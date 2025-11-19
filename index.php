@@ -77,6 +77,13 @@ include 'include/connect.php';
             color: #4a2d63;
         }
 
+        .product-image {
+            width: 100% !important; 
+            height: 240px !important;
+            object-fit: cover !important;
+        }
+
+
     </style>
 </head>
 
@@ -154,18 +161,18 @@ include 'include/connect.php';
     <!-- Best Seller End -->
 
 
- <!-- Produk Start -->
+ <!-- Produk Start -->   
 <div class="container-xxl my-2 py-2 pt-0" style="background-color: white !important;">
     <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-6 mb-4">Produk</h1>
+        <div class="text-start ms-3 mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <h1 class="display-6 mb-4 fw-bold font-family: 'Rufina', serif; font-weight: 700;"><b>Menu</b></h1>
         </div>
         <div class="row g-4">
             <?php foreach ($result as $p): ?>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
                          <div class="position-relative mt-auto">
-                            <img class="img-fluid" src="Asset/images/Produk/<?= $p['gambar']; ?>" alt="<?= $p['nama_produk']; ?>">
+                            <img class="img-fluid product-image" src="Asset/images/Produk/<?= $p['gambar']; ?>" alt="<?= $p['nama_produk']; ?>">
                             <div class="product-overlay">
                                 <a class="btn btn-lg-square btn-outline-light rounded-circle" href="#">
                                     <i class="fa fa-eye text-primary"></i>
@@ -173,10 +180,18 @@ include 'include/connect.php';
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h3 class="mb-3"><?= $p['nama_produk']; ?></h3>
-                            <div class="d-inline-block border border-primary rounded-pill pt-1 px-3 mb-3">
+                            <h3 class="mb-2"><?= $p['nama_produk']; ?></h3>
+                            <div class="pt-1 px-3 mb-3">
                                 Rp.<?= number_format($p['harga'], 0, ',', '.'); ?>
                             </div> 
+                            <div>
+                                <button class="border rounded-circle" style="background-color: #2B143B;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16" style="color: white;">
+                                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                </svg>
+                                </button>
+                                <a href="" class="btn background rounded-pill py-3 px-4"><span class="text-white">Beli Sekarang</span></a>
+                            </div>
                         </div>
                     </div>
                 </div>
