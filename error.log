@@ -94,3 +94,96 @@ Stack trace:
 [18-Nov-2025 09:49:16 UTC] PHP Warning:  Undefined array key "nama_produk" in C:\laragon\www\Gyruss-Cake-Web\index.php on line 112
 [18-Nov-2025 09:49:40 UTC] PHP Warning:  Undefined array key "nama_produk" in C:\laragon\www\Gyruss-Cake-Web\index.php on line 112
 [18-Nov-2025 09:49:40 UTC] PHP Warning:  Undefined array key "nama_produk" in C:\laragon\www\Gyruss-Cake-Web\index.php on line 112
+[19-Nov-2025 05:24:26 UTC] PHP Warning:  Undefined variable $t in C:\laragon\www\Gyruss-Cake-Web\index.php on line 221
+[19-Nov-2025 05:24:26 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\laragon\www\Gyruss-Cake-Web\index.php on line 221
+[19-Nov-2025 05:24:26 UTC] PHP Warning:  Undefined variable $t in C:\laragon\www\Gyruss-Cake-Web\index.php on line 221
+[19-Nov-2025 05:24:26 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\laragon\www\Gyruss-Cake-Web\index.php on line 221
+[19-Nov-2025 05:24:26 UTC] PHP Warning:  Undefined variable $t in C:\laragon\www\Gyruss-Cake-Web\index.php on line 221
+[19-Nov-2025 05:24:26 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\laragon\www\Gyruss-Cake-Web\index.php on line 221
+[19-Nov-2025 05:24:26 UTC] PHP Warning:  Undefined variable $t in C:\laragon\www\Gyruss-Cake-Web\index.php on line 221
+[19-Nov-2025 05:24:26 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\laragon\www\Gyruss-Cake-Web\index.php on line 221
+[19-Nov-2025 05:24:26 UTC] PHP Warning:  Undefined variable $t in C:\laragon\www\Gyruss-Cake-Web\index.php on line 221
+[19-Nov-2025 05:24:26 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\laragon\www\Gyruss-Cake-Web\index.php on line 221
+[20-Nov-2025 05:25:38 UTC] PHP Warning:  Undefined variable $query in C:\laragon\www\Gyruss-Cake-Web\include\connect.php on line 39
+[20-Nov-2025 05:25:38 UTC] PHP Deprecated:  mysqli_query(): Passing null to parameter #2 ($query) of type string is deprecated in C:\laragon\www\Gyruss-Cake-Web\include\connect.php on line 39
+[20-Nov-2025 05:25:38 UTC] PHP Fatal error:  Uncaught ValueError: mysqli_query(): Argument #2 ($query) cannot be empty in C:\laragon\www\Gyruss-Cake-Web\include\connect.php:39
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\include\connect.php(39): mysqli_query(Object(mysqli), '')
+#1 C:\laragon\www\Gyruss-Cake-Web\index.php(6): include('C:\\laragon\\www\\...')
+#2 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\include\connect.php on line 39
+[20-Nov-2025 05:27:18 UTC] PHP Warning:  Undefined variable $query in C:\laragon\www\Gyruss-Cake-Web\include\connect.php on line 25
+[20-Nov-2025 05:27:18 UTC] PHP Deprecated:  mysqli_query(): Passing null to parameter #2 ($query) of type string is deprecated in C:\laragon\www\Gyruss-Cake-Web\include\connect.php on line 25
+[20-Nov-2025 05:27:18 UTC] PHP Fatal error:  Uncaught ValueError: mysqli_query(): Argument #2 ($query) cannot be empty in C:\laragon\www\Gyruss-Cake-Web\include\connect.php:25
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\include\connect.php(25): mysqli_query(Object(mysqli), '')
+#1 C:\laragon\www\Gyruss-Cake-Web\index.php(6): include('C:\\laragon\\www\\...')
+#2 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\include\connect.php on line 25
+[20-Nov-2025 05:27:19 UTC] PHP Warning:  Undefined variable $query in C:\laragon\www\Gyruss-Cake-Web\include\connect.php on line 25
+[20-Nov-2025 05:27:19 UTC] PHP Deprecated:  mysqli_query(): Passing null to parameter #2 ($query) of type string is deprecated in C:\laragon\www\Gyruss-Cake-Web\include\connect.php on line 25
+[20-Nov-2025 05:27:19 UTC] PHP Fatal error:  Uncaught ValueError: mysqli_query(): Argument #2 ($query) cannot be empty in C:\laragon\www\Gyruss-Cake-Web\include\connect.php:25
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\include\connect.php(25): mysqli_query(Object(mysqli), '')
+#1 C:\laragon\www\Gyruss-Cake-Web\index.php(6): include('C:\\laragon\\www\\...')
+#2 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\include\connect.php on line 25
+[20-Nov-2025 05:27:20 UTC] PHP Warning:  Undefined variable $query in C:\laragon\www\Gyruss-Cake-Web\include\connect.php on line 25
+[20-Nov-2025 05:27:20 UTC] PHP Deprecated:  mysqli_query(): Passing null to parameter #2 ($query) of type string is deprecated in C:\laragon\www\Gyruss-Cake-Web\include\connect.php on line 25
+[20-Nov-2025 05:27:20 UTC] PHP Fatal error:  Uncaught ValueError: mysqli_query(): Argument #2 ($query) cannot be empty in C:\laragon\www\Gyruss-Cake-Web\include\connect.php:25
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\include\connect.php(25): mysqli_query(Object(mysqli), '')
+#1 C:\laragon\www\Gyruss-Cake-Web\index.php(6): include('C:\\laragon\\www\\...')
+#2 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\include\connect.php on line 25
+[20-Nov-2025 05:27:20 UTC] PHP Warning:  Undefined variable $query in C:\laragon\www\Gyruss-Cake-Web\include\connect.php on line 25
+[20-Nov-2025 05:27:20 UTC] PHP Deprecated:  mysqli_query(): Passing null to parameter #2 ($query) of type string is deprecated in C:\laragon\www\Gyruss-Cake-Web\include\connect.php on line 25
+[20-Nov-2025 05:27:20 UTC] PHP Fatal error:  Uncaught ValueError: mysqli_query(): Argument #2 ($query) cannot be empty in C:\laragon\www\Gyruss-Cake-Web\include\connect.php:25
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\include\connect.php(25): mysqli_query(Object(mysqli), '')
+#1 C:\laragon\www\Gyruss-Cake-Web\index.php(6): include('C:\\laragon\\www\\...')
+#2 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\include\connect.php on line 25
+[20-Nov-2025 05:27:20 UTC] PHP Warning:  Undefined variable $query in C:\laragon\www\Gyruss-Cake-Web\include\connect.php on line 25
+[20-Nov-2025 05:27:20 UTC] PHP Deprecated:  mysqli_query(): Passing null to parameter #2 ($query) of type string is deprecated in C:\laragon\www\Gyruss-Cake-Web\include\connect.php on line 25
+[20-Nov-2025 05:27:20 UTC] PHP Fatal error:  Uncaught ValueError: mysqli_query(): Argument #2 ($query) cannot be empty in C:\laragon\www\Gyruss-Cake-Web\include\connect.php:25
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\include\connect.php(25): mysqli_query(Object(mysqli), '')
+#1 C:\laragon\www\Gyruss-Cake-Web\index.php(6): include('C:\\laragon\\www\\...')
+#2 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\include\connect.php on line 25
+[20-Nov-2025 05:47:46 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '8' at line 1 in C:\laragon\www\Gyruss-Cake-Web\index.php:18
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\index.php(18): mysqli_query(Object(mysqli), 'SELECT * FROM p...')
+#1 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\index.php on line 18
+[20-Nov-2025 05:47:47 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '8' at line 1 in C:\laragon\www\Gyruss-Cake-Web\index.php:18
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\index.php(18): mysqli_query(Object(mysqli), 'SELECT * FROM p...')
+#1 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\index.php on line 18
+[20-Nov-2025 05:47:48 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '8' at line 1 in C:\laragon\www\Gyruss-Cake-Web\index.php:18
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\index.php(18): mysqli_query(Object(mysqli), 'SELECT * FROM p...')
+#1 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\index.php on line 18
+[20-Nov-2025 05:47:48 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '8' at line 1 in C:\laragon\www\Gyruss-Cake-Web\index.php:18
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\index.php(18): mysqli_query(Object(mysqli), 'SELECT * FROM p...')
+#1 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\index.php on line 18
+[20-Nov-2025 05:47:48 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '8' at line 1 in C:\laragon\www\Gyruss-Cake-Web\index.php:18
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\index.php(18): mysqli_query(Object(mysqli), 'SELECT * FROM p...')
+#1 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\index.php on line 18
+[20-Nov-2025 05:47:48 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '8' at line 1 in C:\laragon\www\Gyruss-Cake-Web\index.php:18
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\index.php(18): mysqli_query(Object(mysqli), 'SELECT * FROM p...')
+#1 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\index.php on line 18
+[20-Nov-2025 05:47:48 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '8' at line 1 in C:\laragon\www\Gyruss-Cake-Web\index.php:18
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\index.php(18): mysqli_query(Object(mysqli), 'SELECT * FROM p...')
+#1 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\index.php on line 18

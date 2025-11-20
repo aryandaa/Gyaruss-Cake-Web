@@ -4,8 +4,23 @@ ini_set('display_errors', 1);
 ini_set('log_errors', 1);
 ini_set('error_log', __DIR__ . '/error.log');
 include 'include/connect.php';
-?>
 
+$filter = isset($_GET['filter']) ? $_GET['filter'] : 'all';
+
+$query = "SELECT * FROM produk limit 8"; 
+
+if ($filter === 'Catering') {
+    $query = "SELECT * FROM produk WHERE kategori = 'Catering' Limit 8";
+} elseif ($filter === 'Cake') {
+    $query = "SELECT * FROM produk WHERE kategori = 'Cake' Limit 8";
+}
+    
+$result = mysqli_query($conn, $query);
+
+if (!$result) {
+    die("Query error: " . mysqli_error($conn));
+}
+?>
 <!DOCTYPE html>
 <html lang="id">
 
@@ -17,74 +32,9 @@ include 'include/connect.php';
     <meta content="Toko kue yang ada di kalsel" name="description">
     <link href="Asset/images/logo gyarus.png" rel="icon">
 
-    <style>
-        body {
-        font-family: 'Rufina', serif !important;
-        }
-        .text-color{
-            color: #2B143B !important;
-        }
-        .background{
-            background: #2B143B !important;
-        }
-        .color-primary {
-            color: #504060 !important;
-        }
-        .text-light{
-            color: white !important;
-        }
-        .custom-testimonial-card {
-        background-color: #f1dde6;
-        border-radius: 20px;
-        min-height: 260px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        }
+    <link rel="stylesheet" href="Asset/css/index.css">
+    <link rel="stylesheet" href="Asset/css/index2.css">
 
-        .custom-testimonial-card .quote-icon i {
-            font-size: 32px;
-            color: #4a2d63;
-        }
-
-        .rating i {
-            font-size: 20px;
-        }
-
-        .testimonial-text {
-            font-size: 15px;
-            color: #4a2d63;
-            line-height: 1.5;
-        }
-
-        .profile-icon {
-            width: 30px;
-            height: 30px;
-            background-color: #4a2d63;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .profile-icon i {
-            color: white;
-            font-size: 18px;
-        }
-
-        .profile-name {
-            font-weight: 600;
-            color: #4a2d63;
-        }
-
-        .product-image {
-            width: 100% !important; 
-            height: 240px !important;
-            object-fit: cover !important;
-        }
-
-
-    </style>
 </head>
 
 <body>
@@ -107,7 +57,6 @@ include 'include/connect.php';
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-lg-8">
-                                <p class="text-primary text-uppercase fw-bold mb-2">#Best Seller</p>
                                 <h1 class="display-1 text-color mb-4 animated slideInDown"><b>Rekomendasi</b></h1>
                                 <p class="text-color fs-5 mb-4 pb-3">- Rasakan Kelezatannya</p>
                                 <a href="" class="btn background rounded-pill py-3 px-5"><span class="text-white">Pesan Sekarang <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -129,7 +78,7 @@ include 'include/connect.php';
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <h1 class="display-6 mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16" style="color: orange;">
                 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                </svg>Best Seller<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16" style="color: orange;">
+                </svg> Terlaris <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16" style="color: orange;">
                 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
                 </svg></h1>
             </div>
@@ -140,12 +89,6 @@ include 'include/connect.php';
                 ?>
                 <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
-                        <div class="text-center p-4">
-                            <div class="d-inline-block border border-primary rounded-pill pt-1 px-3 mb-3">
-                                Rp.<?= number_format($bs['harga'], 0, ',', '.'); ?>
-                            </div>
-                            <h3 class="mb-3"><?= $bs['nama']; ?></h3>
-                        </div>
                         <div class="position-relative mt-auto">
                             <img class="img-fluid" src="Asset/images/best seller/<?= $bs['gambar']; ?>" alt="<?= $bs['nama']; ?>">
                             <div class="product-overlay">
@@ -165,8 +108,28 @@ include 'include/connect.php';
 <div class="container-xxl my-2 py-2 pt-0" style="background-color: white !important;">
     <div class="container">
         <div class="text-start ms-3 mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-6 mb-4 fw-bold font-family: 'Rufina', serif; font-weight: 700;"><b>Menu</b></h1>
+            <h1 class="display-6 mb-4 fw-bold" style="font-family: 'Rufina', serif; font-weight: 700;">Menu</h1>
+            <Form meythod="GET" action="index.php">
+            <div class="d-flex gap-3 flex-wrap mt-3 align-items-center">
+                <button type="submit" name="filter" value="all" class="btn rounded-pill py-3 px-4 <?= ($filter == 'all') ? 'filter-active' : '' ?> " style="background-color: #E9D9DE;">
+                    <span class="fw-bold <?= ($filter == 'all') ? 'text-white' : '' ?> fs-6" style="font-family: 'Montserrat', sans-serif; font-weight:700; color: #504060;" >
+                        Lihat Semua Menu →
+                    </span> 
+                </button>
+                <button  type="submit" name="filter" value="Cake" class="btn rounded-pill py-3 px-4 <?= ($filter == 'Cake') ? 'filter-active' : '' ?> " style="background-color: #E9D9DE;">
+                    <span class="fw-bold <?= ($filter == 'Cake') ? 'text-white' : '' ?>  fs-6" style="font-family: 'Montserrat', sans-serif; font-weight:700; color: #504060;">
+                        Kue
+                    </span>
+                </button>
+                <button type="submit" name="filter" value="Catering" class="btn rounded-pill py-3 px-4 <?= ($filter == 'Catering') ? 'filter-active' : '' ?> " style="background-color: #E9D9DE;">
+                    <span class="fw-bold <?= ($filter == 'Catering') ? 'text-white' : '' ?> fs-6" style="font-family: 'Montserrat', sans-serif; font-weight:700; color: #504060;">
+                        Katering
+                    </span>
+                </button>
+            </div>
+        </Form>
         </div>
+
         <div class="row g-4">
             <?php foreach ($result as $p): ?>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -185,11 +148,18 @@ include 'include/connect.php';
                                 Rp.<?= number_format($p['harga'], 0, ',', '.'); ?>
                             </div> 
                             <div>
-                                <button class="border rounded-circle" style="background-color: #2B143B;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16" style="color: white;">
-                                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
-                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                                </svg>
+                                <button class="border-0 rounded-circle p-3" style="background-color: #2B143B;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                        width="25" height="25" 
+                                        fill="currentColor" 
+                                        class="bi bi-cart-plus " 
+                                        viewBox="0 0 16 16" 
+                                        style="color: white;">
+                                        <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                    </svg>
                                 </button>
+
                                 <a href="" class="btn background rounded-pill py-3 px-4"><span class="text-white">Beli Sekarang</span></a>
                             </div>
                         </div>
@@ -206,9 +176,34 @@ include 'include/connect.php';
 <!-- Testimonial Start -->
 <div class="container-xxl bg-light my-6 py-6 pb-0">
     <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <h1 class="display-6 mb-4">Testimoni</h1>
+        <div class="text-start ms-3 mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <h1 class="display-6 mb-3 fw-bold" 
+                style="font-family: 'Rufina', serif; font-weight:700; color:#2B143B;">
+                Ulasan
+            </h1>
+
+        <div class="mt-2">
+            <h2 class="fw-bold d-flex align-items-center gap-2" 
+                style="font-family: 'Rufina', serif; color:#2B143B;">
+                <?php
+                echo number_format($rataRating, 1);
+                ?>
+            </h2>
+
+            <div class="d-flex align-items-center mb-1" style="font-size: 32px; color: #FFC107;">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+            </div>
+
+            <p class="m-0" style="font-family:'Montserrat', sans-serif; color:#504060; font-size:14px;">
+                Rata-rata hasil dari 50 ulasan
+            </p>
         </div>
+    </div>
+
         <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
 
             <?php foreach ($testimoni as $t): ?>

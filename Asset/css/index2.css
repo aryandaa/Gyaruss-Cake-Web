@@ -1,0 +1,100 @@
+body {
+    font-family: 'Rufina', serif !important;
+}
+.text-color{
+    color: #2B143B !important;
+}
+.background{
+    background: #2B143B !important;
+}
+.color-primary {
+    color: #504060 !important;
+}
+.text-light{
+    color: white !important;
+}
+.custom-testimonial-card {
+    background-color: #f1dde6;
+    border-radius: 20px;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.custom-testimonial-card .quote-icon i {
+    font-size: 32px;
+    color: #4a2d63;
+}
+
+.rating i {
+    font-size: 20px;
+}
+
+.testimonial-text {
+    font-size: 15px;
+    color: #4a2d63;
+    line-height: 1.5;
+}
+
+.profile-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #4a2d63;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-icon i {
+    color: white;
+    font-size: 18px;
+}
+
+.profile-name {
+    font-weight: 600;
+    color: #4a2d63;
+}
+
+.product-image {
+    width: 100% !important; 
+    height: 240px !important;
+    object-fit: cover !important;
+}
+
+.header-carousel .owl-nav::before {
+    display: none !important;
+}
+
+.owl-prev,
+.owl-next {
+    display: none !important;
+}
+
+.owl-prev::before,
+.owl-next::before {
+    display: none !important;
+}
+
+.owl-prev,
+.owl-next {
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+.owl-prev i,
+.owl-next i {
+    font-size: 32px;
+    color: #EAA636; /* warna orange Yanda */
+    font-weight: bold;
+}
+
+.filter-active {
+    background-color: #2B143B !important;
+    color: white !important;
+}

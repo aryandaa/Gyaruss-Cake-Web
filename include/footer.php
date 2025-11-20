@@ -2,7 +2,7 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Office Address</h4>
+                    <h4 class="text-light mb-4">Lokasi Gyaruss Cake</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jl. Komplek Mahatama Regency, Blok B5, No. 108 
                     Kel. Tanjung Pagar, 
                     Banjarmasin 
@@ -21,29 +21,6 @@
                     loading="lazy" 
                     referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Sweet Moments</h4>
-                    <div class="row g-2">
-                        <div class="col-4">
-                            <img class="img-fluid bg-light rounded p-1" src="Asset/images/1.jpg" alt="Image">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light rounded p-1" src="Asset/images/2.jpg" alt="Image">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light rounded p-1" src="Asset/images/3.jpg" alt="Image">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light rounded p-1" src="Asset/images/4.jpg" alt="Image">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light rounded p-1" src="Asset/images/5.jpg" alt="Image">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light rounded p-1" src="Asset/images/6.jpg" alt="Image">
-                        </div>
-                    </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <img src="Asset/images/icon2.png" alt="Image" class="img-fluid">
