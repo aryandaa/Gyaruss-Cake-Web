@@ -44,7 +44,9 @@ if (!$result) {
     </div>
     <!-- Spinner End -->
 
-    <?php include 'include/header.php'; ?>
+    <?php 
+    $activePage = 'Menu';
+    include 'include/header.php'; ?>
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">

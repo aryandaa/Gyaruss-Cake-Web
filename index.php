@@ -44,7 +44,10 @@ if (!$result) {
     </div>
     <!-- Spinner End -->
 
-    <?php include 'include/header.php'; ?>
+    <?php 
+    $activePage = 'beranda';
+    include 'include/header.php'; 
+    ?>
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
@@ -148,7 +151,7 @@ if (!$result) {
                                 Rp.<?= number_format($p['harga'], 0, ',', '.'); ?>
                             </div> 
                             <div>
-                                <button class="border-0 rounded-circle p-3" style="background-color: #2B143B;">
+                                <button class="border-0 rounded-circle p-3 btn-cart-icon" style="background-color: #2B143B;">
                                     <svg xmlns="http://www.w3.org/2000/svg" 
                                         width="25" height="25" 
                                         fill="currentColor" 
@@ -174,7 +177,7 @@ if (!$result) {
 <!-- Produk End -->
 
 <!-- Testimonial Start -->
-<div class="container-xxl bg-light my-6 py-6 pb-0">
+<div class="container-xxl my-2 py-2 pt-0" style="background-color: white !important;">
     <div class="container">
         <div class="text-start ms-3 mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
             <h1 class="display-6 mb-3 fw-bold" 
@@ -182,59 +185,77 @@ if (!$result) {
                 Ulasan
             </h1>
 
-        <div class="mt-2">
-            <h2 class="fw-bold d-flex align-items-center gap-2" 
+        <div class="d-flex align-items-center gap-4 mt-2">
+            <h2 class="fw-bold d-flex align-items-center gap-2 m-0" 
                 style="font-family: 'Rufina', serif; color:#2B143B;">
                 <?php
                 echo number_format($rataRating, 1);
                 ?>
             </h2>
 
+            <div class="text-center">
             <div class="d-flex align-items-center mb-1" style="font-size: 32px; color: #FFC107;">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-half"></i>
+                <?php
+                $rating = $rataRating;    
+                $fullStars = floor($rating);
+                $halfStar = ($rating - $fullStars >= 0.25 && $rating - $fullStars < 0.75) ? 1 : 0;
+                $emptyStars = 5 - $fullStars - $halfStar;
+                for ($i = 0; $i < $fullStars; $i++) {
+                    echo '<i class="bi bi-star-fill"></i>';
+                }
+                if ($halfStar) {
+                    echo '<i class="bi bi-star-half"></i>';
+                }
+                for ($i = 0; $i < $emptyStars; $i++) {
+                    echo '<i class="bi bi-star"></i>';
+                }
+                ?>
             </div>
-
             <p class="m-0" style="font-family:'Montserrat', sans-serif; color:#504060; font-size:14px;">
-                Rata-rata hasil dari 50 ulasan
+                Rata-rata hasil dari <?php echo number_format($totalReviews);?> ulasan
             </p>
-        </div>
-    </div>
-
-        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-
-            <?php foreach ($testimoni as $t): ?>
-            <div class="custom-testimonial-card p-4">
-                <div class="quote-icon mb-2">
-                    <i class="bi bi-quote"></i>
-                </div>
-                <div class="rating mb-3">
-                    <?php
-                    for ($i = 0; $i < 5; $i++){
-                        if ($i < $t['rating']){
-                            echo '<i class="bi bi-star-fill text-warning"></i>';
-                        } else {
-                            echo '<i class="bi bi-star text-warning"></i>';
-                        }
-                    }
-                    ?>
-                </div>
-                <p class="testimonial-text">
-                    “<?= $t['pesan']; ?>”
-                </p>
-                <div class="d-flex align-items-center mt-3">
-                    <div class="profile-icon">
-                        <i class="bi bi-person-fill"></i>
-                    </div>
-                    <span class="ms-2 profile-name"><?= $t['nama']; ?></span>
-                </div>
             </div>
-            <?php endforeach; ?>
-
         </div>
+    </div> 
+
+        <div class="container mt-4">
+            <div class="row g-4">
+
+                <?php foreach ($testimoni as $t): ?>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="custom-testimonial-card p-4 h-100">
+
+                        <div class="quote-icon mb-2">
+                            <i class="bi bi-quote"></i>
+                        </div>
+
+                        <div class="rating mb-3" style="color:#FFC107; font-size:22px;">
+                            <?php
+                            for ($i = 0; $i < 5; $i++){
+                                if ($i < $t['rating']){
+                                    echo '<i class="bi bi-star-fill"></i>';
+                                } else {
+                                    echo '<i class="bi bi-star"></i>';
+                                }
+                            }
+                            ?>
+                        </div>
+
+                        <p class="testimonial-text">
+                            “<?= $t['pesan']; ?>”
+                        </p>
+
+                        <div class="d-flex align-items-center mt-3">
+                            <span class="ms-2 profile-name fw-bold"><?= $t['nama']; ?></span>
+                        </div>
+
+                    </div>
+                </div>
+                <?php endforeach; ?>
+
+            </div>
+</div>
+
     </div>
 </div>
 <!-- Testimonial End -->
@@ -242,7 +263,7 @@ if (!$result) {
     <?php include 'include/footer.php'; ?>
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+    <a href="#" class="btn btn-lg btn-lg-square rounded-circle back-to-top" style="background-color: #60405aff;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16" style="color: white;">
   <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
 </svg></a>
 

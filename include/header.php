@@ -38,7 +38,7 @@
 
         .navbar .btn-outline-primary:hover {
         background-color: #6c63ff;
-        color: #fff;
+        color: white;
         }
 
         #searchInput {
@@ -51,10 +51,47 @@
             color: white;
         }
 
+        .navbar-nav .nav-link {
+            position: relative;
+            font-weight: 600;
+            padding-bottom: 6px;
+            display: inline-block;
+        }
+
+        /* ACTIVE */
+        .navbar-nav .nav-link.active {
+            color: #2B143B !important;
+        }
+
+        .navbar-nav .nav-link.active::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -2px; 
+            transform: translateX(-50%);
+            width: 55%;              /* panjang garis (sesuaikan) */
+            height: 3px;
+            background: #2B143B;
+            border-radius: 20px;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            background: #ffffff !important; 
+            backdrop-filter: none !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .navbar-light {
+            background-color: #ffffff !important;
+        }
+        
+
     </style>
     
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-lg-0 px-lg-5" 
-     style="background-color: #e3f2fd;">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-lg-0 px-lg-5" style="background-color: white;">
 
     <!-- LOGO -->
     <a class="navbar-brand ms-4 ms-lg-0" href="#">
@@ -62,33 +99,36 @@
     </a>
 
     <!-- TOGGLER -->
-    <button class="navbar-toggler me-4" type="button"
-            data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <button class="navbar-toggler me-4 bg-white border-0 shadow-none" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        style="background:white !important;">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
 
     <!-- NAV CONTENT -->
     <div class="collapse navbar-collapse" id="navbarCollapse">
 
         <!-- SEARCH BAR (selalu center di desktop, full di mobile) -->
-        <form class="d-flex mx-lg-auto my-3 my-lg-0" onsubmit="return false;">
-            <input class="form-control rounded-pill border-0 shadow-sm"
-            id="searchInput" 
-            type="search"
-            placeholder="Cari..." 
-            style="background:#fff; width: 380px !important;">
-        </form>
-
+        <div class="navbar-nav ms-lg-auto align-items-center w-100 d-flex justify-content-center">
+            <form class="d-flex mx-lg-auto my-3 my-lg-0" onsubmit="return false;">
+                <input class="form-control rounded-pill border-0 shadow-sm"
+                id="searchInput" 
+                type="search"
+                placeholder="Cari..." 
+                style="background:#F5F6FA; width: 380px !important; border-color: #D5D5D5;">
+            </form>
+        </div>
 
         <!-- MENU -->
         <div class="navbar-nav ms-lg-auto align-items-center">
-            <a href="#" class="nav-item nav-link active">Home</a>
-            <a href="#" class="nav-item nav-link text-color">Menu</a>
-            <a href="#" class="nav-item nav-link text-color">Ulasan</a>
+            <a href="index.php" class="nav-item nav-link text-color fs-5 px-2 py-3 <?php echo ($activePage == 'beranda') ? 'active' : ''; ?>">Beranda</a>
+            <a href="katalog.php" class="nav-item nav-link text-color fs-5 px-2 py-3<?php echo ($activePage == 'Menu') ? 'active' : ''; ?>">Menu</a>
+            <a href="testimoni.php" class="nav-item nav-link text-color fs-5 px-2 py-3<?php echo ($activePage == 'Ulasan') ? 'active' : ''; ?>">Ulasan</a>
 
             <!-- CART ICON -->
-            <a href="#" class="nav-item nav-link text-color">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="26" height="26" fill="currentColor">
+            <a href="keranjang.php" class="nav-item nav-link text-color fs-5 <?php echo ($activePage == 'keranjang') ? 'active' : ''; ?>">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="35" height="35" fill="currentColor">
                     <path d="M320 64C326.6 64 332.9 66.7 337.4 71.5L481.4 223.5L481.9 224L560 224C577.7 224 592 238.3 592 256C592 270.5 582.4 282.7 569.2 286.7L523.1 493.9C516.6 523.2 490.6 544 460.6 544L179.3 544C149.3 544 123.3 523.2 116.8 493.9L70.8 286.7C57.6 282.8 48 270.5 48 256C48 238.3 62.3 224 80 224L158.1 224L158.6 223.5L302.6 71.5C307.1 66.7 313.4 64 320 64zM320 122.9L224.2 224L415.8 224L320 122.9zM240 328C240 314.7 229.3 304 216 304C202.7 304 192 314.7 192 328L192 440C192 453.3 202.7 464 216 464C229.3 464 240 453.3 240 440L240 328zM320 304C306.7 304 296 314.7 296 328L296 440C296 453.3 306.7 464 320 464C333.3 464 344 453.3 344 440L344 328C344 314.7 333.3 304 320 304zM448 328C448 314.7 437.3 304 424 304C410.7 304 400 314.7 400 328L400 440C400 453.3 410.7 464 424 464C437.3 464 448 453.3 448 440L448 328z"></path>
                 </svg>
 

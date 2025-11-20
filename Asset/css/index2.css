@@ -98,3 +98,42 @@ body {
     background-color: #2B143B !important;
     color: white !important;
 }
+
+.btn-cart-icon {
+    background-color: #2B143B !important;
+    transition: 0.2s ease;
+}
+
+.btn-cart-icon svg,
+.btn-cart-icon:hover svg,
+.btn-cart-icon:focus svg,
+.btn-cart-icon:active svg {
+    color: white !important;
+    fill: white !important;
+}
+
+.btn-cart-icon:hover,
+.btn-cart-icon:focus,
+.btn-cart-icon:active {
+    background-color: #2B143B !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+
+.custom-testimonial-card {
+    background: #F2DDEB; 
+    border-radius: 20px;
+    color: #2B143B;
+}
+
+.custom-testimonial-card .bi-quote {
+    font-size: 40px;
+    color: #2B143B;
+}
+
+.testimonial-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #2B143B;
+}

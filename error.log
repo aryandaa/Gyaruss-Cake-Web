@@ -187,3 +187,7 @@ Stack trace:
 #0 C:\laragon\www\Gyruss-Cake-Web\index.php(18): mysqli_query(Object(mysqli), 'SELECT * FROM p...')
 #1 {main}
   thrown in C:\laragon\www\Gyruss-Cake-Web\index.php on line 18
+[20-Nov-2025 08:50:12 UTC] PHP Warning:  Undefined variable $activePage in C:\laragon\www\Gyruss-Cake-Web\include\header.php on line 111
+[20-Nov-2025 08:50:12 UTC] PHP Warning:  Undefined variable $activePage in C:\laragon\www\Gyruss-Cake-Web\include\header.php on line 112
+[20-Nov-2025 08:50:12 UTC] PHP Warning:  Undefined variable $activePage in C:\laragon\www\Gyruss-Cake-Web\include\header.php on line 113
+[20-Nov-2025 08:50:12 UTC] PHP Warning:  Undefined variable $activePage in C:\laragon\www\Gyruss-Cake-Web\include\header.php on line 116
