@@ -254,7 +254,22 @@ if (!$result) {
 
             <button class="btn rounded-pill py-3 px-4 dropdown-toggle" style="background-color: #E9D9DE;" data-bs-toggle="dropdown">
                 <span class="fw-bold fs-6 d-flex align-items-center gap-2" style="font-family:'Montserrat', sans-serif; font-weight:700; color:#504060;">
-                    <i class="bi bi-star-fill" style="color:#FFC107;"></i> 5
+                    <i class="bi bi-star-fill" style="color:#FFC107;"></i> 
+                    <?php
+                    if ($filtertm == '5') {
+                        echo "5";
+                    } elseif ($filtertm == '4') {
+                        echo "4";
+                    } elseif ($filtertm == '3') {
+                        echo "3";
+                    } elseif ($filtertm == '2') {
+                        echo "2";
+                    } elseif ($filtertm == '1') {
+                        echo "1";
+                    } else {
+                        echo "Filter Ulasan";
+                    }
+                     ?>
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
                     <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
                     </svg>
@@ -347,6 +362,7 @@ if (!$result) {
                             <span class="ms-2 profile-name fw-bold"><?= $t['nama']; ?></span>
                         </div>
 
+                        <div class="border rounded-pill "><span><p>Produk</p></span></div>
                     </div>
                 </div>
                 <?php endforeach; ?>
