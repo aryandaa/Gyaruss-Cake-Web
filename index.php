@@ -6,20 +6,18 @@ ini_set('error_log', __DIR__ . '/error.log');
 include 'include/connect.php';
 
 $filter = isset($_GET['filter']) ? $_GET['filter'] : 'all';
-
 $query = "SELECT * FROM produk limit 8"; 
-
 if ($filter === 'Catering') {
     $query = "SELECT * FROM produk WHERE kategori = 'Catering' Limit 8";
 } elseif ($filter === 'Cake') {
     $query = "SELECT * FROM produk WHERE kategori = 'Cake' Limit 8";
 }
-    
 $result = mysqli_query($conn, $query);
-
 if (!$result) {
     die("Query error: " . mysqli_error($conn));
 }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -217,11 +215,111 @@ if (!$result) {
             </div>
         </div>
     </div> 
+    <div class="text-start ms-3 mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+        <?php
+        $filtertm = isset($_GET['filtertm']) ? $_GET['filtertm'] : 'all';
+        $query = "SELECT * FROM testimoni limit 8"; 
+        if ($filtertm === '5') {
+            $query = "SELECT * FROM testimoni WHERE rating = '5' Limit 8";
+        } elseif ($filtertm === '4') {
+            $query = "SELECT * FROM testimoni WHERE rating = '4' Limit 8";
+        } elseif ($filtertm === '3') {
+            $query = "SELECT * FROM testimoni WHERE rating = '3' Limit 8";
+        } elseif ($filtertm === '2') {
+            $query = "SELECT * FROM testimoni WHERE rating = '2' Limit 8";
+        } elseif ($filtertm === '1') {
+            $query = "SELECT * FROM testimoni WHERE rating = '1' Limit 8";
+        }
+        $resulttm = mysqli_query($conn, $query);
+        if (!$resulttm) {
+            die("Query error: " . mysqli_error($conn));
+        }
+
+        ?>
+            <Form method="GET" action="index.php">
+    <div class="d-flex gap-3 flex-wrap mt-3 align-items-center">
+
+        <!-- LIHAT SEMUA ULASAN -->
+        <button type="submit" name="filtertm" value="all" 
+                class="btn rounded-pill py-3 px-4 <?= ($filtertm == 'all') ? 'filter-active' : '' ?> "
+                style="background-color: #E9D9DE;">
+            <span class="fw-bold <?= ($filtertm == 'all') ? 'text-white' : '' ?> fs-6"
+                  style="font-family: 'Montserrat', sans-serif; font-weight:700; color:#504060;">
+                Lihat Semua Ulasan →
+            </span>
+        </button>
+
+        <!-- DROPDOWN FILTER -->
+        <div class="dropdown">
+
+            <button class="btn rounded-pill py-3 px-4 dropdown-toggle" style="background-color: #E9D9DE;" data-bs-toggle="dropdown">
+                <span class="fw-bold fs-6 d-flex align-items-center gap-2" style="font-family:'Montserrat', sans-serif; font-weight:700; color:#504060;">
+                    <i class="bi bi-star-fill" style="color:#FFC107;"></i> 5
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
+                    <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+                    </svg>
+                </span>
+            </button>
+
+            <!-- MENU DROPDOWN -->
+            <ul class="dropdown-menu p-2" style="border-radius:10px;">
+
+                <!-- 5 -->
+                <li>
+                    <button type="submit" name="filtertm" value="5"
+                            class="dropdown-item d-flex align-items-center gap-2 <?= ($filtertm == '5') ? 'text-white filter-active' : '' ?>"
+                            style="font-family:'Montserrat'; font-weight:700;">
+                        <i class="bi bi-star-fill" style="color:#FFC107;"></i> 5
+                    </button>  
+                </li>
+                
+                <!-- 4 -->
+                <li>
+                    <button type="submit" name="filtertm" value="4"
+                            class="dropdown-item d-flex align-items-center gap-2 <?= ($filtertm == '4') ? 'text-white filter-active' : '' ?>"
+                            style="font-family:'Montserrat'; font-weight:700;">
+                        <i class="bi bi-star-fill" style="color:#FFC107;"></i> 4
+                    </button>
+                </li>
+
+                <!-- 3 -->
+                <li>
+                    <button type="submit" name="filtertm" value="3"
+                            class="dropdown-item d-flex align-items-center gap-2 <?= ($filtertm == '3') ? 'text-white filter-active' : '' ?>"
+                            style="font-family:'Montserrat'; font-weight:700;">
+                        <i class="bi bi-star-fill" style="color:#FFC107;"></i> 3
+                    </button>
+                </li>
+
+                <!-- 2 -->
+                <li>
+                    <button type="submit" name="filtertm" value="2"
+                            class="dropdown-item d-flex align-items-center gap-2 <?= ($filtertm == '2') ? 'text-white filter-active' : '' ?>"
+                            style="font-family:'Montserrat'; font-weight:700;">
+                        <i class="bi bi-star-fill" style="color:#FFC107;"></i> 2
+                    </button>
+                </li>
+
+                <!-- 1 -->
+                <li>
+                    <button type="submit" name="filtertm" value="1"
+                            class="dropdown-item d-flex align-items-center gap-2 <?= ($filtertm == '1') ? 'text-white filter-active' : '' ?>"
+                            style="font-family:'Montserrat'; font-weight:700;">
+                        <i class="bi bi-star-fill" style="color:#FFC107;"></i> 1
+                    </button>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</Form>
+
+        </div>
 
         <div class="container mt-4">
-            <div class="row g-4">
-
-                <?php foreach ($testimoni as $t): ?>
+            <div class="row g-4"> 
+                <?php foreach ($resulttm as $t): ?>
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="custom-testimonial-card p-4 h-100">
 

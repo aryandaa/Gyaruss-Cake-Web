@@ -137,3 +137,8 @@ body {
     line-height: 1.6;
     color: #2B143B;
 }
+
+.dropdown-toggle::after {
+    display: none !important; /* Hilangi icon default */
+}
+

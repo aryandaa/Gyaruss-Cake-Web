@@ -26,3 +26,10 @@ $sql = "SELECT COUNT(*) AS total_reviews FROM testimoni;";
 $totalReviewsResult = mysqli_query($conn, $sql);
 $totalReviewsRow = mysqli_fetch_assoc($totalReviewsResult);
 $totalReviews = $totalReviewsRow['total_reviews'];
+//relasi produk & testimoni
+$sql = "SELECT produk.id_produk, produk.nama_produk, COUNT(testimoni.id_testimoni) AS jumlah_testimoni
+        FROM produk
+        LEFT JOIN testimoni ON produk.id_produk = testimoni.id_produk
+        GROUP BY produk.id_produk, produk.nama_produk;";
+$produkTestimoni = mysqli_query($conn, $sql);
+
