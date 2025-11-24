@@ -1,30 +1,90 @@
-    <div class="container-fluid text-light footer my-6 mb-0 py-5 wow fadeIn" data-wow-delay="0.1s" style="background-color: #504060;">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Lokasi Gyaruss Cake</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jl. Komplek Mahatama Regency, Blok B5, No. 108 
-                    Kel. Tanjung Pagar, 
-                    Banjarmasin 
-                    70234</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+62 813-4803-4658</p>
-                    <p class="mb-2"><i class="fab fa-facebook-f me-3"></i>Nur Alimah</p>
+   <style>
+    .text-ungu {
+        color: #2B143B;
+    }
+    .font-montserrat {
+        font-family: 'Montserrat', sans-serif;
+    }
+   </style>
+   
+
+ <div class="container-fluid py-5" style="background-color:#f1dde6;">
+    <div class="container py-5">
+
+        <div class="row g-5 align-items-start">
+
+            <!-- Lokasi & Sosmed -->
+            <div class="col-lg-4 col-md-6">
+                <h4 class="text-ungu mb-1 fs-3">Lokasi Gyaruss Cake</h4>
+
+                <!-- Rating -->
+                <div class="d-flex align-items-center mt-1 mb-3" style="font-size:32px; color:#FFC107;">
+                    <?php
+                    $rating = $rataRating;    
+                    $fullStars = floor($rating);
+                    $halfStar = ($rating - $fullStars >= 0.25 && $rating - $fullStars < 0.75) ? 1 : 0;
+                    $emptyStars = 5 - $fullStars - $halfStar;
+
+                    for ($i = 0; $i < $fullStars; $i++) echo '<i class="bi bi-star-fill"></i>';
+                    if ($halfStar) echo '<i class="bi bi-star-half"></i>';
+                    for ($i = 0; $i < $emptyStars; $i++) echo '<i class="bi bi-star"></i>';
+                    ?>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Location</h4>
-                    <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127962.52375539638!2d114.51823311016532!3d-3.357123799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de421e31a001119%3A0x799d4a8be57fe70f!2sGyaruss%20Cake!5e0!3m2!1sid!2sid!4v1706517360000!5m2!1sid!2sid" 
-                    width="100%" 
-                    height="250" 
-                    style="border:0; border-radius:10px;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <img src="Asset/images/icon2.png" alt="Image" class="img-fluid">
-                </div>
+
+                <!-- Alamat -->
+                <p class="text-ungu mb-4 fs-6">
+                    Jl. Komplek Mahatama Regency, Blok B5, No. 108 <br>
+                    Kel. Tanjung Pagar, <br>
+                    Banjarmasin <br>
+                    70234
+                </p>
+
+                <!-- Sosial Media -->
+                <h4 class="text-ungu mb-3 fs-3"><b>Sosial Media</b></h4>
+
+                <p class="mb-2 text-ungu d-flex align-items-center">
+                    <i class="bi bi-whatsapp fs-4 me-3"></i>
+                    <span class="font-montserrat">0813-4803-4658</span>
+                </p>
+
+                <p class="mb-2 text-ungu d-flex align-items-center">
+                    <i class="bi bi-instagram fs-4 me-3"></i>
+                    <span class="font-montserrat">nur_alimah84</span>
+                </p>
+
+                <p class="mb-2 text-ungu d-flex align-items-center">
+                    <i class="bi bi-facebook fs-4 me-3"></i>
+                    <span class="font-montserrat">Nur Alimah</span>
+                </p>
             </div>
+
+            <!-- MAP -->
+            <div class="col-lg-4 col-md-6">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127962.52375539638!2d114.51823311016532!3d-3.357123799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de421e31a001119%3A0x799d4a8be57fe70f!2sGyaruss%20Cake!5e0!3m2!1sid!2sid!4v1706517360000!5m2!1sid!2sid"
+                    width="100%"
+                    height="300"
+                    style="border:0; border-radius:12px;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <!-- Logo + Jam Buka -->
+            <div class="col-lg-4 col-md-6 text-center">
+                <img src="Asset/images/logo gyarus.png" class="img-fluid mb-3" style="max-width:150px;" alt="Logo">
+                <p class="text-ungu fs-6">
+                    Kelezatan yang <br>Merayakan Momen Anda
+                </p>
+
+                <h3 class="text-ungu mt-4">Jam Buka</h3>
+                <p class="text-ungu fs-6">
+                    Buka Setiap Hari <br>
+                    <b>24 Jam</b>
+                </p>
+            </div>
+
         </div>
     </div>
+</div>
