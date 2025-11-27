@@ -6,7 +6,9 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ini_set('log_errors', 1);
 ini_set('error_log', __DIR__ . '/error.log');
+
 include 'include/connect.php';
+include 'include/init_cart.php';
 
 $filter = isset($_GET['filter']) ? $_GET['filter'] : 'all';
 $query = "SELECT * FROM produk limit 8"; 
@@ -55,7 +57,7 @@ if (!$result) {
 
             <?php foreach ($bestSeller as $bs): ?>
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="Asset/images/best seller/<?= $bs['gambar']; ?>" alt="">
+                <img class="img-fluid" src="Asset/images/Produk/<?= $bs['gambar']; ?>" alt="">
                 <div class="owl-carousel-inner">
                     <div class="container">
                         <div class="row justify-content-start">
@@ -93,9 +95,9 @@ if (!$result) {
                 <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
                         <div class="position-relative mt-auto">
-                            <img class="img-fluid" src="Asset/images/best seller/<?= $bs['gambar']; ?>" alt="<?= $bs['nama']; ?>">
+                            <img class="img-fluid" src="Asset/images/Produk/<?= $bs['gambar']; ?>" alt="<?= $bs['nama_produk']; ?>">
                             <div class="product-overlay">
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle" href=""><i class="fa fa-eye text-primary"></i></a>
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle" href="Pages/detail-produk.php?id=<?= $bs['id_produk'] ?>&from=index.php" ><i class="fa fa-eye text-primary"></i></a>
                             </div>
                         </div>
                     </div>
@@ -140,7 +142,7 @@ if (!$result) {
                          <div class="position-relative mt-auto">
                             <img class="img-fluid product-image" src="Asset/images/Produk/<?= $p['gambar']; ?>" alt="<?= $p['nama_produk']; ?>">
                             <div class="product-overlay">
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle" href="#">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle" href="Pages/detail-produk.php?id= <?= $p['id_produk'] ?>&from=/index.php ">
                                     <i class="fa fa-eye text-primary"></i>
                                 </a>
                             </div>
@@ -151,6 +153,8 @@ if (!$result) {
                                 Rp.<?= number_format($p['harga'], 0, ',', '.'); ?>
                             </div> 
                             <div>
+                                <form action="proses/tambah_keranjang.php" method="POST" class="d-inline">
+                                    <input type="hidden" name="id_produk" value="<?= $p['id_produk'] ?>">
                                 <button class="border-0 rounded-circle p-3 btn-cart-icon" style="background-color: #2B143B;">
                                     <svg xmlns="http://www.w3.org/2000/svg" 
                                         width="25" height="25" 
@@ -162,7 +166,7 @@ if (!$result) {
                                         <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                                     </svg>
                                 </button>
-
+                                </form>
                                 <a href="" class="btn background rounded-pill py-3 px-4"><span class="text-white">Beli Sekarang</span></a>
                             </div>
                         </div>
@@ -221,7 +225,7 @@ if (!$result) {
     <div class="text-start ms-3 mb-5 wow fadeInUp" data-wow-delay="0.1s">
         <?php
         $filtertm = isset($_GET['filtertm']) ? $_GET['filtertm'] : 'all';
-        $query = "SELECT * FROM testimoni limit 8"; 
+        $query = "SELECT * FROM testimoni limit 6"; 
         if ($filtertm === '5') {
             $query = "SELECT * FROM testimoni WHERE rating = '5' Limit 8";
         } elseif ($filtertm === '4') {
@@ -396,6 +400,33 @@ if (!$result) {
 
     <!-- Template Javascript -->
     <script src="Asset/js/main.js"></script>
-</body>
 
+
+    <!-- Modal Notifikasi -->
+    <div class="modal fade" id="ulasanModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 p-4">
+
+        <div class="text-center">
+            <h4 class="fw-bold text-success mb-2">Ulasan Berhasil Ditambahkan!</h4>
+            <p class="mb-3">Terima kasih sudah memberikan ulasan 😍</p>
+
+            <button type="button" class="btn btn-success rounded-pill px-4" data-bs-dismiss="modal" style="background-color: #504060;">
+            Oke
+            </button>
+        </div>
+
+        </div>
+    </div>
+    </div>
+
+    <?php if(isset($_GET['added']) && $_GET['added'] == 'true'): ?>
+        <script>
+            var myModal = new bootstrap.Modal(document.getElementById('ulasanModal'));
+            myModal.show();
+        </script>
+    <?php endif; ?>
+
+
+</body>
 </html>

@@ -294,6 +294,22 @@ h6,
     transition: .5s;
 }
 
+.product-overlay a {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 65px;   /* sesuaikan dengan ukuran tombol kamu */
+    height: 65px;
+    padding: 0 !important;
+}
+
+.product-overlay i {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 26px; /* biar pas */
+}
+
+
 .product-item:hover .product-overlay {
     height: 100%;
     opacity: 1;

@@ -1,3 +1,7 @@
+   <?php 
+    include __DIR__ . "/config.php"; 
+    ?>
+   
    <style>
     .text-ungu {
         color: #2B143B;
@@ -73,7 +77,7 @@
 
             <!-- Logo + Jam Buka -->
             <div class="col-lg-4 col-md-6 text-center">
-                <img src="Asset/images/logo gyarus.png" class="img-fluid mb-3" style="max-width:150px;" alt="Logo">
+                <img src="<?= $base_url ?>Asset/images/logo gyarus.png" class="img-fluid mb-3" style="max-width:150px;" alt="Logo">
                 <p class="text-ungu fs-6">
                     Kelezatan yang <br>Merayakan Momen Anda
                 </p>

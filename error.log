@@ -191,3 +191,7 @@ Stack trace:
 [20-Nov-2025 08:50:12 UTC] PHP Warning:  Undefined variable $activePage in C:\laragon\www\Gyruss-Cake-Web\include\header.php on line 112
 [20-Nov-2025 08:50:12 UTC] PHP Warning:  Undefined variable $activePage in C:\laragon\www\Gyruss-Cake-Web\include\header.php on line 113
 [20-Nov-2025 08:50:12 UTC] PHP Warning:  Undefined variable $activePage in C:\laragon\www\Gyruss-Cake-Web\include\header.php on line 116
+[27-Nov-2025 06:32:25 UTC] PHP Warning:  Undefined array key "nama" in C:\laragon\www\Gyruss-Cake-Web\index.php on line 98
+[27-Nov-2025 06:32:25 UTC] PHP Warning:  Undefined array key "nama" in C:\laragon\www\Gyruss-Cake-Web\index.php on line 98
+[27-Nov-2025 06:33:20 UTC] PHP Warning:  Undefined array key "nama" in C:\laragon\www\Gyruss-Cake-Web\index.php on line 98
+[27-Nov-2025 06:33:20 UTC] PHP Warning:  Undefined array key "nama" in C:\laragon\www\Gyruss-Cake-Web\index.php on line 98
