@@ -1,4 +1,6 @@
 <?php
+session_abort();
+include '../include/connect.php';
 $from = isset($_GET['from']) ? $_GET['from'] : '/index.php';
 include "../proses/proses_detail-produk.php";
 ?>
@@ -70,14 +72,11 @@ include "../proses/proses_detail-produk.php";
                 </a>
 
                 <!-- PESAN SEKARANG -->
-                <form action="../proses/tambah_keranjang.php" method="POST">
-                    <input type="hidden" name="id_produk" value="<?= $data['id_produk']; ?>">
-                    <button class="btn rounded-pill px-4 py-2 fw-bold text-white"
-                            style="background-color:#504060;">
-                        Pesan Sekarang <i class="bi bi-arrow-right"></i>
-                    </button>
-                </form>
-
+                <a href="form_beli_sekarang.php?id_produk=<?= $data['id_produk']; ?>" 
+                    class="btn rounded-pill px-4 py-2 fw-bold text-white"
+                    style="background-color:#504060;";>
+                    Pesan Sekarang <i class="bi bi-arrow-right"></i>
+                </a>
             </div>
 
         </div>

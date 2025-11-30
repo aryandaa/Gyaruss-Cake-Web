@@ -10,7 +10,6 @@ ini_set('error_log', __DIR__ . '../error.log');
 include '../include/connect.php';
 include '../include/init_cart.php';
 
-
 $query = "SELECT * FROM produk WHERE kategori = 'Cake'";
 $kue = mysqli_query($conn, $query);
 
@@ -81,7 +80,7 @@ $katering = mysqli_query($conn, $query);
                                 </button>
                                 </form>
 
-                                <a href="" class="btn background rounded-pill py-3 px-4"><span class="text-white">Beli Sekarang</span></a>
+                                <a href="form_beli_sekarang.php?id_produk=<?= $k['id_produk']; ?>" class="btn background rounded-pill py-3 px-4"><span class="text-white">Beli Sekarang</span></a>
                             </div>
                         </div>
                     </div>
@@ -136,7 +135,7 @@ $katering = mysqli_query($conn, $query);
                                 </button>
                                 </form>
 
-                                <a href="" class="btn background rounded-pill py-3 px-4"><span class="text-white">Beli Sekarang</span></a>
+                                <a href="form_beli_sekarang.php?id_produk=<?= $kr['id_produk']; ?>" class="btn background rounded-pill py-3 px-4"><span class="text-white">Beli Sekarang</span></a>
                             </div>
                         </div>
                     </div>

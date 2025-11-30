@@ -103,8 +103,7 @@ $errors = $errors ?? [];
                 name="pesan"
                 class="form-control" 
                 rows="3" 
-                maxlength="150" 
-                placeholder="Ketik ulasannya" 
+                maxlength="150"
                 oninput="updateCount()"
                 value="<?= $_POST['pesan'] ?? '' ?>">
         </textarea>

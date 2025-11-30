@@ -167,7 +167,7 @@ if (!$result) {
                                     </svg>
                                 </button>
                                 </form>
-                                <a href="" class="btn background rounded-pill py-3 px-4"><span class="text-white">Beli Sekarang</span></a>
+                                <a href="Pages/form_beli_sekarang.php?id_produk=<?= $p['id_produk']; ?>" class="btn background rounded-pill py-3 px-4"><span class="text-white">Beli Sekarang</span></a>
                             </div>
                         </div>
                     </div>
