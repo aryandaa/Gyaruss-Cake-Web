@@ -174,7 +174,7 @@ $errors = $errors ?? [];
 
             <div class="d-flex justify-content-between align-items-center mt-5">
 
-                <a href="../index.php" class="btn btn-submit">
+                <a href="../../index.php" class="btn btn-submit">
                     Batal
                 </a>
                 

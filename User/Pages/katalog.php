@@ -54,7 +54,7 @@ $katering = mysqli_query($conn, $query);
                          <div class="position-relative mt-auto">
                             <img class="img-fluid product-image" src="../Asset/images/Produk/<?= $k['gambar']; ?>" alt="<?= $k['nama_produk']; ?>">
                             <div class="product-overlay">
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle" href="detail-produk.php?id=<?= $k['id_produk'] ?>&from=/Pages/katalog.php">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle" href="detail-produk.php?id=<?= $k['id_produk'] ?>&from=menu">
                                     <i class="fa fa-eye text-primary"></i>
                                 </a>
                             </div>
@@ -109,7 +109,7 @@ $katering = mysqli_query($conn, $query);
                          <div class="position-relative mt-auto">
                             <img class="img-fluid product-image" src="../Asset/images/Produk/<?= $kr['gambar']; ?>" alt="<?= $p['nama_produk']; ?>">
                             <div class="product-overlay">
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle" href="detail-produk.php?id=<?= $kr['id_produk'] ?>&from=/Pages/katalog.php ">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle" href="detail-produk.php?id=<?= $kr['id_produk'] ?>&from=menu">
                                     <i class="fa fa-eye text-primary"></i>
                                 </a>
                             </div>

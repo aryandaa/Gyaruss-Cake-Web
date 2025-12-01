@@ -12,8 +12,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="<?= $base_url ?>Asset/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="<?= $base_url ?>Asset/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?= $base_url ?>User/Asset/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="<?= $base_url ?>User/Asset/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -93,6 +93,11 @@
             background-color: #ffffff !important;
         }
         
+        .search-item:hover {
+            background-color: #f8f4f8;
+            border-radius: 8px;
+        }
+
 
     </style>
     
@@ -100,7 +105,7 @@
 
     <!-- LOGO -->
     <a class="navbar-brand ms-4 ms-lg-0" href="#">
-        <img src="<?= $base_url ?>Asset/images/logo gyarus.png" alt="Logo" style="height: 60px;">
+        <img src="<?= $base_url ?>User/Asset/images/logo gyarus.png" alt="Logo" style="height: 60px;">
     </a>
 
     <!-- TOGGLER -->
@@ -114,25 +119,35 @@
     <!-- NAV CONTENT -->
     <div class="collapse navbar-collapse" id="navbarCollapse">
 
-        <!-- SEARCH BAR (selalu center di desktop, full di mobile) -->
+        <!-- SEARCH BAR -->
         <div class="navbar-nav ms-lg-auto align-items-center w-100 d-flex justify-content-center">
-            <form class="d-flex mx-lg-auto my-3 my-lg-0" onsubmit="return false;">
-                <input class="form-control rounded-pill border-0 shadow-sm"
-                id="searchInput" 
-                type="search"
-                placeholder="Cari..." 
-                style="background:#F5F6FA; width: 380px !important; border-color: #D5D5D5;">
-            </form>
+    <form class="d-flex mx-lg-auto my-3 my-lg-0 position-relative" autocomplete="off">
+
+        <!-- SEARCH INPUT -->
+        <input class="form-control rounded-pill border-0 shadow-sm"
+               id="liveSearch"
+               type="search"
+               placeholder="Cari..."
+               style="background:#F5F6FA; width: 380px!important; border-color:#D5D5D5;">
+
+        <!-- SEARCH RESULT DROPDOWN -->
+        <div id="searchResult"
+             class="position-absolute bg-white shadow-sm rounded p-2"
+             style="top:45px; width:380px; display:none; z-index:9999;">
         </div>
+
+    </form>
+    </div>
+
 
         <!-- MENU -->
         <div class="navbar-nav ms-lg-auto align-items-center">
             <a href="<?= $base_url ?>index.php" class="nav-item nav-link text-color fs-5 px-2 py-3 <?php echo ($activePage == 'beranda') ? 'active' : ''; ?>">Beranda</a>
-            <a href="<?= $base_url ?>pages/katalog.php" class="nav-item nav-link text-color fs-5 px-2 py-3 <?php echo ($activePage == 'Menu') ? 'active' : ''; ?>">Menu</a>
-            <a href="<?= $base_url ?>Pages/testimoni.php" class="nav-item nav-link text-color fs-5 px-2 py-3 <?php echo ($activePage == 'Ulasan') ? 'active' : ''; ?>">Ulasan</a>
+            <a href="<?= $base_url ?>User/Pages/katalog.php" class="nav-item nav-link text-color fs-5 px-2 py-3 <?php echo ($activePage == 'Menu') ? 'active' : ''; ?>">Menu</a>
+            <a href="<?= $base_url ?>User/Pages/testimoni.php" class="nav-item nav-link text-color fs-5 px-2 py-3 <?php echo ($activePage == 'Ulasan') ? 'active' : ''; ?>">Ulasan</a>
 
             <!-- CART ICON -->
-            <a href="<?= $base_url ?>Pages/keranjang.php" class="nav-item nav-link text-color fs-5 <?php echo ($activePage == 'keranjang') ? 'active' : ''; ?>">
+            <a href="<?= $base_url ?>User/Pages/keranjang.php" class="nav-item nav-link text-color fs-5 <?php echo ($activePage == 'keranjang') ? 'active' : ''; ?>">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="35" height="35" fill="currentColor">
                     <path d="M320 64C326.6 64 332.9 66.7 337.4 71.5L481.4 223.5L481.9 224L560 224C577.7 224 592 238.3 592 256C592 270.5 582.4 282.7 569.2 286.7L523.1 493.9C516.6 523.2 490.6 544 460.6 544L179.3 544C149.3 544 123.3 523.2 116.8 493.9L70.8 286.7C57.6 282.8 48 270.5 48 256C48 238.3 62.3 224 80 224L158.1 224L158.6 223.5L302.6 71.5C307.1 66.7 313.4 64 320 64zM320 122.9L224.2 224L415.8 224L320 122.9zM240 328C240 314.7 229.3 304 216 304C202.7 304 192 314.7 192 328L192 440C192 453.3 202.7 464 216 464C229.3 464 240 453.3 240 440L240 328zM320 304C306.7 304 296 314.7 296 328L296 440C296 453.3 306.7 464 320 464C333.3 464 344 453.3 344 440L344 328C344 314.7 333.3 304 320 304zM448 328C448 314.7 437.3 304 424 304C410.7 304 400 314.7 400 328L400 440C400 453.3 410.7 464 424 464C437.3 464 448 453.3 448 440L448 328z"></path>
                 </svg>
@@ -145,18 +160,35 @@
 
 
 
-    <script>
-document.getElementById("searchInput").addEventListener("keyup", function () {
-    let filter = this.value.toLowerCase();
-    let items = document.querySelectorAll(".product-item"); // card produk
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    items.forEach(function (item) {
-        let name = item.querySelector("h3, h4").innerText.toLowerCase();
+<script>
+$(document).ready(function () {
+    $("#liveSearch").keyup(function () {
+        let query = $(this).val();
 
-        if (name.includes(filter)) {
-            item.style.display = "";
+        if (query.length > 0) {
+            $.ajax({
+                url: "<?= $base_url ?>User/proses/search.php",
+                method: "GET",
+                data: { q: query },
+                success: function (data) {
+                    $("#searchResult").html(data);
+                    $("#searchResult").show();
+                }
+            });
         } else {
-            item.style.display = "none";
+            $("#searchResult").hide();
+        }
+    });
+
+    // Klik di luar → hide
+    $(document).click(function(e){
+        if (
+            !$(e.target).closest('#liveSearch').length &&
+            !$(e.target).closest('#searchResult').length
+        ) {
+            $("#searchResult").hide();
         }
     });
 });

@@ -123,7 +123,7 @@ $errors = $errors ?? [];
 
     <!-- BUTTON -->
     <div class="d-flex justify-content-between mt-4">
-        <a href="../index.php"
+        <a href="../../index.php"
                 class="btn px-4 py-2 rounded-pill border border-dark"
                 style="background:#fff; font-weight:600;"
                 >Batal

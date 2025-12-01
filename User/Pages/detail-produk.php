@@ -1,8 +1,23 @@
 <?php
 session_abort();
 include '../include/connect.php';
-$from = isset($_GET['from']) ? $_GET['from'] : '/index.php';
+$from = isset($_GET['from']) ? $_GET['from'] : '../../index.php';
 include "../proses/proses_detail-produk.php";
+
+$from = $_GET['from'] ?? 'menu';
+
+switch ($from) {
+    case 'search':
+        $backUrl = '../../index.php';
+        break;
+
+    case 'menu':
+        $backUrl = './katalog.php';
+        break;
+
+    default:
+        $backUrl = '../../index.php'; 
+}
 ?>
 
 <!DOCTYPE html>
@@ -65,7 +80,7 @@ include "../proses/proses_detail-produk.php";
             <div class="d-flex gap-3 mt-3">
 
                 <!-- KEMBALI -->
-                <a href="../<?= $from; ?>" 
+                <a href="<?= $backUrl ?>" 
                    class="btn border-2 rounded-pill px-4 py-2 fw-bold"
                    style="border-color:#504060; color:#504060;">
                     <i class="bi bi-arrow-left"></i> Kembali ke Menu

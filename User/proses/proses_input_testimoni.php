@@ -64,7 +64,7 @@ if (isset($_POST['submit'])){
 // 4. REDIRECT
 // ======================
 
-    header("location:../index.php?added=true");
+    header("location:../../index.php?added=true");
     exit;
 }
 

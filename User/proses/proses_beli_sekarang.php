@@ -101,20 +101,53 @@ mysqli_query($conn, "
 
 // Siapkan pesan WhatsApp
 $pesanWA = urlencode("
-Pesanan Baru!
-Kode: $kode
-Tanggal: $waktuWA
+╔═══════════════════════╗
+║  🔔 NOTIFIKASI PESANAN  🔔  ║
+╚═══════════════════════╝
 
-Produk: {$produk['nama_produk']}
-Qty: $qty
-Harga: Rp ".number_format($harga,0,',','.')."
-Total: Rp ".number_format($subtotal,0,',','.') ."
+🎉✨ YAY! PESANAN BARU MASUK! ✨🎉
 
-Nama: $nama
-WA: $wa
-Alamat: $alamat
-Catatan: $catatan
-Metode pembayaran: $pembayaran
+Hai Admin Gyaruss Cake! 👋🏻
+Ada pelanggan yang baru saja memesan kue dari kita! 
+Yuk segera diproses! 💪🏻
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎫 INFORMASI PESANAN
+
+📌 Kode Unik Pesanan: $kode
+
+📅 Tanggal & Waktu: $waktuWA
+
+🛍 DETAIL PRODUK PESANAN
+
+🍰 {$produk['nama_produk']}
+   ├─ 📦 Jumlah: $qty pcs
+   ├─ 💵 Harga Satuan: Rp ".number_format($harga,0,',','.')."
+   └─ 💰 Subtotal: Rp ".number_format($subtotal,0,',','.') ."
+
+💳 Metode Pembayaran: $pembayaran
+
+
+👤 DATA PELANGGAN
+
+📝 Nama Lengkap: $nama
+
+📱 Nomor WhatsApp: $wa
+
+📍 Alamat Pengiriman Lengkap: $alamat
+
+💬 CATATAN KHUSUS DARI PELANGGAN:
+
+   \"$catatan\"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✨ Semangat Admin! Mari kita berikan 
+pelayanan terbaik untuk pelanggan kita! 🎂
+
+#GyarussCake #OrderBaru
+#BakingWithLove #TeamGyaruss 
 ");
 
  // Nomor WA toko

@@ -7,8 +7,8 @@ ini_set('display_errors', 1);
 ini_set('log_errors', 1);
 ini_set('error_log', __DIR__ . '/error.log');
 
-include 'include/connect.php';
-include 'include/init_cart.php';
+include 'User/include/connect.php';
+include 'User/include/init_cart.php';
 
 $filter = isset($_GET['filter']) ? $_GET['filter'] : 'all';
 $query = "SELECT * FROM produk limit 8"; 
@@ -32,10 +32,10 @@ if (!$result) {
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Gyaruss" name="keywords">
     <meta content="Toko kue yang ada di kalsel" name="description">
-    <link href="Asset/images/logo gyarus.png" rel="icon">
+    <link href="User/Asset/images/logo gyarus.png" rel="icon">
 
-    <link rel="stylesheet" href="Asset/css/index.css">
-    <link rel="stylesheet" href="Asset/css/index2.css">
+    <link rel="stylesheet" href="User/Asset/css/index.css">
+    <link rel="stylesheet" href="User/Asset/css/index2.css">
 
 </head>
 
@@ -48,7 +48,7 @@ if (!$result) {
 
     <?php 
     $activePage = 'beranda';
-    include 'include/header.php'; 
+    include 'User/include/header.php'; 
     ?>
 
     <!-- Carousel Start -->
@@ -57,14 +57,14 @@ if (!$result) {
 
             <?php foreach ($bestSeller as $bs): ?>
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="Asset/images/Produk/<?= $bs['gambar']; ?>" alt="">
+                <img class="img-fluid" src="User/Asset/images/Produk/<?= $bs['gambar']; ?>" alt="">
                 <div class="owl-carousel-inner">
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-lg-8">
                                 <h1 class="display-1 text-color mb-4 animated slideInDown"><b>Rekomendasi</b></h1>
                                 <p class="text-color fs-5 mb-4 pb-3">- Rasakan Kelezatannya</p>
-                                <a href="" class="btn background rounded-pill py-3 px-5"><span class="text-white">Pesan Sekarang <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <a href="User/Pages/form_beli_sekarang.php?id_produk=<?= $bs['id_produk']; ?>" class="btn background rounded-pill py-3 px-5"><span class="text-white">Beli Sekarang <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                                 </svg></span></a>
                             </div>
@@ -95,9 +95,9 @@ if (!$result) {
                 <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
                         <div class="position-relative mt-auto">
-                            <img class="img-fluid" src="Asset/images/Produk/<?= $bs['gambar']; ?>" alt="<?= $bs['nama_produk']; ?>">
+                            <img class="img-fluid" src="User/Asset/images/Produk/<?= $bs['gambar']; ?>" alt="<?= $bs['nama_produk']; ?>">
                             <div class="product-overlay">
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle" href="Pages/detail-produk.php?id=<?= $bs['id_produk'] ?>&from=index.php" ><i class="fa fa-eye text-primary"></i></a>
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle" href="User/Pages/detail-produk.php?id=<?= $bs['id_produk'] ?>&from=index.php" ><i class="fa fa-eye text-primary"></i></a>
                             </div>
                         </div>
                     </div>
@@ -140,9 +140,9 @@ if (!$result) {
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
                          <div class="position-relative mt-auto">
-                            <img class="img-fluid product-image" src="Asset/images/Produk/<?= $p['gambar']; ?>" alt="<?= $p['nama_produk']; ?>">
+                            <img class="img-fluid product-image" src="User/Asset/images/Produk/<?= $p['gambar']; ?>" alt="<?= $p['nama_produk']; ?>">
                             <div class="product-overlay">
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle" href="Pages/detail-produk.php?id= <?= $p['id_produk'] ?>&from=/index.php ">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle" href="User/Pages/detail-produk.php?id= <?= $p['id_produk'] ?>&from=/index.php ">
                                     <i class="fa fa-eye text-primary"></i>
                                 </a>
                             </div>
@@ -153,7 +153,7 @@ if (!$result) {
                                 Rp.<?= number_format($p['harga'], 0, ',', '.'); ?>
                             </div> 
                             <div>
-                                <form action="proses/tambah_keranjang.php" method="POST" class="d-inline">
+                                <form action="User/proses/tambah_keranjang.php" method="POST" class="d-inline">
                                     <input type="hidden" name="id_produk" value="<?= $p['id_produk'] ?>">
                                 <button class="border-0 rounded-circle p-3 btn-cart-icon" style="background-color: #2B143B;">
                                     <svg xmlns="http://www.w3.org/2000/svg" 
@@ -167,7 +167,7 @@ if (!$result) {
                                     </svg>
                                 </button>
                                 </form>
-                                <a href="Pages/form_beli_sekarang.php?id_produk=<?= $p['id_produk']; ?>" class="btn background rounded-pill py-3 px-4"><span class="text-white">Beli Sekarang</span></a>
+                                <a href="User/Pages/form_beli_sekarang.php?id_produk=<?= $p['id_produk']; ?>" class="btn background rounded-pill py-3 px-4"><span class="text-white">Beli Sekarang</span></a>
                             </div>
                         </div>
                     </div>
@@ -322,7 +322,7 @@ if (!$result) {
             </div>
         </div>
             
-                <a href="Pages/input_testimoni.php" 
+                <a href="User/Pages/input_testimoni.php" 
                     class="btn rounded-pill py-2 px-3 text-decoration-none ms-auto ms-md-auto" 
                     style="background-color: #504060; cursor:pointer;">
                     <span class="fw-bold text-white fs-6" 
@@ -381,7 +381,7 @@ if (!$result) {
 </div>
 <!-- Testimonial End -->
 
-    <?php include 'include/footer.php'; ?>
+    <?php include 'User/include/footer.php'; ?>
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-lg-square rounded-circle back-to-top" style="background-color: #60405aff;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16" style="color: white;">
@@ -392,14 +392,14 @@ if (!$result) {
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="Asset/lib/wow/wow.min.js"></script>
-    <script src="Asset/lib/easing/easing.min.js"></script>
-    <script src="Asset/lib/waypoints/waypoints.min.js"></script>
-    <script src="Asset/lib/counterup/counterup.min.js"></script>
-    <script src="Asset/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="User/Asset/lib/wow/wow.min.js"></script>
+    <script src="User/Asset/lib/easing/easing.min.js"></script>
+    <script src="User/Asset/lib/waypoints/waypoints.min.js"></script>
+    <script src="User/Asset/lib/counterup/counterup.min.js"></script>
+    <script src="User/Asset/lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="Asset/js/main.js"></script>
+    <script src="User/Asset/js/main.js"></script>
 
 
     <!-- Modal Notifikasi -->

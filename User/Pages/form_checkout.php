@@ -1,4 +1,5 @@
 <?php
+session_start();
 include __DIR__ . "/../include/connect.php";
 
 // Ambil id_produk dari GET (normal) atau POST (ketika form dipanggil ulang lewat include)
@@ -174,7 +175,7 @@ $errors = $errors ?? [];
 
             <div class="d-flex justify-content-between align-items-center mt-5">
 
-                <a href="../index.php" class="btn btn-submit">
+                <a href="../../index.php" class="btn btn-submit">
                     Batal
                 </a>
                 
