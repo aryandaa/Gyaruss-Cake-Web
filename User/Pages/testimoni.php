@@ -1,7 +1,6 @@
 <?php 
 session_start();
 
-// Enable error reporting for debugging
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ini_set('log_errors', 1);
@@ -76,17 +75,17 @@ include '../include/connect.php';
     <div class="text-start ms-3 mb-5 wow fadeInUp" data-wow-delay="0.1s">
         <?php
         $filtertm = isset($_GET['filtertm']) ? $_GET['filtertm'] : 'all';
-        $query = "SELECT * FROM testimoni"; 
+        $query = "SELECT * FROM testimoni where aktif = 1"; 
         if ($filtertm === '5') {
-            $query = "SELECT * FROM testimoni WHERE rating = '5'";
+            $query = "SELECT * FROM testimoni WHERE rating = '5' and aktif = 1";
         } elseif ($filtertm === '4') {
-            $query = "SELECT * FROM testimoni WHERE rating = '4'";
+            $query = "SELECT * FROM testimoni WHERE rating = '4' and aktif = 1";
         } elseif ($filtertm === '3') {
-            $query = "SELECT * FROM testimoni WHERE rating = '3'";
+            $query = "SELECT * FROM testimoni WHERE rating = '3' and aktif = 1";
         } elseif ($filtertm === '2') {
-            $query = "SELECT * FROM testimoni WHERE rating = '2'";
+            $query = "SELECT * FROM testimoni WHERE rating = '2' and aktif = 1";
         } elseif ($filtertm === '1') {
-            $query = "SELECT * FROM testimoni WHERE rating = '1'";
+            $query = "SELECT * FROM testimoni WHERE rating = '1' and aktif = 1";
         }
         $resulttm = mysqli_query($conn, $query);
         if (!$resulttm) {

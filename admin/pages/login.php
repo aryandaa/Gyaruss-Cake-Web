@@ -45,13 +45,13 @@
               $_SESSION['token'] = bin2hex(random_bytes(32));
               ?>
 
-              <div class="form-group first mb-2 border border-2 rounded-pill" style="background-color: #D1C9D7; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" >
+              <div class="form-group first mb-2 border border-2 rounded-pill" style="background-color: #A890B7; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" >
                 <label for="username"></label>
                 <input type="text" class="form-control plc bg-transparent" id="username" name="username" placeholder="Masukan Username">
               </div>
 
               <div class="mb-3">
-              <div class="form-group mb-3 m last border border-2 rounded-pill" style="background-color: #D1C9D7; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+              <div class="form-group mb-3 m last border border-2 rounded-pill" style="background-color: #A890B7; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                 <label for="password"></label>
                 <input type="password" class="form-control plc bg-transparent" id="password" name="password" placeholder="Masukan Password">
               </div>

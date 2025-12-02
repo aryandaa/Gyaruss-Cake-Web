@@ -25,12 +25,14 @@ $ulasan = mysqli_query($conn, "
     SELECT nama, pesan, rating
     FROM testimoni 
     WHERE id_produk = '$id_produk'
+    and aktif = 1
 ");
 
 $qAvg = mysqli_query($conn, "
     SELECT AVG(rating) AS rata_rating 
     FROM testimoni 
     WHERE id_produk = '$id_produk'
+    and aktif = 1
 ");
 $AVGrating = mysqli_fetch_assoc($qAvg);
 $rataRatingprd = $AVGrating['rata_rating'] ?? 0;
@@ -41,6 +43,7 @@ $q = mysqli_query($conn, "
     SELECT rating, COUNT(*) AS total
     FROM testimoni
     WHERE id_produk = '$id_produk'
+    and aktif = 1
     GROUP BY rating
 ");
 
@@ -56,7 +59,7 @@ for ($i = 1; $i <= 5; $i++) {
 }
 
 //menampilkan jumlah Testimoni
-$sql = "SELECT COUNT(*) AS total_reviews FROM testimoni WHERE id_produk = '$id_produk';";
+$sql = "SELECT COUNT(*) AS total_reviews FROM testimoni WHERE id_produk = '$id_produk' and aktif = 1;";
 $totalReviewsResult = mysqli_query($conn, $sql);
 $totalReviewsRow = mysqli_fetch_assoc($totalReviewsResult);
 $totalReviews = $totalReviewsRow['total_reviews'];

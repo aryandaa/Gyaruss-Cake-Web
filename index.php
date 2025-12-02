@@ -1,7 +1,6 @@
 <?php 
 session_start();
-
-// Enable error reporting for debugging
+// agar pesan error kelihatan waktu di server
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ini_set('log_errors', 1);
@@ -9,19 +8,6 @@ ini_set('error_log', __DIR__ . '/error.log');
 
 include 'User/include/connect.php';
 include 'User/include/init_cart.php';
-
-$filter = isset($_GET['filter']) ? $_GET['filter'] : 'all';
-$query = "SELECT * FROM produk limit 8"; 
-if ($filter === 'Catering') {
-    $query = "SELECT * FROM produk WHERE kategori = 'Catering' Limit 8";
-} elseif ($filter === 'Cake') {
-    $query = "SELECT * FROM produk WHERE kategori = 'Cake' Limit 8";
-}
-$result = mysqli_query($conn, $query);
-if (!$result) {
-    die("Query error: " . mysqli_error($conn));
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -276,26 +262,6 @@ if (!$result) {
             </div>
         </div> 
     <div class="text-start ms-3 mb-5 wow fadeInUp" data-wow-delay="0.1s">
-        <?php
-        $filtertm = isset($_GET['filtertm']) ? $_GET['filtertm'] : 'all';
-        $query = "SELECT * FROM testimoni limit 6"; 
-        if ($filtertm === '5') {
-            $query = "SELECT * FROM testimoni WHERE rating = '5' Limit 8";
-        } elseif ($filtertm === '4') {
-            $query = "SELECT * FROM testimoni WHERE rating = '4' Limit 8";
-        } elseif ($filtertm === '3') {
-            $query = "SELECT * FROM testimoni WHERE rating = '3' Limit 8";
-        } elseif ($filtertm === '2') {
-            $query = "SELECT * FROM testimoni WHERE rating = '2' Limit 8";
-        } elseif ($filtertm === '1') {
-            $query = "SELECT * FROM testimoni WHERE rating = '1' Limit 8";
-        }
-        $resulttm = mysqli_query($conn, $query);
-        if (!$resulttm) {
-            die("Query error: " . mysqli_error($conn));
-        }
-
-        ?>
 
 
 <form method="GET" action="index.php">
