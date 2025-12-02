@@ -18,6 +18,49 @@ switch ($from) {
     default:
         $backUrl = '../../index.php'; 
 }
+
+$id_produk = $data['id_produk'];
+
+$ulasan = mysqli_query($conn, "
+    SELECT nama, pesan, rating
+    FROM testimoni 
+    WHERE id_produk = '$id_produk'
+");
+
+$qAvg = mysqli_query($conn, "
+    SELECT AVG(rating) AS rata_rating 
+    FROM testimoni 
+    WHERE id_produk = '$id_produk'
+");
+$AVGrating = mysqli_fetch_assoc($qAvg);
+$rataRatingprd = $AVGrating['rata_rating'] ?? 0;
+
+// Hitung jumlah rating per bintang (1–5) khusus produk ini
+$ratingCount = [];
+$q = mysqli_query($conn, "
+    SELECT rating, COUNT(*) AS total
+    FROM testimoni
+    WHERE id_produk = '$id_produk'
+    GROUP BY rating
+");
+
+while ($row = mysqli_fetch_assoc($q)) {
+    $ratingCount[$row['rating']] = $row['total'];
+}
+
+// Pastikan semua level rating (1–5) ada nilainya
+for ($i = 1; $i <= 5; $i++) {
+    if (!isset($ratingCount[$i])) {
+        $ratingCount[$i] = 0;
+    }
+}
+
+//menampilkan jumlah Testimoni
+$sql = "SELECT COUNT(*) AS total_reviews FROM testimoni WHERE id_produk = '$id_produk';";
+$totalReviewsResult = mysqli_query($conn, $sql);
+$totalReviewsRow = mysqli_fetch_assoc($totalReviewsResult);
+$totalReviews = $totalReviewsRow['total_reviews'];
+
 ?>
 
 <!DOCTYPE html>
@@ -99,6 +142,94 @@ switch ($from) {
     </div>
 
 </div>
+
+<!-- ULASAN PRODUK -->
+<div class="container my-5">
+
+    <h3 class="fw-bold mb-4" style="color:#2B143B;">Ulasan Pelanggan</h3>
+
+    <?php if (mysqli_num_rows($ulasan) == 0): ?>
+        
+        <p class="text-muted">Belum ada ulasan untuk produk ini.</p>
+
+    <?php else: ?>
+
+            <div class="d-flex align-items-center gap-4 mt-2">
+
+                <h2 class="fw-bold d-flex align-items-center gap-2 m-0" 
+                    style="font-family: 'Rufina', serif; color:#2B143B;">
+                    <?php
+                    echo number_format($rataRatingprd, 1);
+                    ?>
+                </h2>
+
+                <div class="text-center">
+                <div class="d-flex align-items-center mb-1" style="font-size: 32px; color: #FFC107;">
+                    <?php
+                    $rating = $rataRatingprd;    
+                    $fullStars = floor($rating);
+                    $halfStar = ($rating - $fullStars >= 0.25 && $rating - $fullStars < 0.75) ? 1 : 0;
+                    $emptyStars = 5 - $fullStars - $halfStar;
+                    for ($i = 0; $i < $fullStars; $i++) {
+                        echo '<i class="bi bi-star-fill"></i>';
+                    }
+                    if ($halfStar) {
+                        echo '<i class="bi bi-star-half"></i>';
+                    }
+                    for ($i = 0; $i < $emptyStars; $i++) {
+                        echo '<i class="bi bi-star"></i>';
+                    }
+                    ?>
+                </div>
+                <p class="m-0" style="font-family:'Montserrat', sans-serif; color:#504060; font-size:14px;">
+                    Rata-rata hasil dari <?php echo number_format($totalReviews);?> ulasan
+                </p>
+                </div>
+            </div>
+
+        <?php while ($u = mysqli_fetch_assoc($ulasan)): ?>
+
+            <?php 
+                // generate star
+                $rating = $u['rating'];
+                $fullStars = floor($rating);
+                $halfStar = ($rating - $fullStars >= 0.25 && $rating - $fullStars < 0.75) ? 1 : 0;
+                $emptyStars = 5 - $fullStars - $halfStar;
+            ?>
+
+            <div class="p-3 mb-4 rounded shadow-sm"
+                 style="background:#F8F4F8; border-left:6px solid #504060;">
+
+                <!-- Nama + Bintang -->
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <strong style="color:#2B143B;">
+                        <?= htmlspecialchars($u['nama']); ?>
+                    </strong>
+
+                    <!-- BINTANG -->
+                    <div class="d-flex align-items-center" style="font-size:20px; color:#FFC107;">
+                        <?php
+                            for ($i = 0; $i < $fullStars; $i++) echo '<i class="bi bi-star-fill"></i>';
+                            if ($halfStar) echo '<i class="bi bi-star-half"></i>';
+                            for ($i = 0; $i < $emptyStars; $i++) echo '<i class="bi bi-star"></i>';
+                        ?>
+                    </div>
+                </div>
+
+                <!-- Isi Ulasan -->
+                <p class="m-0" style="color:#504060; line-height:1.6;">
+                    “<?= nl2br(htmlspecialchars($u['pesan'])); ?>”
+                </p>
+
+            </div>
+
+        <?php endwhile; ?>
+
+    <?php endif; ?>
+
+</div>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

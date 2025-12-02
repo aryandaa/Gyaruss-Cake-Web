@@ -60,6 +60,50 @@ $katering = mysqli_query($conn, $query);
         .purple-btn:hover { background-color:#3a2047; }
         .purple-bg { background-color:#4B2A5A; color:white; }
         .btn-circle { width:35px; height:35px; border-radius:50%; }
+
+        .product-image {
+            width: 100%;
+            height: 260px;
+            border-radius: 15px 15px 0 0;
+            display: block;
+        }
+
+        .product-item {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .product-body {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .product-actions {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px; /* jarak icon & tombol */
+        }
+
+        .btn-cart-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+        }
+
+        .btn-beli {
+            padding: 10px 26px;       /* biar langsing */
+            border-radius: 50px;
+            background-color: #2B143B;
+            color: white;
+            font-weight: 600;
+            display: inline-block;
+            white-space: nowrap;      /* biar gak jadi 2 baris */
+        }
+
     </style>
 
 </head>
@@ -178,7 +222,15 @@ $katering = mysqli_query($conn, $query);
                     <strong>Rp <?= number_format($total_harga, 0, ',', '.') ?></strong>
                 </div>
 
-                <div class="d-flex justify-content-center">
+                <form action="form_checkout.php" method="POST">
+                    <?php
+                    mysqli_data_seek($data, 0);
+                    while ($c = mysqli_fetch_assoc($data)): ?>
+                        <input type="hidden" name="produk_id[]" value="<?= $c['id_cart']; ?>">
+                        <input type="hidden" name="qty[]" value="<?= $c['qty']; ?>">
+                    <?php endwhile; ?>
+                    
+                <div class="d-flex justify-content-center"> 
                     <button class="btn py-2 px-2 shadow rounded-pill" 
                             style="
                             background-color: #504060;
@@ -186,6 +238,7 @@ $katering = mysqli_query($conn, $query);
                         <span style="font-family: 'Montserrat', sans-serif; font-weight:700; color: white;">Lanjutkan Pesanan</span>
                     </button>
                 </div>
+                </form>
 
             </div>
             <?php endif; ?>
@@ -209,7 +262,7 @@ $katering = mysqli_query($conn, $query);
             <?php foreach ($kue as $k): ?>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
-                         <div class="position-relative mt-auto">
+                         <div class="position-relative">
                             <img class="img-fluid product-image" src="../Asset/images/Produk/<?= $k['gambar']; ?>" alt="<?= $k['nama_produk']; ?>">
                             <div class="product-overlay">
                                 <a class="btn btn-lg-square btn-outline-light rounded-circle" href="detail-produk.php?id=<?= $k['id_produk'] ?>&from=/Pages/keranjang.php ">
@@ -217,12 +270,12 @@ $katering = mysqli_query($conn, $query);
                                 </a>
                             </div>
                         </div>
-                        <div class="text-center p-4">
+                        <div class="text-center p-4 product-body">
                             <h3 class="mb-2"><?= $k['nama_produk']; ?></h3>
                             <div class="pt-1 px-3 mb-3">
                                 Rp.<?= number_format($k['harga'], 0, ',', '.'); ?>
                             </div> 
-                            <div>
+                            <div class="product-actions">
                                 <form action="../proses/tambah_keranjang.php" method="POST" class="d-inline">
                                     <input type="hidden" name="id_produk" value="<?= $k['id_produk'] ?>">
                                 <button class="border-0 rounded-circle p-3 btn-cart-icon" style="background-color: #2B143B;">
@@ -263,7 +316,7 @@ $katering = mysqli_query($conn, $query);
             <?php foreach ($katering as $kr): ?>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
-                         <div class="position-relative mt-auto">
+                         <div class="position-relative">
                             <img class="img-fluid product-image" src="../Asset/images/Produk/<?= $kr['gambar']; ?>" alt="<?= $kr['nama_produk']; ?>">
                             <div class="product-overlay">
                                 <a class="btn btn-lg-square btn-outline-light rounded-circle" href="detail-produk.php?id=<?= $kr['id_produk'] ?>&from=/Pages/keranjang.php">
@@ -271,12 +324,12 @@ $katering = mysqli_query($conn, $query);
                                 </a>
                             </div>
                         </div>
-                        <div class="text-center p-4">
+                        <div class="text-center p-4 product-body">
                             <h3 class="mb-2"><?= $kr['nama_produk']; ?></h3>
                             <div class="pt-1 px-3 mb-3">
                                 Rp.<?= number_format($kr['harga'], 0, ',', '.'); ?>
                             </div> 
-                            <div>
+                            <div class="product-actions">
                                 <form action="../proses/tambah_keranjang.php" method="POST" class="d-inline">
                                     <input type="hidden" name="id_produk" value="<?= $kr['id_produk'] ?>">
                                 <button class="border-0 rounded-circle p-3 btn-cart-icon" style="background-color: #2B143B;">

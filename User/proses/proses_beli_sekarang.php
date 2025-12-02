@@ -100,8 +100,7 @@ mysqli_query($conn, "
 ");
 
 // Siapkan pesan WhatsApp
-$pesanWA = urlencode("
-╔═══════════════════════╗
+$pesan  = "╔═══════════════════════╗
 ║  🔔 NOTIFIKASI PESANAN  🔔  ║
 ╚═══════════════════════╝
 
@@ -124,36 +123,35 @@ Yuk segera diproses! 💪🏻
 🍰 {$produk['nama_produk']}
    ├─ 📦 Jumlah: $qty pcs
    ├─ 💵 Harga Satuan: Rp ".number_format($harga,0,',','.')."
-   └─ 💰 Subtotal: Rp ".number_format($subtotal,0,',','.') ."
+   └─ 💰 Subtotal: Rp ".number_format($subtotal,0,',','.')."
 
 💳 Metode Pembayaran: $pembayaran
-
 
 👤 DATA PELANGGAN
 
 📝 Nama Lengkap: $nama
-
 📱 Nomor WhatsApp: $wa
+📍 Alamat Pengiriman: $alamat
 
-📍 Alamat Pengiriman Lengkap: $alamat
-
-💬 CATATAN KHUSUS DARI PELANGGAN:
-
-   \"$catatan\"
+💬 Catatan Pelanggan:
+\"$catatan\"
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-✨ Semangat Admin! Mari kita berikan 
-pelayanan terbaik untuk pelanggan kita! 🎂
+✨ Semangat Admin! Mari kita berikan pelayanan terbaik 
+untuk pelanggan kita! 🎂
 
 #GyarussCake #OrderBaru
-#BakingWithLove #TeamGyaruss 
-");
+#BakingWithLove #TeamGyaruss
+";
 
- // Nomor WA toko
+// Encode aman
+$pesanWA = urlencode($pesan);
+
+// Nomor WA Toko
 $waToko = "6289692778102";
 
-// Redirect WA + success page
+// Redirect
 header("Location: https://wa.me/$waToko?text=$pesanWA");
 exit();
 ?>

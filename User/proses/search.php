@@ -21,11 +21,12 @@ if (mysqli_num_rows($result) == 0) {
 
 while ($row = mysqli_fetch_assoc($result)) {
     $url = $base_url . "User/Pages/detail-produk.php?id=" . $row['id_produk'] . "&from=search";
+    $urlfoto = $base_url . "User/Asset/images/Produk/{$row['gambar']}";
     echo "
     <a href='$url'
        class='d-flex align-items-center p-2 text-decoration-none text-dark search-item'>
 
-        <img src='../Asset/images/Produk/{$row['gambar']}' 
+        <img src='$urlfoto' 
             style='width:40px; height:40px; object-fit:cover; border-radius:5px;'>
 
         <div class='ms-2'>

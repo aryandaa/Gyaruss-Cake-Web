@@ -36,6 +36,51 @@ if (!$result) {
 
     <link rel="stylesheet" href="User/Asset/css/index.css">
     <link rel="stylesheet" href="User/Asset/css/index2.css">
+    <style>
+        .product-image {
+            width: 100%;
+            height: 260px;
+            border-radius: 15px 15px 0 0;
+            display: block;
+        }
+
+        .product-item {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .product-body {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .product-actions {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px; /* jarak icon & tombol */
+        }
+
+        .btn-cart-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+        }
+
+        .btn-beli {
+            padding: 10px 26px;       /* biar langsing */
+            border-radius: 50px;
+            background-color: #2B143B;
+            color: white;
+            font-weight: 600;
+            display: inline-block;
+            white-space: nowrap;      /* biar gak jadi 2 baris */
+        }
+
+    </style>
 
 </head>
 
@@ -139,20 +184,26 @@ if (!$result) {
             <?php foreach ($result as $p): ?>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
-                         <div class="position-relative mt-auto">
-                            <img class="img-fluid product-image" src="User/Asset/images/Produk/<?= $p['gambar']; ?>" alt="<?= $p['nama_produk']; ?>">
+
+                         <div class="position-relative">
+                            <img class="img-fluid product-image" 
+                                src="User/Asset/images/Produk/<?= $p['gambar']; ?>" 
+                                alt="<?= $p['nama_produk']; ?>">
                             <div class="product-overlay">
-                                <a class="btn btn-lg-square btn-outline-light rounded-circle" href="User/Pages/detail-produk.php?id= <?= $p['id_produk'] ?>&from=/index.php ">
+                                <a class="btn btn-lg-square btn-outline-light rounded-circle"
+                                href="User/Pages/detail-produk.php?id=<?= $p['id_produk'] ?>&from=/index.php ">
                                     <i class="fa fa-eye text-primary"></i>
                                 </a>
                             </div>
                         </div>
-                        <div class="text-center p-4">
+
+                        <div class="text-center p-4 product-body">
                             <h3 class="mb-2"><?= $p['nama_produk']; ?></h3>
                             <div class="pt-1 px-3 mb-3">
                                 Rp.<?= number_format($p['harga'], 0, ',', '.'); ?>
                             </div> 
-                            <div>
+
+                            <div class="product-actions">
                                 <form action="User/proses/tambah_keranjang.php" method="POST" class="d-inline">
                                     <input type="hidden" name="id_produk" value="<?= $p['id_produk'] ?>">
                                 <button class="border-0 rounded-circle p-3 btn-cart-icon" style="background-color: #2B143B;">
@@ -167,9 +218,11 @@ if (!$result) {
                                     </svg>
                                 </button>
                                 </form>
-                                <a href="User/Pages/form_beli_sekarang.php?id_produk=<?= $p['id_produk']; ?>" class="btn background rounded-pill py-3 px-4"><span class="text-white">Beli Sekarang</span></a>
+                                <a href="User/Pages/form_beli_sekarang.php?id_produk=<?= $p['id_produk']; ?>" class="btn background rounded-pill py-3 px-4 btn-beli"><span class="text-white">Beli Sekarang</span></a>
                             </div>
+
                         </div>
+
                     </div>
                 </div>
             <?php endforeach; ?>

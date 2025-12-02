@@ -116,7 +116,7 @@ h6,
     .navbar .navbar-nav {
         margin-top: 10px !important;
         border-top: none !important;
-        background: #e3f2fd !important;
+        background: #ffffff !important;
     }
 
     /* Warna teks */
@@ -132,7 +132,7 @@ h6,
     .navbar-nav.bg-dark,
     .bg-dark,
     .navbar-collapse.show {
-        background-color: #e3f2fd !important;
+        background-color: #ffffff !important;
         color: #2e1a47 !important;
     }
 }
