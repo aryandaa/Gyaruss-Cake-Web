@@ -117,8 +117,8 @@ $totalReviews = $totalReviewsRow['total_reviews'];
             <h4 class="fw-bold mt-4 mb-2" style="color:#2B143B;">Harga</h4>
 
             <!-- HARGA -->
-            <div class="px-4 py-2 rounded-pill d-inline-block mb-4"
-                 style="background-color:#E9D9DE; color:#504060; font-weight:700; font-size:18px;">
+            <div class="px-1 py-2 d-inline-block mb-4"
+                 style="color:#504060; font-weight:700; font-size:18px;">
                 Rp <?= number_format($data['harga'], 0, ',', '.'); ?>
             </div>
 
@@ -149,7 +149,7 @@ $totalReviews = $totalReviewsRow['total_reviews'];
 <!-- ULASAN PRODUK -->
 <div class="container my-5">
 
-    <h3 class="fw-bold mb-4" style="color:#2B143B;">Ulasan Pelanggan</h3>
+    <h3 class="fw-bold mb-4" style="color:#2B143B;">Ulasan Produk</h3>
 
     <?php if (mysqli_num_rows($ulasan) == 0): ?>
         
