@@ -174,26 +174,30 @@ $errors = $errors ?? [];
                     <input type="text" name="no_wa" class="form-control input-custom" placeholder="08xxxx">
                 </div>
 
+
+                <!-- Alamat -->
+                <div class="col-md-6">
+                    <label class="fw-semibold mb-1">Alamat Lengkap</label>
+                    <textarea name="alamat" class="form-control input-custom" rows="2"
+                              placeholder="Masukkan alamat lengkap"></textarea>
+                </div>
+
+
                 <!-- Estimasi selesai -->
                 <div class="col-md-6">
                     <label class="fw-semibold mb-1">Estimasi Selesai</label>
                     <input type="text" name="no_wa" class="form-control input-custom" placeholder="2-5 Hari" readonly>
                 </div>
 
-                <!-- WhatsApp -->
+                <!-- Total Harga -->
                 <div class="col-md-6">
-                    <input type="hidden" name="no_wa" class="form-control input-custom" placeholder="08xxxx">
+                    <label class="fw-semibold mb-1">Total Harga</label>
+                    <input type="text" class="form-control input-custom fw-bold" 
+                        value="Rp <?= number_format($total_semua, 0, ',', '.') ?>" readonly>
                 </div>
-
-                <!-- Alamat -->
-                <div class="col-md-12">
-                    <label class="fw-semibold mb-1">Alamat Lengkap</label>
-                    <textarea name="alamat" class="form-control input-custom" rows="2"
-                              placeholder="Masukkan alamat lengkap"></textarea>
-                </div>
-
+                
                 <!-- Catatan -->
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <label class="fw-semibold mb-1">Catatan (opsional)</label>
                     <textarea name="catatan" class="form-control input-custom" rows="2"
                               placeholder="Tambahkan catatan..."></textarea>

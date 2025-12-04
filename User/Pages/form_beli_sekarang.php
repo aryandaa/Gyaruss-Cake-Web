@@ -97,9 +97,9 @@ $errors = $errors ?? [];
 
         <form action="../proses/proses_beli_sekarang.php" method="POST">
 
-            <div class="row g-4">
+            <input type="hidden" name="id_produk" value="<?= $produk['id_produk'] ?>">
 
-                <input type="hidden" name="id_produk" value="<?= $produk['id_produk'] ?>">
+            <div class="row g-4">
 
                 <!-- Nama -->
                 <div class="col-md-6">

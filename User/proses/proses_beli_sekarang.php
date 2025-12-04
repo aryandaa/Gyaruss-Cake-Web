@@ -101,45 +101,44 @@ mysqli_query($conn, "
 
 // Siapkan pesan WhatsApp
 $pesan  = "╔═══════════════════════╗
-║  🔔 NOTIFIKASI PESANAN  🔔  ║
+║   NOTIFIKASI PESANAN    ║
 ╚═══════════════════════╝
 
-🎉✨ YAY! PESANAN BARU MASUK! ✨🎉
-
-Hai Admin Gyaruss Cake! 👋🏻
+ YAY! PESANAN BARU MASUK! 
+Hai Admin Gyaruss Cake! 
 Ada pelanggan yang baru saja memesan kue dari kita! 
-Yuk segera diproses! 💪🏻
+Yuk segera diproses! 
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-🎫 INFORMASI PESANAN
+ INFORMASI PESANAN
 
-📌 Kode Unik Pesanan: $kode
+ Kode Unik Pesanan: $kode
 
-📅 Tanggal & Waktu: $waktuWA
+ Tanggal & Waktu: $waktuWA
 
-🛍 DETAIL PRODUK PESANAN
+ DETAIL PRODUK PESANAN
 
-🍰 {$produk['nama_produk']}
-   ├─ 📦 Jumlah: $qty pcs
-   ├─ 💵 Harga Satuan: Rp ".number_format($harga,0,',','.')."
-   └─ 💰 Subtotal: Rp ".number_format($subtotal,0,',','.')."
+ {$produk['nama_produk']}
+   ├─  Jumlah: $qty pcs
+   ├─  Harga Satuan: Rp ".number_format($harga,0,',','.')."
+   └─  Subtotal: Rp ".number_format($subtotal,0,',','.')."
 
-💳 Metode Pembayaran: $pembayaran
+ Metode Pembayaran: $pembayaran
 
-👤 DATA PELANGGAN
+ DATA PELANGGAN
 
-📝 Nama Lengkap: $nama
-📱 Nomor WhatsApp: $wa
-📍 Alamat Pengiriman: $alamat
+ Nama Lengkap: $nama
+ Nomor WhatsApp: $wa
+ Alamat Pengiriman: $alamat
 
-💬 Catatan Pelanggan:
+ Catatan Pelanggan:
 \"$catatan\"
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-✨ Semangat Admin! Mari kita berikan pelayanan terbaik 
-untuk pelanggan kita! 🎂
+ Semangat Admin! Mari kita berikan pelayanan terbaik 
+untuk pelanggan kita! 
 
 #GyarussCake #OrderBaru
 #BakingWithLove #TeamGyaruss

@@ -61,15 +61,15 @@ foreach ($items as $i) {
 }
 
 $pesan = 
-"╔═══════════════════════╗%0A".
-"║ PESANAN BARU MASUK  ║%0A".
-"╚═══════════════════════╝%0A%0A".
+"╔═══════════════════════╗".
+"║ PESANAN BARU MASUK    ║".
+"╚═══════════════════════╝".
 
-"🎉 Ada pesanan baru nih! Yuk cek detailnya 👇%0A%0A".
+" Ada pesanan baru nih! Yuk cek detailnya ".
 
-"━━━━━━━━━━━━━━━━━━━━━━━━━━%0A".
-"🛍️ DETAIL PRODUK PESANAN%0A".
-"━━━━━━━━━━━━━━━━━━━━━━━━━━%0A%0A";
+"━━━━━━━━━━━━━━━━━━━━━━━━━━".
+" DETAIL PRODUK PESANAN".
+"━━━━━━━━━━━━━━━━━━━━━━━━━━";
 
 // Loop produk cart
 foreach ($items as $i) {
@@ -79,31 +79,31 @@ foreach ($items as $i) {
     $hargaSat   = rawurlencode(number_format($i['harga'],0,',','.'));
 
     $pesan .= 
-    "🍰 $namaProduk%0A".
-    "   ├─ 📦 Jumlah: {$qty} pcs%0A".
-    "   ├─ 💵 Harga Satuan: Rp {$hargaSat}%0A".
-    "   └─ 💰 Subtotal: Rp {$sub}%0A%0A";
+    " $namaProduk".
+    "   ├─  Jumlah: {$qty} pcs".
+    "   ├─  Harga Satuan: Rp {$hargaSat}".
+    "   └─  Subtotal: Rp {$sub}";
 }
 
 $pesan .=
-"━━━━━━━━━━━━━━━━━━━━━━━━━━%0A".
-"💰 TOTAL PEMBAYARAN%0A".
-"━━━━━━━━━━━━━━━━━━━━━━━━━━%0A".
-"Total: Rp " . rawurlencode(number_format($total_harga,0,',','.')) . "%0A%0A".
+"━━━━━━━━━━━━━━━━━━━━━━━━━━".
+" TOTAL PEMBAYARAN".
+"━━━━━━━━━━━━━━━━━━━━━━━━━━".
+"Total: Rp " . rawurlencode(number_format($total_harga,0,',','.')) .
 
-"━━━━━━━━━━━━━━━━━━━━━━━━━━%0A".
-"👤 DATA PELANGGAN%0A".
-"━━━━━━━━━━━━━━━━━━━━━━━━━━%0A".
-"📝 Nama: " . rawurlencode($nama) . "%0A".
-"📱 WhatsApp: " . rawurlencode($wa) . "%0A".
-"📍 Alamat: " . rawurlencode($alamat) . "%0A".
-"💳 Metode Pembayaran: " . rawurlencode($metode) . "%0A%0A".
+"━━━━━━━━━━━━━━━━━━━━━━━━━━".
+" DATA PELANGGAN".
+"━━━━━━━━━━━━━━━━━━━━━━━━━━".
+" Nama: " . rawurlencode($nama) .
+" WhatsApp: " . rawurlencode($wa) . 
+" Alamat: " . rawurlencode($alamat) .
+" Metode Pembayaran: " . rawurlencode($metode) .
 
-"💬 Catatan:%0A".
-rawurlencode($catatan) . "%0A%0A".
+" Catatan:%0A".
+rawurlencode($catatan) . 
 
-"━━━━━━━━━━━━━━━━━━━━━━━━━━%0A".
-"✨ Admin, yuk segera diproses!%0A".
+"━━━━━━━━━━━━━━━━━━━━━━━━━━".
+" yuk segera diproses!".
 "#GyarussCake";
 
 // Nomor WA

@@ -114,12 +114,19 @@ $totalReviews = $totalReviewsRow['total_reviews'];
                 <?= nl2br($data['deskripsi']); ?>
             </p>
 
-            <h4 class="fw-bold mt-4 mb-2" style="color:#2B143B;">Harga</h4>
+            <h4 class="fw-bold mt-4" style="color:#2B143B;">Harga</h4>
 
             <!-- HARGA -->
             <div class="px-1 py-2 d-inline-block mb-4"
                  style="color:#504060; font-weight:700; font-size:18px;">
-                Rp <?= number_format($data['harga'], 0, ',', '.'); ?>
+                - Rp <?= number_format($data['harga'], 0, ',', '.'); ?>
+            </div>
+
+            <h4 class="fw-bold mt-2 mb-2" style="color:#2B143B;">Estimasi Pesanan</h4>
+
+            <div class="px-1 py-2 d-inline-block mb-4"
+                 style="color:#504060; font-weight:700; font-size:18px;">
+                - "2 - 4 Hari"
             </div>
 
             <!-- BUTTONS -->

@@ -39,7 +39,7 @@
               <h3>Login Admin</h3>
               </div>
 
-            <form action="login.php" method="post">
+            <form action="../proses/cek_login.php" method="post">
               <?php
               session_start();
               $_SESSION['token'] = bin2hex(random_bytes(32));
@@ -47,7 +47,7 @@
 
               <div class="form-group first mb-2 border border-2 rounded-pill" style="background-color: #A890B7; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" >
                 <label for="username"></label>
-                <input type="text" class="form-control plc bg-transparent" id="username" name="username" placeholder="Masukan Username">
+                <input type="text" class="form-control plc bg-transparent" id="user" name="user" placeholder="Masukan Username">
               </div>
 
               <div class="mb-3">
@@ -62,7 +62,7 @@
               </div>
 
               <div class="text-center md-4">
-              <input type="submit" value="Login" class="btn btn-block rounded-pill text-white" style="background-color: #2B143B;">
+              <input type="submit" name="submit" value="Login" class="btn btn-block rounded-pill text-white" style="background-color: #2B143B;">
               </div>
             </form>
             </div>
