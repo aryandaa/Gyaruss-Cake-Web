@@ -1,5 +1,12 @@
 <?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('log_errors', 1);
+ini_set('error_log', __DIR__ . '/error.log');
+
 include 'include/connect.php';
+include __DIR__ . "/include/config.php";     
 session_start();
 if(isset($_SESSION['nama'])){
 ?>
@@ -21,20 +28,14 @@ if(isset($_SESSION['nama'])){
 
     <link href="Asset/vendor/bootstrap-5.3.8.min.css" rel="stylesheet" media="all">
 
-    <link href="Asset/css/aos.css" rel="stylesheet" media="all">
+    <link href="Asset/css/aos.css"  rel="stylesheet" media="all">
     <link href="Asset/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
     <link href="Asset/css/swiper-bundle-12.0.3.min.css" rel="stylesheet" media="all">
     <link href="Asset/vendor/perfect-scrollbar/perfect-scrollbar-1.5.6.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
     <link href="Asset/css/theme.css" rel="stylesheet" media="all">
-
-    <style>
-    .text-template {
-        color: white;
-        font-family: rufina, serif;
-    }
-    </style>
-
+    <link href="Asset/css/style2.css" rel="stylesheet" media="all">
 </head>
 
 <body>
@@ -157,107 +158,49 @@ if(isset($_SESSION['nama'])){
         <!-- END HEADER MOBILE-->
 
         <!-- MENU SIDEBAR-->
-        <aside class="menu-sidebar d-none d-lg-block">
-            <div class="logo">
-                <a href="#">
-                    <img src="Asset/images/icon/logo.png" alt="Cool Admin" />
-                </a>
+        <aside class="menu-sidebar d-none d-lg-block ">
+            <!-- logo -->   
+            <div class="logo d-flex justify-content-center mb-4 mt-3" style="background-color: white;">
+                <img src="<?= $base_url ?>User/Asset/images/logo gyarus.png" 
+                     alt="Gyaruss Logo"
+                     class="img-fluid"
+                     style="max-width: 160px;">
             </div>
-            <div class="menu-sidebar__content js-scrollbar1">
+
+            <div class="menu-sidebar__content js-scrollbar1 p-0">
                 <nav class="navbar-sidebar">
-                    <ul class="list-unstyled navbar__list">
-                        <li class="active has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                <li>
-                                    <a href="index.html">Dashboard 1</a>
-                                </li>
-                                <li>
-                                    <a href="index2.html">Dashboard 2</a>
-                                </li>
-                                <li>
-                                    <a href="index3.html">Dashboard 3</a>
-                                </li>
-                                <li>
-                                    <a href="index4.html">Dashboard 4</a>
-                                </li>
-                            </ul>
+                    <ul class="list-unstyled navbar__list m-0 p-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link active text-white d-flex align-items-center w-100 px-3"
+                                style="background-color: #504060;"
+                                href="#">
+                                <i class="fas fa-tachometer-alt me-3"></i>Dashboard
+                            </a>
                         </li>
-                        <li>
-                            <a href="chart.html">
-                                <i class="fas fa-chart-bar"></i>Charts</a>
+
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center justify-content-start" href="?p=produk">
+                                <i class="bi bi-grid-fill me-3"></i>
+                                Produk
+                            </a>
                         </li>
-                        <li>
-                            <a href="table.html">
-                                <i class="fas fa-table"></i>Tables</a>
+
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center justify-content-start" href="?p=ulasan">
+                                <i class="fas fa-pen me-3"></i>
+                                Ulasan
+                            </a>
                         </li>
-                        <li>
-                            <a href="form.html">
-                                <i class="far fa-check-square"></i>Forms</a>
+
+                        <li class="nav-item mt-2">
+                            <a class="nav-link text-danger fw-bold d-flex align-items-center justify-content-start"
+                            href="../logout.php">
+                                <i class="fas fa-power-off me-3"></i>
+                                Logout
+                            </a>
                         </li>
-                        <li>
-                            <a href="calendar.html">
-                                <i class="fas fa-calendar-alt"></i>Calendar</a>
-                        </li>
-                        <li>
-                            <a href="map.html">
-                                <i class="fas fa-map-marker-alt"></i>Maps</a>
-                        </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-copy"></i>Pages</a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                <li>
-                                    <a href="login.html">Login</a>
-                                </li>
-                                <li>
-                                    <a href="register.html">Register</a>
-                                </li>
-                                <li>
-                                    <a href="forget-pass.html">Forget Password</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-desktop"></i>UI Elements</a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                <li>
-                                    <a href="button.html">Button</a>
-                                </li>
-                                <li>
-                                    <a href="badge.html">Badges</a>
-                                </li>
-                                <li>
-                                    <a href="tab.html">Tabs</a>
-                                </li>
-                                <li>
-                                    <a href="card.html">Cards</a>
-                                </li>
-                                <li>
-                                    <a href="alert.html">Alerts</a>
-                                </li>
-                                <li>
-                                    <a href="progress-bar.html">Progress Bars</a>
-                                </li>
-                                <li>
-                                    <a href="modal.html">Modals</a>
-                                </li>
-                                <li>
-                                    <a href="switch.html">Switchs</a>
-                                </li>
-                                <li>
-                                    <a href="grid.html">Grids</a>
-                                </li>
-                                <li>
-                                    <a href="fontawesome.html">Fontawesome Icon</a>
-                                </li>
-                                <li>
-                                    <a href="typo.html">Typography</a>
-                                </li>
-                            </ul>
-                        </li>
+
                     </ul>
                 </nav>
             </div>
@@ -271,18 +214,31 @@ if(isset($_SESSION['nama'])){
             <div class="section__content section__content--p30">
                 <div class="container-fluid">
                     <div class="header-wrap">
-                        <form class="form-header" action="" method="POST">
-                            <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." />
-                                <button class="au-btn--submit" type="submit">
-                                    <i class="zmdi zmdi-search"></i>
-                                </button>
+
+                        <!-- Search -->
+                        <div class="navbar-nav ms-lg-auto align-items-center w-100 d-flex justify-content-center">
+                        <form class="d-flex mx-lg-auto my-3 my-lg-0 position-relative" autocomplete="off">
+                            <input class="form-control rounded-pill border-0 shadow-sm"
+                                    id="liveSearch"
+                                    type="search" 
+                                    placeholder="Cari..."
+                                    style="background:#F5F6FA; width: 380px!important; border-color:#D5D5D5;" />
+
+                             <!-- Produk yang muncul -->
+                            <div id="searchResult"
+                                class="position-absolute bg-white shadow-sm rounded p-2"
+                                style="top:45px; width:380px; display:none; z-index:9999;">
+                            </div>
+
                         </form>
+                        </div>
+
                         <div class="header-button">
                             <div class="account-wrap">
                                 <div class="account-item clearfix js-item-menu">
                                         <div class="content">
-                                            <p class="text-template"><b><?php echo$_SESSION['nama']; ?></b></p>
-                                            <p class="text-template">Admin</p>
+                                            <p class="text-template font"><b><?php echo$_SESSION['nama']; ?></b></p>
+                                            <p class="text-template font">Admin</p>
                                         </div>
                                     </div>
                                 </div>
@@ -832,6 +788,34 @@ if(isset($_SESSION['nama'])){
     <script src="Asset/js/swiper-bundle-12.0.3.min.js"></script>
     <script src="Asset/js/aos.js"></script>
     <script src="Asset/js/modern-plugins.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function () {
+    $("#liveSearch").keyup(function () {
+        let query = $(this).val();
+
+        if (query.length > 0) {
+            $.ajax({
+                url: "./proses/search.php",
+                type: "GET",
+                data: { q: query },
+                success: function (data) {
+                    $("#searchResult").html(data).show();
+                }
+            });
+        } else {
+            $("#searchResult").hide();
+        }
+    });
+
+    $(document).click(function(e){
+        if (!$(e.target).closest('#liveSearch,#searchResult').length) {
+            $("#searchResult").hide();
+        }
+    });
+});
+</script>
 
 </body>
 

@@ -120,7 +120,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
 
         <!-- SEARCH BAR -->
-        <div class="navbar-nav ms-lg-auto align-items-center w-100 d-flex justify-content-center">
+    <div class="navbar-nav ms-lg-auto align-items-center w-100 d-flex justify-content-center">
     <form class="d-flex mx-lg-auto my-3 my-lg-0 position-relative" autocomplete="off">
 
         <!-- SEARCH INPUT -->
@@ -157,8 +157,6 @@
 
     </div>
 </nav>
-
-
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 

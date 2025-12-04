@@ -1698,19 +1698,6 @@ section {
     position: relative;
 }
 
-.navbar-sidebar .navbar__list li.has-sub > a::after {
-    content: '\f054';
-    font-family: 'Font Awesome 7 Free';
-    font-weight: 900;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 14px;
-    color: #999;
-    transition: transform 0.3s ease;
-}
-
 .navbar-sidebar .navbar__list li.has-sub.open > a::after {
     transform: translateY(-50%) rotate(90deg);
 }
