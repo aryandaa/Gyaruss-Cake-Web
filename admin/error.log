@@ -2182,3 +2182,46 @@ Stack trace:
 [05-Dec-2025 06:48:23 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
 [05-Dec-2025 06:48:23 UTC] PHP Warning:  Undefined variable $row in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 42
 [05-Dec-2025 06:48:23 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 42
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Undefined variable $row in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Undefined variable $row in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Undefined variable $row in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Undefined variable $row in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Undefined variable $row in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Undefined variable $row in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Undefined variable $row in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Undefined variable $row in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Undefined variable $row in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Undefined variable $row in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Undefined variable $row in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Undefined variable $row in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Undefined variable $row in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Undefined variable $row in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:52:25 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 40
+[05-Dec-2025 06:59:22 UTC] PHP Warning:  Undefined variable $no in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 49
+[05-Dec-2025 07:42:26 UTC] PHP Warning:  Undefined array key "best_seller" in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 60
+[05-Dec-2025 07:42:26 UTC] PHP Warning:  Undefined array key "best_seller" in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 60
+[05-Dec-2025 07:42:26 UTC] PHP Warning:  Undefined array key "best_seller" in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 60
+[05-Dec-2025 07:42:26 UTC] PHP Warning:  Undefined array key "best_seller" in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 60
+[05-Dec-2025 07:42:26 UTC] PHP Warning:  Undefined array key "best_seller" in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 60
+[05-Dec-2025 07:42:26 UTC] PHP Warning:  Undefined array key "best_seller" in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 60
+[05-Dec-2025 07:42:26 UTC] PHP Warning:  Undefined array key "best_seller" in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 60
+[05-Dec-2025 07:42:26 UTC] PHP Warning:  Undefined array key "best_seller" in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 60
+[05-Dec-2025 07:42:26 UTC] PHP Warning:  Undefined array key "best_seller" in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 60
+[05-Dec-2025 07:42:26 UTC] PHP Warning:  Undefined array key "best_seller" in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 60
+[05-Dec-2025 07:42:26 UTC] PHP Warning:  Undefined array key "best_seller" in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 60
+[05-Dec-2025 07:42:26 UTC] PHP Warning:  Undefined array key "best_seller" in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 60
+[05-Dec-2025 07:42:26 UTC] PHP Warning:  Undefined array key "best_seller" in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 60
+[05-Dec-2025 07:42:26 UTC] PHP Warning:  Undefined array key "best_seller" in C:\laragon\www\Gyruss-Cake-Web\Admin\pages\produk.php on line 60

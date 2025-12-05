@@ -117,6 +117,7 @@ if(isset($_SESSION['nama'])){
         <!-- END HEADER MOBILE-->
 
         <!-- MENU SIDEBAR-->
+        <?php $page = $_GET['p'] ?? 'pesanan'; ?>
         <aside class="menu-sidebar d-none d-lg-block ">
             <!-- logo -->   
             <div class="logo d-flex justify-content-center mb-4 mt-3" style="background-color: white;">
@@ -131,15 +132,14 @@ if(isset($_SESSION['nama'])){
                     <ul class="list-unstyled navbar__list m-0 p-0">
 
                         <li class="nav-item">
-                            <a class="nav-link active text-white d-flex align-items-center w-100 px-3"
-                                style="background-color: #504060;"
+                            <a class="nav-link d-flex align-items-center justify-content-start w-100 px-3 <?= ($page == 'pesanan') ? 'active text-white' : '' ?>"
                                 href="?p=pesanan">
                                 <i class="fas fa-tachometer-alt me-3"></i>Dashboard
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link d-flex align-items-center justify-content-start w-100 px-3" 
+                            <a class="nav-link d-flex align-items-center justify-content-start w-100 px-3 <?= ($page == 'produk') ? 'active text-white' : '' ?>" 
                                 href="?p=produk">
                                 <i class="bi bi-grid-fill me-3"></i>
                                 Produk
@@ -147,7 +147,7 @@ if(isset($_SESSION['nama'])){
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link d-flex align-items-center justify-content-start w-100 px-3" 
+                            <a class="nav-link d-flex align-items-center justify-content-start w-100 px-3 <?= ($page == 'testimoni') ? 'active text-white' : '' ?>" 
                                 href="?p=testimoni">
                                 <i class="fas fa-pen me-3"></i>
                                 Ulasan

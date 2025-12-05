@@ -8,7 +8,7 @@ include __DIR__ . '/../proses/backend_pesanan.php';
 <div class="row">
     <div class="col-12">
         <h2 class="title-1 m-b-25" style="font-family: 'Montserrat', sans-serif !important;">
-            <b>Pesanan Pelanggan</b>
+            Pesanan Pelanggan
         </h2>
 
 <div class="card shadow-sm p-3 mb-4" style="border-radius: 16px;">
