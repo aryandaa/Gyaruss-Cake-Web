@@ -1,5 +1,5 @@
 <?php
-include "../include/connect.php";
+include $_SERVER['DOCUMENT_ROOT'] . '/Gyruss-Cake-Web/config.php';
 
 $error = [];
 $nama = trim($_POST['nama'] ?? '');

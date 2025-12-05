@@ -1,6 +1,5 @@
 <?php
-include __DIR__ . '/../include/connect.php';
-include __DIR__ . '/../include/config.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/Gyruss-Cake-Web/config.php';
 include __DIR__ . '/../proses/backend_pesanan.php';
 ?>
 

@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . "/../include/connect.php";
+include $_SERVER['DOCUMENT_ROOT'] . '/Gyruss-Cake-Web/config.php';
 
 // Ambil id_produk dari GET (normal) atau POST (ketika form dipanggil ulang lewat include)
 $id_produk = $_GET['id_produk'] ?? $_POST['id_produk'] ?? null;

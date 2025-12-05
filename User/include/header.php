@@ -1,5 +1,5 @@
     <?php 
-    include __DIR__ . "/config.php"; 
+    include $_SERVER['DOCUMENT_ROOT'] . '/Gyruss-Cake-Web/config.php';
     ?>
 
     

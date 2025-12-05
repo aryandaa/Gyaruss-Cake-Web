@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "../include/connect.php";
+include $_SERVER['DOCUMENT_ROOT'] . '/Gyruss-Cake-Web/config.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 

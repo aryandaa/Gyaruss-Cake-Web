@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . '/../include/connect.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/Gyruss-Cake-Web/config.php';
 
 if (isset($_POST['id_testimoni'])) {
     $id = intval($_POST['id_testimoni']);

@@ -1,5 +1,5 @@
 <?php
-include "../include/connect.php";
+include $_SERVER['DOCUMENT_ROOT'] . '/Gyruss-Cake-Web/config.php';
 include "../include/config.php";
 
 $keyword = mysqli_real_escape_string($conn, $_GET['q']);

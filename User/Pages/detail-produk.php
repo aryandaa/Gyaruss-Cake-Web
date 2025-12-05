@@ -1,6 +1,7 @@
 <?php
 session_abort();
-include '../include/connect.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/Gyruss-Cake-Web/config.php';
+
 $from = isset($_GET['from']) ? $_GET['from'] : '../../index.php';
 include "../proses/proses_detail-produk.php";
 

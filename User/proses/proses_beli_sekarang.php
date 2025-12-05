@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . "/../include/connect.php";
+include $_SERVER['DOCUMENT_ROOT'] . '/Gyruss-Cake-Web/config.php';
 $id_produk = $_POST['id_produk'] ?? '';
 
 if ($id_produk === '') {

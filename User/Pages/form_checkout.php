@@ -1,6 +1,6 @@
 <?php
 session_start();
-include __DIR__ . "/../include/connect.php";
+include $_SERVER['DOCUMENT_ROOT'] . '/Gyruss-Cake-Web/config.php';
 
 
 // =========================

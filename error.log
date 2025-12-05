@@ -247,3 +247,347 @@ Stack trace:
 #0 C:\laragon\www\Gyruss-Cake-Web\index.php(293): mysqli_query(Object(mysqli), 'SELECT * FROM t...')
 #1 {main}
   thrown in C:\laragon\www\Gyruss-Cake-Web\index.php on line 293
+[05-Dec-2025 17:40:30 UTC] PHP Warning:  include(../../config.php): Failed to open stream: No such file or directory in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:40:30 UTC] PHP Warning:  include(): Failed opening '../../config.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:40:30 UTC] PHP Warning:  Undefined variable $conn in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:40:30 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php:13
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php(13): mysqli_query(NULL, 'SELECT * FROM p...')
+#1 C:\laragon\www\Gyruss-Cake-Web\User\include\init_cart.php(2): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\Gyruss-Cake-Web\index.php(10): include('C:\\laragon\\www\\...')
+#3 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:40:31 UTC] PHP Warning:  include(../../config.php): Failed to open stream: No such file or directory in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:40:31 UTC] PHP Warning:  include(): Failed opening '../../config.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:40:31 UTC] PHP Warning:  Undefined variable $conn in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:40:31 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php:13
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php(13): mysqli_query(NULL, 'SELECT * FROM p...')
+#1 C:\laragon\www\Gyruss-Cake-Web\User\include\init_cart.php(2): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\Gyruss-Cake-Web\index.php(10): include('C:\\laragon\\www\\...')
+#3 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:40:31 UTC] PHP Warning:  include(../../config.php): Failed to open stream: No such file or directory in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:40:31 UTC] PHP Warning:  include(): Failed opening '../../config.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:40:31 UTC] PHP Warning:  Undefined variable $conn in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:40:31 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php:13
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php(13): mysqli_query(NULL, 'SELECT * FROM p...')
+#1 C:\laragon\www\Gyruss-Cake-Web\User\include\init_cart.php(2): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\Gyruss-Cake-Web\index.php(10): include('C:\\laragon\\www\\...')
+#3 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:40:31 UTC] PHP Warning:  include(../../config.php): Failed to open stream: No such file or directory in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:40:31 UTC] PHP Warning:  include(): Failed opening '../../config.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:40:31 UTC] PHP Warning:  Undefined variable $conn in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:40:31 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php:13
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php(13): mysqli_query(NULL, 'SELECT * FROM p...')
+#1 C:\laragon\www\Gyruss-Cake-Web\User\include\init_cart.php(2): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\Gyruss-Cake-Web\index.php(10): include('C:\\laragon\\www\\...')
+#3 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:40:55 UTC] PHP Warning:  include(C:/laragon/www/Gyaruss-Cake-Web/config.php): Failed to open stream: No such file or directory in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:40:55 UTC] PHP Warning:  include(): Failed opening 'C:/laragon/www/Gyaruss-Cake-Web/config.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:40:55 UTC] PHP Warning:  Undefined variable $conn in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:40:55 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php:13
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php(13): mysqli_query(NULL, 'SELECT * FROM p...')
+#1 C:\laragon\www\Gyruss-Cake-Web\User\include\init_cart.php(2): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\Gyruss-Cake-Web\index.php(10): include('C:\\laragon\\www\\...')
+#3 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:40:56 UTC] PHP Warning:  include(C:/laragon/www/Gyaruss-Cake-Web/config.php): Failed to open stream: No such file or directory in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:40:56 UTC] PHP Warning:  include(): Failed opening 'C:/laragon/www/Gyaruss-Cake-Web/config.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:40:56 UTC] PHP Warning:  Undefined variable $conn in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:40:56 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php:13
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php(13): mysqli_query(NULL, 'SELECT * FROM p...')
+#1 C:\laragon\www\Gyruss-Cake-Web\User\include\init_cart.php(2): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\Gyruss-Cake-Web\index.php(10): include('C:\\laragon\\www\\...')
+#3 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:41:23 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'db_host_user'@'localhost' (using password: YES) in C:\laragon\www\Gyruss-Cake-Web\config.php:19
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\config.php(19): mysqli_connect('localhost', 'db_host_user', 'db_host_pass', 'db_host_name')
+#1 C:\laragon\www\Gyruss-Cake-Web\index.php(9): include('C:\\laragon\\www\\...')
+#2 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\config.php on line 19
+[05-Dec-2025 17:41:24 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'db_host_user'@'localhost' (using password: YES) in C:\laragon\www\Gyruss-Cake-Web\config.php:19
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\config.php(19): mysqli_connect('localhost', 'db_host_user', 'db_host_pass', 'db_host_name')
+#1 C:\laragon\www\Gyruss-Cake-Web\index.php(9): include('C:\\laragon\\www\\...')
+#2 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\config.php on line 19
+[05-Dec-2025 17:41:24 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'db_host_user'@'localhost' (using password: YES) in C:\laragon\www\Gyruss-Cake-Web\config.php:19
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\config.php(19): mysqli_connect('localhost', 'db_host_user', 'db_host_pass', 'db_host_name')
+#1 C:\laragon\www\Gyruss-Cake-Web\index.php(9): include('C:\\laragon\\www\\...')
+#2 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\config.php on line 19
+[05-Dec-2025 17:41:24 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'db_host_user'@'localhost' (using password: YES) in C:\laragon\www\Gyruss-Cake-Web\config.php:19
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\config.php(19): mysqli_connect('localhost', 'db_host_user', 'db_host_pass', 'db_host_name')
+#1 C:\laragon\www\Gyruss-Cake-Web\index.php(9): include('C:\\laragon\\www\\...')
+#2 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\config.php on line 19
+[05-Dec-2025 17:41:59 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'db_host_user'@'localhost' (using password: YES) in C:\laragon\www\Gyruss-Cake-Web\config.php:19
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\config.php(19): mysqli_connect('localhost', 'db_host_user', 'db_host_pass', 'db_host_name')
+#1 C:\laragon\www\Gyruss-Cake-Web\index.php(9): include('C:\\laragon\\www\\...')
+#2 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\config.php on line 19
+[05-Dec-2025 17:42:00 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'db_host_user'@'localhost' (using password: YES) in C:\laragon\www\Gyruss-Cake-Web\config.php:19
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\config.php(19): mysqli_connect('localhost', 'db_host_user', 'db_host_pass', 'db_host_name')
+#1 C:\laragon\www\Gyruss-Cake-Web\index.php(9): include('C:\\laragon\\www\\...')
+#2 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\config.php on line 19
+[05-Dec-2025 17:43:20 UTC] PHP Warning:  include(C:/laragon/www/Gyaruss-Cake-Web/config.php): Failed to open stream: No such file or directory in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:43:20 UTC] PHP Warning:  include(): Failed opening 'C:/laragon/www/Gyaruss-Cake-Web/config.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:43:20 UTC] PHP Warning:  Undefined variable $conn in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:43:20 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php:13
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php(13): mysqli_query(NULL, 'SELECT * FROM p...')
+#1 C:\laragon\www\Gyruss-Cake-Web\User\include\init_cart.php(2): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\Gyruss-Cake-Web\index.php(10): include('C:\\laragon\\www\\...')
+#3 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:43:20 UTC] PHP Warning:  include(C:/laragon/www/Gyaruss-Cake-Web/config.php): Failed to open stream: No such file or directory in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:43:20 UTC] PHP Warning:  include(): Failed opening 'C:/laragon/www/Gyaruss-Cake-Web/config.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:43:20 UTC] PHP Warning:  Undefined variable $conn in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:43:20 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php:13
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php(13): mysqli_query(NULL, 'SELECT * FROM p...')
+#1 C:\laragon\www\Gyruss-Cake-Web\User\include\init_cart.php(2): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\Gyruss-Cake-Web\index.php(10): include('C:\\laragon\\www\\...')
+#3 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:43:21 UTC] PHP Warning:  include(C:/laragon/www/Gyaruss-Cake-Web/config.php): Failed to open stream: No such file or directory in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:43:21 UTC] PHP Warning:  include(): Failed opening 'C:/laragon/www/Gyaruss-Cake-Web/config.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:43:21 UTC] PHP Warning:  Undefined variable $conn in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:43:21 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php:13
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php(13): mysqli_query(NULL, 'SELECT * FROM p...')
+#1 C:\laragon\www\Gyruss-Cake-Web\User\include\init_cart.php(2): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\Gyruss-Cake-Web\index.php(10): include('C:\\laragon\\www\\...')
+#3 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:44:26 UTC] PHP Warning:  include(C:/laragon/www/Gyaruss-Cake-Web/config.php): Failed to open stream: No such file or directory in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:44:26 UTC] PHP Warning:  include(): Failed opening 'C:/laragon/www/Gyaruss-Cake-Web/config.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:44:26 UTC] PHP Warning:  Undefined variable $conn in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:44:26 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php:13
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php(13): mysqli_query(NULL, 'SELECT * FROM p...')
+#1 C:\laragon\www\Gyruss-Cake-Web\User\include\init_cart.php(2): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\Gyruss-Cake-Web\index.php(10): include('C:\\laragon\\www\\...')
+#3 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:44:26 UTC] PHP Warning:  include(C:/laragon/www/Gyaruss-Cake-Web/config.php): Failed to open stream: No such file or directory in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:44:26 UTC] PHP Warning:  include(): Failed opening 'C:/laragon/www/Gyaruss-Cake-Web/config.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:44:26 UTC] PHP Warning:  Undefined variable $conn in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:44:26 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php:13
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php(13): mysqli_query(NULL, 'SELECT * FROM p...')
+#1 C:\laragon\www\Gyruss-Cake-Web\User\include\init_cart.php(2): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\Gyruss-Cake-Web\index.php(10): include('C:\\laragon\\www\\...')
+#3 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:44:27 UTC] PHP Warning:  include(C:/laragon/www/Gyaruss-Cake-Web/config.php): Failed to open stream: No such file or directory in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:44:27 UTC] PHP Warning:  include(): Failed opening 'C:/laragon/www/Gyaruss-Cake-Web/config.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:44:27 UTC] PHP Warning:  Undefined variable $conn in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:44:27 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php:13
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php(13): mysqli_query(NULL, 'SELECT * FROM p...')
+#1 C:\laragon\www\Gyruss-Cake-Web\User\include\init_cart.php(2): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\Gyruss-Cake-Web\index.php(10): include('C:\\laragon\\www\\...')
+#3 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:44:27 UTC] PHP Warning:  include(C:/laragon/www/Gyaruss-Cake-Web/config.php): Failed to open stream: No such file or directory in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:44:27 UTC] PHP Warning:  include(): Failed opening 'C:/laragon/www/Gyaruss-Cake-Web/config.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 2
+[05-Dec-2025 17:44:27 UTC] PHP Warning:  Undefined variable $conn in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:44:27 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php:13
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php(13): mysqli_query(NULL, 'SELECT * FROM p...')
+#1 C:\laragon\www\Gyruss-Cake-Web\User\include\init_cart.php(2): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\Gyruss-Cake-Web\index.php(10): include('C:\\laragon\\www\\...')
+#3 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:45:25 UTC] PHP Warning:  Undefined variable $conn in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:45:25 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php:13
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php(13): mysqli_query(NULL, 'SELECT * FROM p...')
+#1 C:\laragon\www\Gyruss-Cake-Web\User\include\init_cart.php(2): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\Gyruss-Cake-Web\index.php(10): include('C:\\laragon\\www\\...')
+#3 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:45:26 UTC] PHP Warning:  Undefined variable $conn in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:45:26 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php:13
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php(13): mysqli_query(NULL, 'SELECT * FROM p...')
+#1 C:\laragon\www\Gyruss-Cake-Web\User\include\init_cart.php(2): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\Gyruss-Cake-Web\index.php(10): include('C:\\laragon\\www\\...')
+#3 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:45:26 UTC] PHP Warning:  Undefined variable $conn in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:45:26 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php:13
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php(13): mysqli_query(NULL, 'SELECT * FROM p...')
+#1 C:\laragon\www\Gyruss-Cake-Web\User\include\init_cart.php(2): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\Gyruss-Cake-Web\index.php(10): include('C:\\laragon\\www\\...')
+#3 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\User\include\connect.php on line 13
+[05-Dec-2025 17:45:49 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'db_host_user'@'localhost' (using password: YES) in C:\laragon\www\Gyruss-Cake-Web\config.php:19
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\config.php(19): mysqli_connect('localhost', 'db_host_user', 'db_host_pass', 'db_host_name')
+#1 C:\laragon\www\Gyruss-Cake-Web\index.php(9): include('C:\\laragon\\www\\...')
+#2 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\config.php on line 19
+[05-Dec-2025 17:45:50 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'db_host_user'@'localhost' (using password: YES) in C:\laragon\www\Gyruss-Cake-Web\config.php:19
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\config.php(19): mysqli_connect('localhost', 'db_host_user', 'db_host_pass', 'db_host_name')
+#1 C:\laragon\www\Gyruss-Cake-Web\index.php(9): include('C:\\laragon\\www\\...')
+#2 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\config.php on line 19
+[05-Dec-2025 17:45:50 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'db_host_user'@'localhost' (using password: YES) in C:\laragon\www\Gyruss-Cake-Web\config.php:19
+Stack trace:
+#0 C:\laragon\www\Gyruss-Cake-Web\config.php(19): mysqli_connect('localhost', 'db_host_user', 'db_host_pass', 'db_host_name')
+#1 C:\laragon\www\Gyruss-Cake-Web\index.php(9): include('C:\\laragon\\www\\...')
+#2 {main}
+  thrown in C:\laragon\www\Gyruss-Cake-Web\config.php on line 19
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $bestSeller in C:\laragon\www\Gyruss-Cake-Web\index.php on line 89
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\laragon\www\Gyruss-Cake-Web\index.php on line 89
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $bestSeller in C:\laragon\www\Gyruss-Cake-Web\index.php on line 123
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\laragon\www\Gyruss-Cake-Web\index.php on line 123
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $filter in C:\laragon\www\Gyruss-Cake-Web\index.php on line 150
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $filter in C:\laragon\www\Gyruss-Cake-Web\index.php on line 151
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $filter in C:\laragon\www\Gyruss-Cake-Web\index.php on line 155
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $filter in C:\laragon\www\Gyruss-Cake-Web\index.php on line 156
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $filter in C:\laragon\www\Gyruss-Cake-Web\index.php on line 160
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $filter in C:\laragon\www\Gyruss-Cake-Web\index.php on line 161
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $result in C:\laragon\www\Gyruss-Cake-Web\index.php on line 170
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\laragon\www\Gyruss-Cake-Web\index.php on line 170
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $rataRating in C:\laragon\www\Gyruss-Cake-Web\index.php on line 236
+[05-Dec-2025 17:49:17 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in C:\laragon\www\Gyruss-Cake-Web\index.php on line 236
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $rataRating in C:\laragon\www\Gyruss-Cake-Web\index.php on line 243
+[05-Dec-2025 17:49:17 UTC] PHP Deprecated:  floor(): Passing null to parameter #1 ($num) of type int|float is deprecated in C:\laragon\www\Gyruss-Cake-Web\index.php on line 244
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $totalReviews in C:\laragon\www\Gyruss-Cake-Web\index.php on line 259
+[05-Dec-2025 17:49:17 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in C:\laragon\www\Gyruss-Cake-Web\index.php on line 259
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 272
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 273
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 284
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 286
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 288
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 290
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 292
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 307
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 314
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 321
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 328
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 335
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $resulttm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 358
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\laragon\www\Gyruss-Cake-Web\index.php on line 358
+[05-Dec-2025 17:49:17 UTC] PHP Warning:  Undefined variable $rataRating in C:\laragon\www\Gyruss-Cake-Web\User\include\footer.php on line 27
+[05-Dec-2025 17:49:17 UTC] PHP Deprecated:  floor(): Passing null to parameter #1 ($num) of type int|float is deprecated in C:\laragon\www\Gyruss-Cake-Web\User\include\footer.php on line 28
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $bestSeller in C:\laragon\www\Gyruss-Cake-Web\index.php on line 89
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\laragon\www\Gyruss-Cake-Web\index.php on line 89
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $bestSeller in C:\laragon\www\Gyruss-Cake-Web\index.php on line 123
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\laragon\www\Gyruss-Cake-Web\index.php on line 123
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $filter in C:\laragon\www\Gyruss-Cake-Web\index.php on line 150
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $filter in C:\laragon\www\Gyruss-Cake-Web\index.php on line 151
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $filter in C:\laragon\www\Gyruss-Cake-Web\index.php on line 155
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $filter in C:\laragon\www\Gyruss-Cake-Web\index.php on line 156
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $filter in C:\laragon\www\Gyruss-Cake-Web\index.php on line 160
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $filter in C:\laragon\www\Gyruss-Cake-Web\index.php on line 161
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $result in C:\laragon\www\Gyruss-Cake-Web\index.php on line 170
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\laragon\www\Gyruss-Cake-Web\index.php on line 170
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $rataRating in C:\laragon\www\Gyruss-Cake-Web\index.php on line 236
+[05-Dec-2025 17:49:19 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in C:\laragon\www\Gyruss-Cake-Web\index.php on line 236
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $rataRating in C:\laragon\www\Gyruss-Cake-Web\index.php on line 243
+[05-Dec-2025 17:49:19 UTC] PHP Deprecated:  floor(): Passing null to parameter #1 ($num) of type int|float is deprecated in C:\laragon\www\Gyruss-Cake-Web\index.php on line 244
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $totalReviews in C:\laragon\www\Gyruss-Cake-Web\index.php on line 259
+[05-Dec-2025 17:49:19 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in C:\laragon\www\Gyruss-Cake-Web\index.php on line 259
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 272
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 273
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 284
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 286
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 288
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 290
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 292
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 307
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 314
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 321
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 328
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 335
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  Undefined variable $resulttm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 358
+[05-Dec-2025 17:49:19 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\laragon\www\Gyruss-Cake-Web\index.php on line 358
+[05-Dec-2025 17:49:20 UTC] PHP Warning:  Undefined variable $rataRating in C:\laragon\www\Gyruss-Cake-Web\User\include\footer.php on line 27
+[05-Dec-2025 17:49:20 UTC] PHP Deprecated:  floor(): Passing null to parameter #1 ($num) of type int|float is deprecated in C:\laragon\www\Gyruss-Cake-Web\User\include\footer.php on line 28
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $bestSeller in C:\laragon\www\Gyruss-Cake-Web\index.php on line 89
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\laragon\www\Gyruss-Cake-Web\index.php on line 89
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $bestSeller in C:\laragon\www\Gyruss-Cake-Web\index.php on line 123
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\laragon\www\Gyruss-Cake-Web\index.php on line 123
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $filter in C:\laragon\www\Gyruss-Cake-Web\index.php on line 150
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $filter in C:\laragon\www\Gyruss-Cake-Web\index.php on line 151
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $filter in C:\laragon\www\Gyruss-Cake-Web\index.php on line 155
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $filter in C:\laragon\www\Gyruss-Cake-Web\index.php on line 156
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $filter in C:\laragon\www\Gyruss-Cake-Web\index.php on line 160
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $filter in C:\laragon\www\Gyruss-Cake-Web\index.php on line 161
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $result in C:\laragon\www\Gyruss-Cake-Web\index.php on line 170
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\laragon\www\Gyruss-Cake-Web\index.php on line 170
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $rataRating in C:\laragon\www\Gyruss-Cake-Web\index.php on line 236
+[05-Dec-2025 17:49:26 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in C:\laragon\www\Gyruss-Cake-Web\index.php on line 236
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $rataRating in C:\laragon\www\Gyruss-Cake-Web\index.php on line 243
+[05-Dec-2025 17:49:26 UTC] PHP Deprecated:  floor(): Passing null to parameter #1 ($num) of type int|float is deprecated in C:\laragon\www\Gyruss-Cake-Web\index.php on line 244
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $totalReviews in C:\laragon\www\Gyruss-Cake-Web\index.php on line 259
+[05-Dec-2025 17:49:26 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in C:\laragon\www\Gyruss-Cake-Web\index.php on line 259
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 272
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 273
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 284
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 286
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 288
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 290
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 292
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 307
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 314
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 321
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 328
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 335
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $resulttm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 358
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\laragon\www\Gyruss-Cake-Web\index.php on line 358
+[05-Dec-2025 17:49:26 UTC] PHP Warning:  Undefined variable $rataRating in C:\laragon\www\Gyruss-Cake-Web\User\include\footer.php on line 27
+[05-Dec-2025 17:49:26 UTC] PHP Deprecated:  floor(): Passing null to parameter #1 ($num) of type int|float is deprecated in C:\laragon\www\Gyruss-Cake-Web\User\include\footer.php on line 28
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $bestSeller in C:\laragon\www\Gyruss-Cake-Web\index.php on line 89
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\laragon\www\Gyruss-Cake-Web\index.php on line 89
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $bestSeller in C:\laragon\www\Gyruss-Cake-Web\index.php on line 123
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\laragon\www\Gyruss-Cake-Web\index.php on line 123
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $filter in C:\laragon\www\Gyruss-Cake-Web\index.php on line 150
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $filter in C:\laragon\www\Gyruss-Cake-Web\index.php on line 151
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $filter in C:\laragon\www\Gyruss-Cake-Web\index.php on line 155
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $filter in C:\laragon\www\Gyruss-Cake-Web\index.php on line 156
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $filter in C:\laragon\www\Gyruss-Cake-Web\index.php on line 160
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $filter in C:\laragon\www\Gyruss-Cake-Web\index.php on line 161
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $result in C:\laragon\www\Gyruss-Cake-Web\index.php on line 170
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\laragon\www\Gyruss-Cake-Web\index.php on line 170
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $rataRating in C:\laragon\www\Gyruss-Cake-Web\index.php on line 236
+[05-Dec-2025 17:57:31 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in C:\laragon\www\Gyruss-Cake-Web\index.php on line 236
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $rataRating in C:\laragon\www\Gyruss-Cake-Web\index.php on line 243
+[05-Dec-2025 17:57:31 UTC] PHP Deprecated:  floor(): Passing null to parameter #1 ($num) of type int|float is deprecated in C:\laragon\www\Gyruss-Cake-Web\index.php on line 244
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $totalReviews in C:\laragon\www\Gyruss-Cake-Web\index.php on line 259
+[05-Dec-2025 17:57:31 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in C:\laragon\www\Gyruss-Cake-Web\index.php on line 259
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 272
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 273
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 284
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 286
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 288
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 290
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 292
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 307
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 314
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 321
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 328
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $filtertm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 335
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $resulttm in C:\laragon\www\Gyruss-Cake-Web\index.php on line 358
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\laragon\www\Gyruss-Cake-Web\index.php on line 358
+[05-Dec-2025 17:57:31 UTC] PHP Warning:  Undefined variable $rataRating in C:\laragon\www\Gyruss-Cake-Web\User\include\footer.php on line 27
+[05-Dec-2025 17:57:31 UTC] PHP Deprecated:  floor(): Passing null to parameter #1 ($num) of type int|float is deprecated in C:\laragon\www\Gyruss-Cake-Web\User\include\footer.php on line 28

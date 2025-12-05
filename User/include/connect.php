@@ -1,12 +1,6 @@
 <?php
-$server = "localhost";
-$username = "root";
-$password = "";
-$database = "gyaruss_cake";
-$conn = mysqli_connect($server, $username, $password, $database);
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+include $_SERVER['DOCUMENT_ROOT'] . '/Gyruss-Cake-Web/config.php';
+
 //index.php = 
 //menampilkan semua Produk dan filter kategorinya:
 $filter = isset($_GET['filter']) ? $_GET['filter'] : 'all';

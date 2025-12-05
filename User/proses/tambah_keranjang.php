@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../include/connect.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/Gyruss-Cake-Web/config.php';
 include '../include/init_cart.php'; // mengambil cart_token
 
 $id_produk = $_POST['id_produk'];
