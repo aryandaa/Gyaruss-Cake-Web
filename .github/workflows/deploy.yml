@@ -1,0 +1,25 @@
+name: Deploy to Hosting
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: 🎉 Deploy Website
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Deploy via SSH
+      uses: easingthemes/ssh-deploy@v4
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+        REMOTE_HOST: ${{ secrets.SSH_HOST }}
+        REMOTE_USER: ${{ secrets.SSH_USER }}
+        SOURCE: "./"
+        TARGET: "/home/gyarusca/public_html/"
+        ARGS: "-rlgoDzvc -i --delete"
