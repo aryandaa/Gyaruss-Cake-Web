@@ -39,6 +39,109 @@
         font-size: 18px;
     }
 
+    .menu-sidebar {
+    padding: 0 !important;
+    }
+
+    /* HEADER MOBILE */
+    .header-mobile__bar {
+        background: #ffffff;
+        border-bottom: 1px solid #eee;
+        padding: 0.8rem 1rem;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .header-mobile-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* USER INFO */
+    .navbar-mobile__list > li:first-child {
+        padding: 1rem 0.5rem 0;
+        font-size: 14px;
+        color: #504060; /* brand purple */
+    }
+
+    /* SEARCH */
+    #liveSearch {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .navbar-nav {
+        padding: 0 0.5rem;
+    }
+
+    #searchResult {
+        width: 100% !important;
+    }
+
+    /* MENU ITEMS */
+    .navbar-mobile__list li a {
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        padding: 0.9rem 0.8rem;
+        font-weight: 500;
+        color: #504060 !important;
+        border-radius: 10px;
+        transition: 0.3s;
+        margin-bottom: 2px;
+    }
+
+    .navbar-mobile__list li a:hover {
+        background-color: #504060;
+        color: #fff !important;
+    }
+
+    .navbar-mobile__list li a i {
+        font-size: 18px;
+    }
+
+    /* Logout Special */
+    .navbar-mobile__list li a.text-danger:hover {
+        background-color: #ff4c4c;
+        color: #fff !important;
+    }
+
+    /* REMOVE OLD BORDER LINES */
+    .navbar-mobile__list li {
+        border-bottom: none !important;
+    }
+
+    /* PAD NAV CONTAINER */
+    .navbar-mobile .container-fluid {
+        padding: 1rem;
+    }
+
+    /* Biar header mobile selalu nempel di atas */
+    .header-mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99999;
+    }
+
+    .container-custom {
+    max-width: 1100px; /* Sesuaikan biar gak kepanjangan */
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .table-responsive {
+        border-radius: 12px;
+    }
+
+    /* Judul */
+    .title-1 {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
 
     @media (max-width: 991px) {
 
