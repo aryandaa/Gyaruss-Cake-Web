@@ -95,7 +95,7 @@ include '../include/connect.php';
         ?>
 
 
-<form method="GET" action="../../index.php">
+<form method="GET" action="testimoni.php">
     <div class="d-flex align-items-center gap-3 mt-3 w-100 flex-wrap flex-md-nowrap">
 
         <div class="d-flex align-items-center gap-3 flex-nowrap">

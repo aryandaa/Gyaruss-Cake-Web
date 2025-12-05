@@ -38,6 +38,8 @@ if(isset($_SESSION['nama'])){
 
     <link href="<?= $base_url ?>Admin/Asset/css/theme.css" rel="stylesheet" media="all">
     <link href="<?= $base_url ?>Admin/Asset/css/style2.css" rel="stylesheet" media="all">
+    <link href="<?= $base_url ?>Admin/Asset/css/testimoni.css" rel="stylesheet" media="all">
+    <style></style>
 </head>
 
 <body>
@@ -247,6 +249,7 @@ if(isset($_SESSION['nama'])){
     <script src="<?= $base_url ?>Admin/Asset/vendor/bootstrap-5.3.8.bundle.min.js"></script>
     <!-- Vendor JS       -->
     <script src="<?= $base_url ?>Admin/Asset/vendor/perfect-scrollbar/perfect-scrollbar-1.5.6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="<?= $base_url ?>Admin/Asset/vendor/chartjs/chart.umd.js-4.5.1.min.js"></script>
 
     <!-- Main JS-->
