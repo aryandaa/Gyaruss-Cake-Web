@@ -102,13 +102,13 @@ if(isset($_SESSION['nama'])){
                         </li>
 
                         <li>
-                            <a href="?p=ulasan">
+                            <a href="?p=testimoni">
                                 <i class="fas fa-pen me-3"></i>Ulasan
                             </a>
                         </li>
 
                         <li class="mt-2">
-                            <a class="fw-bold" href="../logout.php">
+                            <a class="fw-bold" href="proses/logout.php">
                                 <span class="text-danger"><i class="fas fa-power-off me-3"></i>Logout</span>
                             </a>
                         </li>
@@ -158,7 +158,7 @@ if(isset($_SESSION['nama'])){
 
                         <li class="nav-item mt-2">
                             <a class="nav-link text-danger fw-bold d-flex align-items-center justify-content-start w-100 px-3"
-                                href="../logout.php">
+                                href="proses/logout.php">
                                 <i class="fas fa-power-off me-3"></i>
                                 Logout
                             </a>

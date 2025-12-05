@@ -60,17 +60,17 @@ include __DIR__ . '/../proses/proses_testimoni.php';
 
         <?php
         $filtertm = isset($_GET['filtertm']) ? $_GET['filtertm'] : 'all';
-        $query = "SELECT * FROM testimoni where aktif = 1"; 
+        $query = "SELECT * FROM testimoni"; 
         if ($filtertm === '5') {
-            $query = "SELECT * FROM testimoni WHERE rating = '5' and aktif = 1";
+            $query = "SELECT * FROM testimoni WHERE rating = '5'";
         } elseif ($filtertm === '4') {
-            $query = "SELECT * FROM testimoni WHERE rating = '4' and aktif = 1";
+            $query = "SELECT * FROM testimoni WHERE rating = '4'";
         } elseif ($filtertm === '3') {
-            $query = "SELECT * FROM testimoni WHERE rating = '3' and aktif = 1";
+            $query = "SELECT * FROM testimoni WHERE rating = '3'";
         } elseif ($filtertm === '2') {
-            $query = "SELECT * FROM testimoni WHERE rating = '2' and aktif = 1";
+            $query = "SELECT * FROM testimoni WHERE rating = '2'";
         } elseif ($filtertm === '1') {
-            $query = "SELECT * FROM testimoni WHERE rating = '1' and aktif = 1";
+            $query = "SELECT * FROM testimoni WHERE rating = '1'";
         }
         $resulttm = mysqli_query($conn, $query);
         if (!$resulttm) {
@@ -165,7 +165,12 @@ include __DIR__ . '/../proses/proses_testimoni.php';
             <div class="row g-4"> 
                 <?php foreach ($resulttm as $t): ?>
                 <div class="col-12 col-md-6 col-lg-4">
+
                     <div class="custom-testimonial-card p-4 h-100">
+                        <?php
+                            $checkedYes = ($t['aktif'] == 1) ? "checked" : "";
+                            $checkedNo  = ($t['aktif'] == 0) ? "checked" : "";
+                        ?>
 
                         <div class="quote-icon mb-2">
                             <i class="bi bi-quote"></i>
@@ -197,7 +202,28 @@ include __DIR__ . '/../proses/proses_testimoni.php';
                         $produk = mysqli_fetch_assoc($result_produk);
                         ?>
                         <div class="border h-10 rounded-pill ps-2 mt-2" style="background-color: #504060;"><span class="text-light">Produk: <?= $produk['nama_produk'];?></span></div>
+
+                        <!-- STATUS ULASAN TOGGLE -->
+                    <form action="proses/proses_update_testimoni.php" method="POST" class="mt-3">
+                        <input type="hidden" name="id_testimoni" value="<?= $t['id_testimoni'] ?>">
+
+                        <label class="form-label fw-semibold" style="color:#4B385C;">Status Ulasan</label>
+                        <div class="d-flex gap-3">
+
+                            <label class="d-flex align-items-center gap-1">
+                                <input type="radio" name="aktif" value="1" <?= $checkedYes ?> onchange="this.form.submit()">
+                                <span class="small">Aktif</span>
+                            </label>
+
+                            <label class="d-flex align-items-center gap-1">
+                                <input type="radio" name="aktif" value="0" <?= $checkedNo ?> onchange="this.form.submit()">
+                                <span class="small">Nonaktif</span>
+                            </label>
+
+                        </div>
+                    </form>
                     </div>
+
                 </div>
                 <?php endforeach; ?>
 

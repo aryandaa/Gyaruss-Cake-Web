@@ -5,17 +5,17 @@ include __DIR__ . '/../include/config.php';
 
 //menampilkan Testimoni dan filter ratingnya:
 $filtertm = isset($_GET['filtertm']) ? $_GET['filtertm'] : 'all';
-$query = "SELECT * FROM testimoni WHERE aktif = 1 limit 6"; 
+$query = "SELECT * FROM testimoni"; 
     if ($filtertm === '5') {
-        $query = "SELECT * FROM testimoni WHERE rating = '5' and aktif = 1 Limit 8";
+        $query = "SELECT * FROM testimoni WHERE rating = '5'";
     } elseif ($filtertm === '4') {
-        $query = "SELECT * FROM testimoni WHERE rating = '4' and aktif = 1 Limit 8";
+        $query = "SELECT * FROM testimoni WHERE rating = '4'";
     } elseif ($filtertm === '3') {
-        $query = "SELECT * FROM testimoni WHERE rating = '3' and aktif = 1 Limit 8";
+        $query = "SELECT * FROM testimoni WHERE rating = '3'";
     } elseif ($filtertm === '2') {
-        $query = "SELECT * FROM testimoni WHERE rating = '2' and aktif = 1 Limit 8";
+        $query = "SELECT * FROM testimoni WHERE rating = '2'";
     } elseif ($filtertm === '1') {
-        $query = "SELECT * FROM testimoni WHERE rating = '1' and aktif = 1 Limit 8";
+        $query = "SELECT * FROM testimoni WHERE rating = '1'";
     }
     $resulttm = mysqli_query($conn, $query);
     if (!$resulttm) {
@@ -33,4 +33,7 @@ $sql = "SELECT COUNT(*) AS total_reviews FROM testimoni;";
 $totalReviewsResult = mysqli_query($conn, $sql);
 $totalReviewsRow = mysqli_fetch_assoc($totalReviewsResult);
 $totalReviews = $totalReviewsRow['total_reviews'];
+
+
+
 ?>
