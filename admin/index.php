@@ -39,7 +39,6 @@ if(isset($_SESSION['nama'])){
     <link href="<?= $base_url ?>Admin/Asset/css/theme.css" rel="stylesheet" media="all">
     <link href="<?= $base_url ?>Admin/Asset/css/style2.css" rel="stylesheet" media="all">
     <link href="<?= $base_url ?>Admin/Asset/css/testimoni.css" rel="stylesheet" media="all">
-    <style></style>
 </head>
 
 <body>
@@ -69,25 +68,9 @@ if(isset($_SESSION['nama'])){
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
                         <li>
-                            <p class="m-0 fw-bold">hello, <?php echo $_SESSION['nama']; ?></p>
-                        </li>
-                        <li>
-                            <div class="navbar-nav ms-lg-auto align-items-center w-100 d-flex justify-content-center">
-                        <form class="d-flex mx-lg-auto my-3 my-lg-0 position-relative" autocomplete="off">
-                            <input class="form-control rounded-pill border-0 shadow-sm"
-                                    id="liveSearch"
-                                    type="search" 
-                                    placeholder="Cari..."
-                                    style="background:#F5F6FA; width: 380px!important; border-color:#D5D5D5;" />
-
-                             <!-- Produk yang muncul -->
-                            <div id="searchResult"
-                                class="position-absolute bg-white shadow-sm rounded p-2"
-                                style="top:45px; width:380px; display:none; z-index:9999;">
-                            </div>
-
-                        </form>
-                        </div>
+                            <b><div class="dateTime" class="fw-semibold"></div></b>
+                            <div class="fw-bold">
+                            Halo <?= $_SESSION['nama']; ?> 👋
                         </li>
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
@@ -174,34 +157,24 @@ if(isset($_SESSION['nama'])){
         <div class="page-container">
         <!-- HEADER DESKTOP-->
         <header class="header-desktop" style="background-color: #504060;">
-            <div class="section__content section__content--p30">
+            <div class="section__content">
                 <div class="container-fluid">
                     <div class="header-wrap">
-
-                        <!-- Search -->
-                        <div class="navbar-nav ms-lg-auto align-items-center w-100 d-flex justify-content-center">
-                        <form class="d-flex mx-lg-auto my-3 my-lg-0 position-relative" autocomplete="off">
-                            <input class="form-control rounded-pill border-0 shadow-sm"
-                                    id="liveSearch"
-                                    type="search" 
-                                    placeholder="Cari..."
-                                    style="background:#F5F6FA; width: 380px!important; border-color:#D5D5D5;" />
-
-                             <!-- Produk yang muncul -->
-                            <div id="searchResult"
-                                class="position-absolute bg-white shadow-sm rounded p-2"
-                                style="top:45px; width:380px; display:none; z-index:9999;">
-                            </div>
-
-                        </form>
-                        </div>
 
                         <div class="header-button">
                             <div class="account-wrap">
                                 <div class="account-item clearfix js-item-menu">
                                         <div class="content">
-                                            <p class="text-template font"><b><?php echo$_SESSION['nama']; ?></b></p>
-                                            <p class="text-template font">Admin</p>
+
+                                            <div class="d-flex align-items-start gap-3 text-white">
+                                                <b><div class="dateTime" class="fw-semibold"></div></b>
+
+                                                <div class="fw-bold">
+                                                    Halo <?= $_SESSION['nama']; ?> 👋
+                                                </div>
+
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -260,32 +233,7 @@ if(isset($_SESSION['nama'])){
     <script src="<?= $base_url ?>Admin/Asset/js/modern-plugins.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$(document).ready(function () {
-    $("#liveSearch").keyup(function () {
-        let query = $(this).val();
-
-        if (query.length > 0) {
-            $.ajax({
-                url: "<?= $base_url ?>Admin/proses/search.php",
-                type: "GET",
-                data: { q: query },
-                success: function (data) {
-                    $("#searchResult").html(data).show();
-                }
-            });
-        } else {
-            $("#searchResult").hide();
-        }
-    });
-
-    $(document).click(function(e){
-        if (!$(e.target).closest('#liveSearch,#searchResult').length) {
-            $("#searchResult").hide();
-        }
-    });
-});
-</script>
+    <script src="<?= $base_url ?>Admin/Asset/js/datetime.js"></script>
 
 </body>
 
