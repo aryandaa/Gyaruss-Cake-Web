@@ -1,4 +1,4 @@
-name: Deploy to Hosting
+name: Deploy Website via SFTP
 
 on:
   push:
@@ -7,19 +7,19 @@ on:
 
 jobs:
   deploy:
-    name: 🎉 Deploy Website
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout Code
+    - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Deploy via SSH
-      uses: easingthemes/ssh-deploy@v4
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
-        REMOTE_HOST: ${{ secrets.SSH_HOST }}
-        REMOTE_USER: ${{ secrets.SSH_USER }}
-        SOURCE: "./"
-        TARGET: "/home/gyarusca/public_html/"
-        ARGS: "-rlgoDzvc -i --delete"
+    - name: Deploy to cPanel via SFTP
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      with:
+        server: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        ssh_private_key: ${{ secrets.SSH_KEY }}
+        local_path: "./"
+        remote_path: "/home/***/public_html"
+        exclude: |
+          .git*
+          .github*
