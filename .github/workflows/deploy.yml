@@ -13,15 +13,14 @@ jobs:
     - name: Checkout Repo
       uses: actions/checkout@v3
 
-    - name: Deploy via SFTP
+    - name: Deploy to cPanel using SFTP
       uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
         server: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USER }}
         port: 22
+        username: ${{ secrets.SSH_USER }}
         password: ${{ secrets.SSH_PASSWORD }}
 
         local_path: "./"
         remote_path: "/home/gyarusca/public_html/"
-
         sftp_only: true
