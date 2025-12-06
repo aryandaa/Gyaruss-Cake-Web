@@ -1,4 +1,4 @@
-name: Deploy to cPanel via FTPS
+name: Deploy to cPanel via SFTP
 
 on:
   push:
@@ -13,16 +13,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Deploy to cPanel via FTPS
+      - name: Deploy to server
         uses: SamKirkland/FTP-Deploy-Action@v4.3.3
         with:
-          server: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          password: ${{ secrets.SSH_PASSWORD }}
+          server: ${{ secrets.SFTP_HOST }}
+          port: ${{ secrets.SFTP_PORT }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
           protocol: ftps
           local-dir: ./
           server-dir: /home/gyarusca/public_html/
           exclude: |
             **/.git*
-            **/.github/*
             **/README.md
+            **/.github*
