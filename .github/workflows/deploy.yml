@@ -1,4 +1,4 @@
-name: Deploy Website via SFTP
+name: Deploy to cPanel via SFTP
 
 on:
   push:
@@ -8,18 +8,20 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout code
+    - name: Checkout Repo
       uses: actions/checkout@v3
 
-    - name: Deploy to cPanel via SFTP
+    - name: Deploy via SFTP
       uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
         server: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USER }}
-        ssh_private_key: ${{ secrets.SSH_KEY }}
+        port: 22
+        password: ${{ secrets.SSH_PASSWORD }}
+
         local_path: "./"
-        remote_path: "/home/***/public_html"
-        exclude: |
-          .git*
-          .github*
+        remote_path: "/home/gyarusca/public_html/"
+
+        sftp_only: true
