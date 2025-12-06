@@ -1,26 +1,13 @@
-name: Deploy to cPanel via SFTP
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout Repo
-      uses: actions/checkout@v3
-
-    - name: Deploy to cPanel using SFTP
-      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-      with:
-        server: ${{ secrets.SSH_HOST }}
-        port: 22
-        username: ${{ secrets.SSH_USER }}
-        password: ${{ secrets.SSH_PASSWORD }}
-
-        local_path: "./"
-        remote_path: "/home/gyarusca/public_html/"
-        sftp_only: true
+- name: Deploy to cPanel via SFTP with Password
+  uses: SamKirkland/FTP-Deploy-Action@v4.3.3
+  with:
+    server: ${{ secrets.SSH_HOST }}
+    username: ${{ secrets.SSH_USER }}
+    password: ${{ secrets.SSH_PASSWORD }}
+    protocol: ftps
+    local-dir: ./
+    server-dir: /home/gyarusca/public_html/
+    exclude: |
+      **/.git*
+      **/README.md
+      **/.github/*
