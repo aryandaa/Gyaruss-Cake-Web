@@ -1,13 +1,28 @@
-- name: Deploy to cPanel via SFTP with Password
-  uses: SamKirkland/FTP-Deploy-Action@v4.3.3
-  with:
-    server: ${{ secrets.SSH_HOST }}
-    username: ${{ secrets.SSH_USER }}
-    password: ${{ secrets.SSH_PASSWORD }}
-    protocol: ftps
-    local-dir: ./
-    server-dir: /home/gyarusca/public_html/
-    exclude: |
-      **/.git*
-      **/README.md
-      **/.github/*
+name: Deploy to cPanel via FTPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy to cPanel via FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.3
+        with:
+          server: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          protocol: ftps
+          local-dir: ./
+          server-dir: /home/gyarusca/public_html/
+          exclude: |
+            **/.git*
+            **/.github/*
+            **/README.md
