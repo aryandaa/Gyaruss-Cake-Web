@@ -3,16 +3,16 @@ name: Auto Deploy to FTP
 on:
   push:
     branches:
-      - main   # atau master sesuai branch kamu
+      - main
 
 jobs:
   ftp-deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-    
+
     - name: Deploy to FTP Server
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
@@ -25,10 +25,10 @@ jobs:
         server-dir: ./
         exclude: |
           **/.git*
-          **/.github/**
           **/.github*
-          **/.git/**
-          **/.gitignore
-          **/README.md
+          **/.github/**
+          **/.vscode/**
+          **/User/Asset/scss/**
         passive: true
-        concurrency: 3
+        concurrency: 1
+        timeout: 600000
