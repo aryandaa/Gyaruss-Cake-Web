@@ -22,10 +22,12 @@ jobs:
         protocol: ftps
         port: ${{ secrets.FTP_PORT || 21 }}
         local-dir: ./
-        server-dir: public_html/
+        server-dir: /
         exclude: |
           **/.git*
           **/.github*
           **/.git/** 
           **/.gitignore
           **/README.md
+        passive: true
+        concurrency: 3
