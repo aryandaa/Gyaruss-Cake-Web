@@ -168,7 +168,7 @@ h6,
     left: 0;
     display: flex;
     align-items: center;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .0);
 }
 
 @media (max-width: 768px) {
@@ -449,4 +449,15 @@ h6,
     color: var(--light);
 }
 
+.header-carousel .owl-carousel-item {
+    background: none !important;
+}
 
+.header-carousel .owl-carousel-item img {
+    filter: brightness(1) !important;
+    opacity: 1 !important;
+}
+
+.header-carousel .owl-carousel-inner {
+    background: rgba(0, 0, 0, .0) !important; /* opsional: bisa dihapus */
+}

@@ -207,7 +207,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Gyruss-Cake-Web/config.php';
                             ?>
                         </div>
 
-                        <p class="testimonial-text">
+                        <p class="testimonial-text" style="font-size: 20px;">
                             “<?= $t['pesan']; ?>”
                         </p>
                         <hr class="border border-dark" style="height: 2px;">

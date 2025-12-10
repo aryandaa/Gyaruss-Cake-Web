@@ -159,24 +159,23 @@ if(isset($_SESSION['nama'])){
                 <div class="container-fluid">
                     <div class="header-wrap">
 
-                        <div class="header-button">
-                            <div class="account-wrap">
-                                <div class="account-item clearfix js-item-menu">
-                                        <div class="content">
+                        <div class="header-button w-100">
+    <div class="d-flex justify-content-between align-items-center text-white w-100 px-3">
 
-                                            <div class="d-flex align-items-start gap-3 text-white">
-                                                <b><div class="dateTime" class="fw-semibold"></div></b>
+        <!-- Kiri: Nama Admin -->
+        <div class="fw-bold">
+            Halo <?= $_SESSION['nama']; ?> 👋
+        </div>
 
-                                                <div class="fw-bold">
-                                                    Halo <?= $_SESSION['nama']; ?> 👋
-                                                </div>
+        <!-- Tengah: (kosong untuk future use) -->
+        <div class="flex-grow-1"></div>
 
-                                            </div>
+        <!-- Kanan: Tanggal & Jam -->
+        <b><div class="dateTime fw-semibold text-end"></div></b>
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+    </div>
+</div>
+
                     </div>
                 </div>
             </div>

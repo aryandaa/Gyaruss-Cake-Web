@@ -1,4 +1,5 @@
 <?php 
+//memulai session
 session_start();
 // agar pesan error kelihatan waktu di server
 error_reporting(E_ALL);
@@ -66,17 +67,20 @@ include 'User/include/init_cart.php';
             white-space: nowrap;      /* biar gak jadi 2 baris */
         }
 
+
     </style>
 
 </head>
 
 <body>
     <!-- Spinner Start -->
+     <!-- Spinner berfungsi untuk loading pada render awal website -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" role="status"></div>
     </div>
     <!-- Spinner End -->
 
+    <!-- Mengambil header -->
     <?php 
     $activePage = 'beranda';
     include 'User/include/header.php'; 
@@ -110,23 +114,44 @@ include 'User/include/init_cart.php';
 
     <!-- Best seller Start -->
     <div class="container-xxl my-5 py-5 pt-0" style="background-color: white !important;">
-        <div class="container">
+        <class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-6 mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16" style="color: orange;">
+                <h1 class="display-6 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-star-fill mx-3" viewBox="0 0 16 16" style="color: #EDB500;">
                 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                </svg> Terlaris <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16" style="color: orange;">
+                </svg> 
+                
+                Terlaris 
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-star-fill mx-3" viewBox="0 0 16 16" style="color: #EDB500;">
                 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
                 </svg></h1>
             </div>
-            <div class="row g-4">
-                <?php 
-                foreach ($bestSeller as $bs): 
-                
-                ?>
-                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
-                        <div class="position-relative mt-auto">
-                            <img class="img-fluid" src="User/Asset/images/Produk/<?= $bs['gambar']; ?>" alt="<?= $bs['nama_produk']; ?>">
+
+                <div class="row justify-content-center gx-4 gy-4 text-center">
+
+                <?php foreach ($bestSeller as $bs): ?>
+                <div class="col-lg-5 col-md-6 col-sm-10 wow fadeInUp rounded-pill d-flex justify-content-center" data-wow-delay="0.1s">
+                    <div class="product-item bg-white" 
+                        style="
+                        width:100%;
+                        max-width: 480px;
+                        border-radius: 25px;
+                        overflow: hidden;
+                        transition: transform .3s ease, box-shadow .3s ease;
+                        cursor:pointer;
+                        "
+                        onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)'"
+                        onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.08)'"
+                        >
+                        <div class="position-relative">
+                            <img class="img-fluid"
+                                src="User/Asset/images/Produk/<?= $bs['gambar']; ?>" 
+                                alt="<?= $bs['nama_produk']; ?>"
+                                style="
+                                width:100%;
+                                height:300px;
+                                object-fit:cover;">
                             <div class="product-overlay">
                                 <a class="btn btn-lg-square btn-outline-light rounded-circle" href="User/Pages/detail-produk.php?id=<?= $bs['id_produk'] ?>&from=index.php" ><i class="fa fa-eye text-primary"></i></a>
                             </div>
@@ -134,7 +159,9 @@ include 'User/include/init_cart.php';
                     </div>
                 </div>
                 <?php endforeach; ?>
-            </div>
+                
+                </div>
+            
         </div>
     </div>
     <!-- Best Seller End -->
@@ -363,7 +390,7 @@ include 'User/include/init_cart.php';
                             <i class="bi bi-quote"></i>
                         </div>
 
-                        <div class="rating mb-3" style="color:#FFC107; font-size:22px;">
+                        <div class="rating mb-3 text-center" style="color:#FFC107; font-size:22px;">
                             <?php
                             for ($i = 0; $i < 5; $i++){
                                 if ($i < $t['rating']){
@@ -375,7 +402,7 @@ include 'User/include/init_cart.php';
                             ?>
                         </div>
 
-                        <p class="testimonial-text">
+                        <p class="testimonial-text" style="font-size: 20px;">
                             “<?= $t['pesan']; ?>”
                         </p>
                         <hr class="border border-dark" style="height: 2px;">

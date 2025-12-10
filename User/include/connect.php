@@ -4,16 +4,42 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Gyruss-Cake-Web/config.php';
 //index.php = 
 //menampilkan semua Produk dan filter kategorinya:
 $filter = isset($_GET['filter']) ? $_GET['filter'] : 'all';
-$query = "SELECT * FROM produk WHERE aktif = 1 LIMIT 8"; 
-if ($filter === 'Catering') {
-    $query = "SELECT * FROM produk WHERE kategori = 'Catering' and aktif = 1 Limit 8";
-} elseif ($filter === 'Cake') {
-    $query = "SELECT * FROM produk WHERE kategori = 'Cake' and aktif = 1 Limit 8";
+
+// Default: tampilkan 3 Cake + 3 Catering
+if ($filter === 'all') {
+    $query = "
+        (SELECT * FROM produk 
+        WHERE kategori = 'Cake' AND aktif = 1 
+        LIMIT 4)
+        UNION ALL
+        (SELECT * FROM produk 
+        WHERE kategori = 'Catering' AND aktif = 1 
+        LIMIT 4)
+    ";
 }
+// Filter Catering
+elseif ($filter === 'Catering') {
+    $query = "
+        SELECT * FROM produk 
+        WHERE kategori = 'Catering' AND aktif = 1 
+        LIMIT 8
+    ";
+}
+// Filter Cake
+elseif ($filter === 'Cake') {
+    $query = "
+        SELECT * FROM produk 
+        WHERE kategori = 'Cake' AND aktif = 1 
+        LIMIT 8
+    ";
+}
+
 $result = mysqli_query($conn, $query);
 if (!$result) {
     die("Query error: " . mysqli_error($conn));
 }
+
+
 
 //Menampilkan Best Seller
 $sql = "SELECT * FROM produk WHERE best_seller = 1 and aktif = 1 LIMIT 3";

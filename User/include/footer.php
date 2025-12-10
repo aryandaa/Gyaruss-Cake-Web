@@ -7,8 +7,26 @@
         color: #2B143B;
     }
     .font-montserrat {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 200 !important;
     }
+    
+    .montserrat-font {
+    font-family: "Montserrat", sans-serif !important;
+    font-optical-sizing: auto;
+    font-weight: 300 !important;
+    font-style: normal !important;
+    }
+
+    .lokasi-wrapper {
+    max-width: 1000px; /* bisa adjust biar sesuai desain */
+    margin: 0 auto; /* ini yang bikin center */
+    }
+
+    a {
+    text-decoration: none !important;
+    }
+
    </style>
    
 
@@ -44,26 +62,25 @@
                 </p>
 
                 <!-- Sosial Media -->
-                <h4 class="text-ungu mb-3 fs-3"><b>Sosial Media</b></h4>
+                <h4 class="text-ungu mb-3 fs-3">Sosial Media</h4>
 
-                <p class="mb-2 text-ungu d-flex align-items-center">
-                    <i class="bi bi-whatsapp fs-4 me-3"></i>
-                    <span class="font-montserrat">0813-4803-4658</span>
+                <p class="mb-2 d-flex align-items-center">
+                    <i class="bi bi-whatsapp me-3 fs-4"></i>
+                    <span class=""><a href="https://wa.me/6281348034658" 
+                                    class="text-ungu montserrat-font">0813-4803-4658</a></span>
                 </p>
 
-                <p class="mb-2 text-ungu d-flex align-items-center">
-                    <i class="bi bi-instagram fs-4 me-3"></i>
-                    <span class="font-montserrat">nur_alimah84</span>
+                <p class="mb-2 d-flex align-items-center">
+                    <i class="bi bi-instagram me-3 fs-4"></i>
+                    <span class=""><a href="https://www.instagram.com/nur_alimah84?igsh=MXBzejMxZG1wdW94bA=="
+                                    class="text-ungu montserrat-font">nur_alimah84</a></span>
                 </p>
 
-                <p class="mb-2 text-ungu d-flex align-items-center">
-                    <i class="bi bi-facebook fs-4 me-3"></i>
-                    <span class="font-montserrat">Nur Alimah</span>
-                </p>
             </div>
 
+            
             <!-- MAP -->
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6 mt-5">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127962.52375539638!2d114.51823311016532!3d-3.357123799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de421e31a001119%3A0x799d4a8be57fe70f!2sGyaruss%20Cake!5e0!3m2!1sid!2sid!4v1706517360000!5m2!1sid!2sid"
                     width="100%"
@@ -71,18 +88,19 @@
                     style="border:0; border-radius:12px;"
                     allowfullscreen=""
                     loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="border" >
                 </iframe>
             </div>
 
             <!-- Logo + Jam Buka -->
-            <div class="col-lg-4 col-md-6 text-center">
+            <div class="col-lg-4 col-md-6 text-center mt-5">
                 <img src="<?= $base_url ?>User/Asset/images/logo gyarus.png" class="img-fluid mb-3" style="max-width:150px;" alt="Logo">
                 <p class="text-ungu fs-6">
                     Kelezatan yang <br>Merayakan Momen Anda
                 </p>
 
-                <h3 class="text-ungu mt-4">Jam Buka</h3>
+                <h3 class="text-ungu mt-4"><b>Jam Buka</b></h3>
                 <p class="text-ungu fs-6">
                     Buka Setiap Hari <br>
                     <b>24 Jam</b>

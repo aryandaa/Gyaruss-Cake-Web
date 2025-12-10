@@ -104,6 +104,29 @@ $katering = mysqli_query($conn, $query);
             white-space: nowrap;      /* biar gak jadi 2 baris */
         }
 
+        .qty-btn {
+        width: 40px;
+        height: 40px;
+        background-color: #504060;
+        border: none;
+        outline: none;
+        text-decoration: none;
+        }
+
+        /* Hilangkan highlight biru */
+        a:focus,
+        a:active,
+        button:focus,
+        button:active {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        /* Hilangkan garis bawah link */
+        a {
+            text-decoration: none !important;
+        }
+
     </style>
 
 </head>
@@ -141,12 +164,9 @@ $katering = mysqli_query($conn, $query);
                     <img src="../Asset/images/Produk/<?= $c['gambar']; ?>" class="card-img-top"
                         style="height:130px; object-fit:cover; border-radius:15px 15px 0 0;">
 
-                    <div class="d-flex justify-content-between align-items-center px-3 py-2 purple-bg"
+                    <div class="d-flex justify-content-center  align-items-center px-3 py-2 purple-bg"
                         style="border-radius:0 0 15px 15px;">
-                        <span class="fw-semibold"><?= $c['nama_produk']; ?></span>
-                        <a href="../proses/hapus_cart.php?id=<?= $c['id_cart']; ?>">
-                        <button class="btn btn-sm rounded-circle" style="background-color: red;"><i class="bi bi-trash" style="color: white;"></i></button>
-                        </a>
+                        <span class="fw-semibold text-center"><?= $c['nama_produk']; ?></span>
                     </div>
 
                 </div>
@@ -168,23 +188,40 @@ $katering = mysqli_query($conn, $query);
                     <div class="d-flex align-items-center gap-2">
 
                     <a href="../proses/minus_qty.php?id=<?= $c['id_cart']; ?>">
-                    <button class="btn rounded-circle d-flex justify-content-center align-items-center shadow"
-                            style="width:40px; height:40px; background-color:#504060;">
-                        <span class="text-white fw-bold">−</span>
-                    </button>
+                        <a href="../proses/minus_qty.php?id=<?= $c['id_cart']; ?>">
+                        <button class="btn rounded-circle d-flex justify-content-center align-items-center shadow"
+                                style="width:40px; height:40px; background-color:#504060; border:none;">
+                            <span class="text-white fw-bold"
+                                style="font-size:48px; line-height:0;">
+                                <i class="bi bi-dash fs-3"></i>
+                            </span>
+                        </button>
                     </a>
 
                     <div class="rounded-circle d-flex justify-content-center align-items-center shadow"
                         style="width:40px; height:40px; background-color:#504060;">
-                        <span class="text-white fw-bold"><?= $c['qty']; ?></span>
+                        <span class="text-white fw-bold fs-5" style="font-family: montserrat;"><?= $c['qty']; ?></span>
                     </div>
 
                     <a href="../proses/plus_qty.php?id=<?= $c['id_cart']; ?>">
-                    <button class="btn rounded-circle d-flex justify-content-center align-items-center shadow"
-                            style="width:40px; height:40px; background-color:#504060;">
-                        <span class="text-white fw-bold">+</span>
-                    </button>
+                        <button class="btn rounded-circle d-flex justify-content-center align-items-center shadow"
+                                style="width:40px; height:40px; background-color:#504060; border:none;">
+                            <span class="text-white fw-bold"
+                                style="font-size:40px; line-height:0;">
+                                <i class="bi bi-plus fs-3"></i>
+                            </span>
+                        </button>
                     </a>
+
+
+
+                    <a href="../proses/hapus_cart.php?id=<?= $c['id_cart']; ?>" class="ms-4 ">
+                        <button class="btn qty-btn rounded-circle d-flex justify-content-center align-items-center shadow"
+                                style="width:45px; height:45px; background-color:#504060;">
+                            <i class="bi bi-trash text-white fs-5"></i>
+                        </button>
+                    </a>
+
 
                 </div>
 
@@ -212,14 +249,14 @@ $katering = mysqli_query($conn, $query);
                 <h5 class="fw-bold text-center mb-3 fs-4" style="font-family: 'Montserrat', sans-serif; font-weight:700; color:#2B143B;">Jumlah Pesanan</h5>
 
                 <div class="d-flex justify-content-between mb-1">
-                    <span>Total Pesanan (<?= $total_qty ?> item)</span>
+                    <span style="font-family: 'Montserrat', sans-serif;">Total Pesanan (<?= $total_qty ?> item)</span>
                 </div>
 
                 <hr>
 
                 <div class="d-flex justify-content-between mb-4">
-                    <strong>Total</strong>
-                    <strong>Rp <?= number_format($total_harga, 0, ',', '.') ?></strong>
+                    <strong style="font-family: 'Montserrat', sans-serif;">Total</strong>
+                    <strong style="font-family: 'Montserrat', sans-serif; font-weight:500;">Rp <?= number_format($total_harga, 0, ',', '.') ?></strong>
                 </div>
 
                 <form action="form_checkout.php" method="POST">

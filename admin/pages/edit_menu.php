@@ -123,7 +123,7 @@ include "../proses/proses_edit_menu.php";
                         <label class="d-flex align-items-center gap-2">
                             <input type="radio" name="best_seller" value="1" 
                                 <?= ($data['best_seller'] == 1) ? 'checked' : ''; ?>>
-                            <span>Ya (Tampilkan Badge 🔥 Terlaris)</span>
+                            <span>Ya (Tampilkan Badge Terlaris)</span>
                         </label>
 
                         <label class="d-flex align-items-center gap-2">

@@ -155,7 +155,20 @@
         background-color: rgba(59, 143, 190, 0.35);
     }
 
-    
+    input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #504060 !important;
+    cursor: pointer;
+    }
+
+    .header-button {
+    background-color: #504060;
+    padding: 10px 0;
+    }
+    .dateTime {
+        min-width: 260px; /* biar gak geser saat jam berubah */
+    }
 
 
     @media (max-width: 991px) {

@@ -101,7 +101,7 @@ body.modal-open {
                                 <?php if($r['best_seller'] == 1): ?>
                                     <span class="badge"
                                         style="background:#FF5B5B; color:white; padding:4px 10px; border-radius:12px; font-size:12px; margin-left:6px;">
-                                        🔥 Terlaris
+                                        Terlaris
                                     </span>
                                 <?php endif; ?>
                         
