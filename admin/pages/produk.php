@@ -52,6 +52,31 @@ body.modal-open {
     pointer-events: auto !important;
 }
 
+.sell-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.sell-count {
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    min-width: 30px; /* biar angka selalu stabil */
+    text-align: center;
+}
+
+/* Badge terlaris styling */
+.badge-terlaris {
+    background-color: #ff5c5c;
+    color: white;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
 
 
 </style>
@@ -95,17 +120,20 @@ body.modal-open {
                             </td>
                             <td><b><?= $r['nama_produk'] ?></b></td>
                             <td class="text-end">Rp.<?= number_format($r['harga'], 0, ',', '.'); ?></td>
-                            <td class="text-end">
-                                <?= $r['total_penjualan'] ?>
+
+                            <td class="text-center">
+                                <div class="sell-wrapper">
+                                <span class="sell-count"><?= $r['total_penjualan'] ?></span>
 
                                 <?php if($r['best_seller'] == 1): ?>
-                                    <span class="badge"
+                                    <span class="badge badge-terlaris"
                                         style="background:#FF5B5B; color:white; padding:4px 10px; border-radius:12px; font-size:12px; margin-left:6px;">
-                                        Terlaris
+                                        <i class="bi bi-fire"></i> Terlaris
                                     </span>
                                 <?php endif; ?>
-                        
+                                </div>
                             </td>
+
                             <td class="text-end"><?= $r['kategori'] ?></td>
                             <td class="text-center">
 

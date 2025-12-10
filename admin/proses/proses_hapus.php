@@ -22,6 +22,12 @@ if ($res->num_rows === 0) {
 $data = $res->fetch_assoc();
 $gambar = $data['gambar'];
 
+// Hapus komentar terkait produk
+$del_komen = $conn->prepare("DELETE FROM komentar WHERE id_produk = ?");
+$del_komen->bind_param("i", $id);
+$del_komen->execute();
+$del_komen->close();
+
 // Hapus database
 $del = $conn->prepare("DELETE FROM produk WHERE id_produk = ?");
 $del->bind_param("i", $id);

@@ -99,6 +99,22 @@ mysqli_query($conn, "
      ('$id_pesanan','$id_produk','{$produk['nama_produk']}','$qty','$harga','$subtotal')
 ");
 
+// Update status best seller
+mysqli_query($conn, "UPDATE produk SET best_seller = 0");
+
+$result_bs = mysqli_query($conn, "
+    SELECT id_produk, SUM(qty) as total_jual
+    FROM pesanan_detail
+    GROUP BY id_produk
+    ORDER BY total_jual DESC
+    LIMIT 2
+");
+
+while($bs = mysqli_fetch_assoc($result_bs)) {
+    $idp = $bs['id_produk'];
+    mysqli_query($conn, "UPDATE produk SET best_seller = 1 WHERE id_produk = '$idp'");
+}
+
 // Siapkan pesan WhatsApp
 $pesan  = "╔═══════════════════════╗
 ║   NOTIFIKASI PESANAN    ║

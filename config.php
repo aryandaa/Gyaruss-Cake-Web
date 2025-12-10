@@ -1,4 +1,5 @@
 <?php
+
 /// Default: LOCAL dulu
 $base_url = "http://localhost/Gyruss-Cake-Web/";
 $db_host = "localhost";

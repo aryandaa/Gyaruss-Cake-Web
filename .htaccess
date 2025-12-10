@@ -1,0 +1,14 @@
+# ===========================
+# PROTECT SENSITIVE DIRECTORIES
+# ===========================
+
+RewriteRule ^Admin/proses/ - [F,L]
+RewriteRule ^Admin/include/ - [F,L]
+
+RewriteRule ^User/proses/ - [F,L]
+RewriteRule ^User/include/ - [F,L]
+
+# Protect config.php
+<Files "config.php">
+    Require all denied
+</Files>

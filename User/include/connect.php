@@ -42,7 +42,7 @@ if (!$result) {
 
 
 //Menampilkan Best Seller
-$sql = "SELECT * FROM produk WHERE best_seller = 1 and aktif = 1 LIMIT 3";
+$sql = "SELECT * FROM produk WHERE best_seller = 1 and aktif = 1 LIMIT 2";
 $bestSeller = mysqli_query($conn, $sql);
 
 //menampilkan Testimoni dan filter ratingnya:

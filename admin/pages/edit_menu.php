@@ -115,26 +115,6 @@ include "../proses/proses_edit_menu.php";
                             name="deskripsi"><?= htmlspecialchars($data['deskripsi']); ?></textarea>
                 </div>
 
-
-                <div class="col-12">
-                    <label class="form-label fw-semibold" style="color:#504060;">Best Seller?</label>
-                    <div class="d-flex gap-4">
-
-                        <label class="d-flex align-items-center gap-2">
-                            <input type="radio" name="best_seller" value="1" 
-                                <?= ($data['best_seller'] == 1) ? 'checked' : ''; ?>>
-                            <span>Ya (Tampilkan Badge Terlaris)</span>
-                        </label>
-
-                        <label class="d-flex align-items-center gap-2">
-                            <input type="radio" name="best_seller" value="0"
-                                <?= ($data['best_seller'] == 0) ? 'checked' : ''; ?>>
-                            <span>Tidak</span>
-                        </label>
-
-                    </div>
-                </div>
-
                 <div class="col-12 mt-2">
                     <label class="form-label fw-semibold" style="color:#504060;">Status Produk</label>
                     <div class="d-flex gap-4">

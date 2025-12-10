@@ -1,28 +1,29 @@
-name: Deploy via SFTP
+name: Auto Deploy to FTP
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main   # atau master sesuai branch kamu
 
 jobs:
-  deploy:
+  ftp-deploy:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v3
-
-      - name: Deploy to cPanel using SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.3
-        with:
-          server: ${{ secrets.SFTP_HOST }}
-          port: ${{ secrets.SFTP_PORT }}
-          username: ${{ secrets.SFTP_USER }}
-          password: ${{ secrets.SFTP_PASSWORD }}
-          protocol: sftp
-          server-dir: /home/gyarusca/public_html/
-          local-dir: ./
-          exclude: |
-            **/.git*
-            **/README.md
-            **/.github*
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Deploy to FTP Server
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        protocol: ftps
+        port: ${{ secrets.FTP_PORT || 21 }}
+        local-dir: ./
+        server-dir: /home/gyarusca/public_html
+        exclude: |
+          **/.git*
+          **/.github*
+          README.md

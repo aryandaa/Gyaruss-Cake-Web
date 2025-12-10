@@ -1,13 +1,7 @@
 <?php 
-//memulai session
 session_start();
-// agar pesan error kelihatan waktu di server
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-ini_set('log_errors', 1);
-ini_set('error_log', __DIR__ . '/error.log');
-
 include $_SERVER['DOCUMENT_ROOT'] . '/Gyruss-Cake-Web/config.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/Gyruss-Cake-Web/secure.php';
 include 'User/include/init_cart.php';
 ?>
 <!DOCTYPE html>
@@ -86,20 +80,21 @@ include 'User/include/init_cart.php';
     include 'User/include/header.php'; 
     ?>
 
+
     <!-- Carousel Start -->
     <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="owl-carousel header-carousel position-relative">
 
             <?php foreach ($bestSeller as $bs): ?>
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="User/Asset/images/Produk/<?= $bs['gambar']; ?>" alt="">
+                <img class="img-fluid" src="User/Asset/images/Produk/<?= e($bs['gambar']); ?>" alt="">
                 <div class="owl-carousel-inner">
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-lg-8">
                                 <h1 class="display-1 mb-4 animated slideInDown" style="color: #504060;"><b>Rekomendasi</b></h1>
                                 <p class="text-color fs-5 mb-4 pb-3">- Rasakan Kelezatannya</p>
-                                <a href="User/Pages/form_beli_sekarang.php?id_produk=<?= $bs['id_produk']; ?>" class="btn background rounded-pill py-3 px-5"><span class="text-white">Beli Sekarang <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <a href="User/Pages/form_beli_sekarang.php?id_produk=<?= e($bs['id_produk']); ?>" class="btn background rounded-pill py-3 px-5"><span class="text-white">Beli Sekarang <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                                 </svg></span></a>
                             </div>
@@ -146,8 +141,8 @@ include 'User/include/init_cart.php';
                         >
                         <div class="position-relative">
                             <img class="img-fluid"
-                                src="User/Asset/images/Produk/<?= $bs['gambar']; ?>" 
-                                alt="<?= $bs['nama_produk']; ?>"
+                                src="User/Asset/images/Produk/<?= e($bs['gambar']); ?>" 
+                                alt="<?= e($bs['nama_produk']); ?>"
                                 style="
                                 width:100%;
                                 height:300px;
@@ -200,8 +195,8 @@ include 'User/include/init_cart.php';
 
                          <div class="position-relative">
                             <img class="img-fluid product-image" 
-                                src="User/Asset/images/Produk/<?= $p['gambar']; ?>" 
-                                alt="<?= $p['nama_produk']; ?>">
+                                src="User/Asset/images/Produk/<?= e($p['gambar']); ?>" 
+                                alt="<?= e($p['nama_produk']); ?>">
                             <div class="product-overlay">
                                 <a class="btn btn-lg-square btn-outline-light rounded-circle"
                                 href="User/Pages/detail-produk.php?id=<?= $p['id_produk'] ?>&from=/index.php ">
@@ -211,7 +206,7 @@ include 'User/include/init_cart.php';
                         </div>
 
                         <div class="text-center p-4 product-body">
-                            <h3 class="mb-2"><?= $p['nama_produk']; ?></h3>
+                            <h3 class="mb-2"><?= e($p['nama_produk']); ?></h3>
                             <div class="pt-1 px-3 mb-3">
                                 Rp.<?= number_format($p['harga'], 0, ',', '.'); ?>
                             </div> 
@@ -219,15 +214,21 @@ include 'User/include/init_cart.php';
                             <div class="product-actions">
                                 <form action="User/proses/tambah_keranjang.php" method="POST" class="d-inline">
                                     <input type="hidden" name="id_produk" value="<?= $p['id_produk'] ?>">
+                                    <input type="hidden" name="csrf_token" value="<?= e($_SESSION['csrf_token']); ?>">
                                 <button class="border-0 rounded-circle p-3 btn-cart-icon d-flex justify-content-center align-items-center" style="background-color: #2B143B;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" 
-                                        width="23" 
-                                        height="23" 
-                                        fill="currentColor" 
-                                        class="bi bi-bag-plus-fill" 
-                                        viewBox="0 0 16 16"
+                                    
+                                    <svg width="50" height="50"
+                                        fill="currentColor"
+                                        viewBox="0 0 16 16" 
+                                        version="1.1" 
+                                        xmlns="http://www.w3.org/2000/svg" 
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" 
+                                        class="si-glyph si-glyph-basket-plus"
                                         style="color: white;">
-                                        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5z"/>
+                                                <path d="M9.927,11.918 C9.887,11.833 9.86,11.741 9.86,11.639 L9.86,7.483 C9.86,7.145 10.146,6.907 10.448,6.907 L10.469,6.907 C10.77,6.907 11.063,7.145 11.063,7.483 L11.063,10.943 L11.965,10.943 L11.965,8.982 L13.258,8.982 L13.422,5.976 L14.188,5.976 C14.588,5.976 14.913,4.756 14.913,4.756 C14.913,4.386 14.589,4.084 14.188,4.084 L12.26,4.084 L11.225,0.447 C11.074,0.13 10.699,0.00199999998 10.387,0.161 L10.315,0.197 C10.005,0.357 9.876,0.743 10.027,1.06 L10.768,4.083 L4.114,4.083 L4.882,1.064 C5.036,0.75 4.909,0.362 4.601,0.199 L4.531,0.163 C4.22,0.000999999981 3.843,0.125 3.689,0.44 L2.616,4.083 L0.726,4.083 C0.326,4.083 0.000999999931,4.385 0.000999999931,4.755 C0.000999999931,4.755 0.325,5.975 0.726,5.975 L1.362,5.975 L1.811,12.652 C1.811,12.652 1.863,13.961 3.924,13.961 L9.928,13.961 L9.928,11.918 L9.927,11.918 Z M11.969,5 L13.031,5 L13.031,6.062 L11.969,6.062 L11.969,5 L11.969,5 Z M3.094,6.031 L1.912,6.031 L1.912,4.906 L3.094,4.906 L3.094,6.031 L3.094,6.031 Z M5.006,11.742 C5.006,12.092 4.755,12.375 4.447,12.375 L4.424,12.375 C4.113,12.375 3.863,12.092 3.863,11.742 L3.863,7.413 C3.863,7.063 4.113,6.781 4.424,6.781 L4.447,6.781 C4.755,6.781 5.006,7.063 5.006,7.413 L5.006,11.742 L5.006,11.742 Z M8.004,11.547 C8.004,11.881 7.774,12.152 7.49,12.152 L7.469,12.152 C7.185,12.152 6.955,11.881 6.955,11.547 L6.955,7.448 C6.955,7.114 7.184,6.844 7.469,6.844 L7.49,6.844 C7.773,6.844 8.004,7.115 8.004,7.448 L8.004,11.547 L8.004,11.547 Z" class="si-glyph-fill">
+                                                </path>
+                                                <path d="M16,12.012 L13.992,12.012 L13.992,10.106 L13.055,10.106 L13.055,12.012 L11.052,12.012 L11.052,12.906 L13.055,12.906 L13.055,14.938 L13.992,14.938 L13.992,12.906 L16,12.906 L16,12.012 Z" class="si-glyph-fill">
+                                                </path>
                                     </svg>
 
                                 </button>
@@ -404,19 +405,22 @@ include 'User/include/init_cart.php';
                         </div>
 
                         <p class="testimonial-text" style="font-size: 20px;">
-                            “<?= $t['pesan']; ?>”
+                            “<?= e($t['pesan']); ?>”
                         </p>
                         <hr class="border border-dark" style="height: 2px;">
                         <div class="d-flex align-items-center mt-3">
-                            <span class="ms-2 profile-name fw-bold"><?= $t['nama']; ?></span>
+                            <span class="ms-2 profile-name fw-bold"><?= e($t['nama']); ?></span>
                         </div>
                         <?php
-                        $id_produk = $t['id_produk'];
-                        $query_produk = "SELECT nama_produk FROM produk WHERE id_produk = '$id_produk'";
-                        $result_produk = mysqli_query($conn, $query_produk);
-                        $produk = mysqli_fetch_assoc($result_produk);
+                        $id_produk = (int)$t['id_produk'];
+                        $stmt = $conn->prepare("SELECT nama_produk FROM produk WHERE id_produk = ?");
+                        $stmt->bind_param("i", $id_produk);
+                        $stmt->execute();
+                        $result_produk = $stmt->get_result();
+                        $produk = $result_produk->fetch_assoc();
+                        $stmt->close();
                         ?>
-                        <div class="border h-10 rounded-pill ps-2 mt-2" style="background-color: #504060;"><span class="text-light">Produk: <?= $produk['nama_produk'];?></span></div>
+                        <div class="border h-10 rounded-pill ps-2 mt-2" style="background-color: #504060;"><span class="text-light">Produk: <?= e($produk['nama_produk']);?></span></div>
                     </div>
                 </div>
                 <?php endforeach; ?>
@@ -477,3 +481,5 @@ include 'User/include/init_cart.php';
 
 </body>
 </html>
+
+<?php var_dump($_SESSION['csrf_token']); ?>
