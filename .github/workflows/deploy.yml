@@ -22,7 +22,7 @@ jobs:
         protocol: ftps
         port: ${{ secrets.FTP_PORT || 21 }}
         local-dir: ./
-        server-dir: /home/gyarusca/public_html
+        server-dir: /home/gyarusca/public_html/
         exclude: |
           **/.git*
           **/.github*
