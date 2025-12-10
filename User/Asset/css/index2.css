@@ -5,7 +5,7 @@ body {
     color: #2B143B !important;
 }
 .background{
-    background: #2B143B !important;
+    background: #504060 !important;
 }
 .color-primary {
     color: #504060 !important;
@@ -95,12 +95,12 @@ body {
 }
 
 .filter-active {
-    background-color: #2B143B !important;
+    background-color: #504060 !important;
     color: white !important;
 }
 
 .btn-cart-icon {
-    background-color: #2B143B !important;
+    background-color: #504060 !important;
     transition: 0.2s ease;
 }
 

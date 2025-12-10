@@ -60,51 +60,41 @@ foreach ($items as $i) {
     ");
 }
 
-$pesan = 
-"╔═══════════════════════╗".
-"║ PESANAN BARU MASUK    ║".
-"╚═══════════════════════╝".
+$pesan =
+rawurlencode("╔══════════════════════════════════════╗") . "%0A" .
+rawurlencode("║ PESANAN BARU MASUK ║") . "%0A" .
+rawurlencode("╚══════════════════════════════════════╝") . "%0A%0A" .
 
-" Ada pesanan baru nih! Yuk cek detailnya ".
+rawurlencode("Ada pesanan baru nih! Yuk cek detailnya 👇") . "%0A%0A" .
 
-"━━━━━━━━━━━━━━━━━━━━━━━━━━".
-" DETAIL PRODUK PESANAN".
-"━━━━━━━━━━━━━━━━━━━━━━━━━━";
+rawurlencode("━━━━━━━━ DETAIL PRODUK ━━━━━━━━") . "%0A";
 
-// Loop produk cart
 foreach ($items as $i) {
-    $namaProduk = rawurlencode($i['nama_produk']);
-    $qty        = rawurlencode($i['qty']);
-    $sub        = rawurlencode(number_format($i['qty'] * $i['harga'],0,',','.'));
-    $hargaSat   = rawurlencode(number_format($i['harga'],0,',','.'));
+    $namaProduk = $i['nama_produk'];
+    $qty        = $i['qty'];
+    $hargaSat   = number_format($i['harga'],0,',','.');
+    $sub        = number_format($i['qty'] * $i['harga'],0,',','.');
 
-    $pesan .= 
-    " $namaProduk".
-    "   ├─  Jumlah: {$qty} pcs".
-    "   ├─  Harga Satuan: Rp {$hargaSat}".
-    "   └─  Subtotal: Rp {$sub}";
+    $pesan .= rawurlencode("• $namaProduk") . "%0A";
+    $pesan .= rawurlencode("   ├─ Jumlah: {$qty} pcs") . "%0A";
+    $pesan .= rawurlencode("   ├─ Harga: Rp {$hargaSat}") . "%0A";
+    $pesan .= rawurlencode("   └─ Subtotal: Rp {$sub}") . "%0A%0A";
 }
 
 $pesan .=
-"━━━━━━━━━━━━━━━━━━━━━━━━━━".
-" TOTAL PEMBAYARAN".
-"━━━━━━━━━━━━━━━━━━━━━━━━━━".
-"Total: Rp " . rawurlencode(number_format($total_harga,0,',','.')) .
+rawurlencode("━━━━━━━━ TOTAL PEMBAYARAN ━━━━━━━━") . "%0A" .
+rawurlencode("Total: Rp " . number_format($total_harga,0,',','.')) . "%0A%0A" .
 
-"━━━━━━━━━━━━━━━━━━━━━━━━━━".
-" DATA PELANGGAN".
-"━━━━━━━━━━━━━━━━━━━━━━━━━━".
-" Nama: " . rawurlencode($nama) .
-" WhatsApp: " . rawurlencode($wa) . 
-" Alamat: " . rawurlencode($alamat) .
-" Metode Pembayaran: " . rawurlencode($metode) .
+rawurlencode("━━━━━━━━ DATA PELANGGAN ━━━━━━━━") . "%0A" .
+rawurlencode("Nama: $nama") . "%0A" .
+rawurlencode("WhatsApp: $wa") . "%0A" .
+rawurlencode("Alamat: $alamat") . "%0A" .
+rawurlencode("Metode Pembayaran: $metode") . "%0A" .
+rawurlencode("Catatan: $catatan") . "%0A%0A" .
 
-" Catatan:%0A".
-rawurlencode($catatan) . 
-
-"━━━━━━━━━━━━━━━━━━━━━━━━━━".
-" yuk segera diproses!".
-"#GyarussCake";
+rawurlencode("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━") . "%0A" .
+rawurlencode("Yuk segera diproses!") . "%0A" .
+rawurlencode("#GyarussCake");
 
 // Nomor WA
 $waToko = "6289692778102";

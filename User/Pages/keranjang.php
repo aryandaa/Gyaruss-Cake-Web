@@ -315,15 +315,15 @@ $katering = mysqli_query($conn, $query);
                             <div class="product-actions">
                                 <form action="../proses/tambah_keranjang.php" method="POST" class="d-inline">
                                     <input type="hidden" name="id_produk" value="<?= $k['id_produk'] ?>">
-                                <button class="border-0 rounded-circle p-3 btn-cart-icon" style="background-color: #2B143B;">
+                               <button class="border-0 rounded-circle p-3 btn-cart-icon d-flex justify-content-center align-items-center" style="background-color: #2B143B;">
                                     <svg xmlns="http://www.w3.org/2000/svg" 
-                                        width="25" height="25" 
+                                        width="23" 
+                                        height="23" 
                                         fill="currentColor" 
-                                        class="bi bi-cart-plus " 
-                                        viewBox="0 0 16 16" 
+                                        class="bi bi-bag-plus-fill" 
+                                        viewBox="0 0 16 16"
                                         style="color: white;">
-                                        <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
-                                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5z"/>
                                     </svg>
                                 </button>
                                 </form>
@@ -369,15 +369,15 @@ $katering = mysqli_query($conn, $query);
                             <div class="product-actions">
                                 <form action="../proses/tambah_keranjang.php" method="POST" class="d-inline">
                                     <input type="hidden" name="id_produk" value="<?= $kr['id_produk'] ?>">
-                                <button class="border-0 rounded-circle p-3 btn-cart-icon" style="background-color: #2B143B;">
+                                <button class="border-0 rounded-circle p-3 btn-cart-icon d-flex justify-content-center align-items-center" style="background-color: #2B143B;">
                                     <svg xmlns="http://www.w3.org/2000/svg" 
-                                        width="25" height="25" 
+                                        width="23" 
+                                        height="23" 
                                         fill="currentColor" 
-                                        class="bi bi-cart-plus " 
-                                        viewBox="0 0 16 16" 
+                                        class="bi bi-bag-plus-fill" 
+                                        viewBox="0 0 16 16"
                                         style="color: white;">
-                                        <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
-                                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5z"/>
                                     </svg>
                                 </button>
                                 </form>
