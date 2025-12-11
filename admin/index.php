@@ -23,23 +23,23 @@ if(isset($_SESSION['nama'])){
     <meta name="keywords" content="au theme template">
     <title>Dashboard Admin</title>
 
-    <link href="<?= $base_url ?>Admin/Asset/css/font-face.css" rel="stylesheet" media="all">
-    <link href="<?= $base_url ?>Admin/Asset/vendor/fontawesome-7.1.0/css/all.min.css" rel="stylesheet" media="all">
-    <link href="<?= $base_url ?>Admin/Asset/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="<?= $base_url ?>admin/Asset/css/font-face.css" rel="stylesheet" media="all">
+    <link href="<?= $base_url ?>admin/Asset/vendor/fontawesome-7.1.0/css/all.min.css" rel="stylesheet" media="all">
+    <link href="<?= $base_url ?>admin/Asset/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
 
-    <link href="<?= $base_url ?>Admin/Asset/vendor/bootstrap-5.3.8.min.css" rel="stylesheet" media="all">
+    <link href="<?= $base_url ?>admin/Asset/vendor/bootstrap-5.3.8.min.css" rel="stylesheet" media="all">
 
-    <link href="<?= $base_url ?>Admin/Asset/css/aos.css"  rel="stylesheet" media="all">
-    <link href="<?= $base_url ?>Admin/Asset/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
-    <link href="<?= $base_url ?>Admin/Asset/css/swiper-bundle-12.0.3.min.css" rel="stylesheet" media="all">
-    <link href="<?= $base_url ?>Admin/Asset/vendor/perfect-scrollbar/perfect-scrollbar-1.5.6.css" rel="stylesheet" media="all">
+    <link href="<?= $base_url ?>admin/Asset/css/aos.css"  rel="stylesheet" media="all">
+    <link href="<?= $base_url ?>admin/Asset/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="<?= $base_url ?>admin/Asset/css/swiper-bundle-12.0.3.min.css" rel="stylesheet" media="all">
+    <link href="<?= $base_url ?>admin/Asset/vendor/perfect-scrollbar/perfect-scrollbar-1.5.6.css" rel="stylesheet" media="all">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <link href="<?= $base_url ?>Admin/Asset/css/theme.css" rel="stylesheet" media="all">
-    <link href="<?= $base_url ?>Admin/Asset/css/style2.css" rel="stylesheet" media="all">
-    <link href="<?= $base_url ?>Admin/Asset/css/testimoni.css" rel="stylesheet" media="all">
+    <link href="<?= $base_url ?>admin/Asset/css/theme.css" rel="stylesheet" media="all">
+    <link href="<?= $base_url ?>admin/Asset/css/style2.css" rel="stylesheet" media="all">
+    <link href="<?= $base_url ?>admin/Asset/css/testimoni.css" rel="stylesheet" media="all">
 </head>
 
 <body>
@@ -217,23 +217,23 @@ if(isset($_SESSION['nama'])){
     </div>
 
     <!-- Jquery JS-->
-    <script src="<?= $base_url ?>Admin/Asset/js/vanilla-utils.js"></script>
+    <script src="<?= $base_url ?>admin/Asset/js/vanilla-utils.js"></script>
     <!-- Bootstrap JS-->
-    <script src="<?= $base_url ?>Admin/Asset/vendor/bootstrap-5.3.8.bundle.min.js"></script>
+    <script src="<?= $base_url ?>admin/Asset/vendor/bootstrap-5.3.8.bundle.min.js"></script>
     <!-- Vendor JS       -->
-    <script src="<?= $base_url ?>Admin/Asset/vendor/perfect-scrollbar/perfect-scrollbar-1.5.6.min.js"></script>
+    <script src="<?= $base_url ?>admin/Asset/vendor/perfect-scrollbar/perfect-scrollbar-1.5.6.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="<?= $base_url ?>Admin/Asset/vendor/chartjs/chart.umd.js-4.5.1.min.js"></script>
+    <script src="<?= $base_url ?>admin/Asset/vendor/chartjs/chart.umd.js-4.5.1.min.js"></script>
 
     <!-- Main JS-->
-    <script src="<?= $base_url ?>Admin/Asset/js/bootstrap5-init.js"></script>
-    <script src="<?= $base_url ?>Admin/Asset/js/main-vanilla.js"></script>
-    <script src="<?= $base_url ?>Admin/Asset/js/swiper-bundle-12.0.3.min.js"></script>
-    <script src="<?= $base_url ?>Admin/Asset/js/aos.js"></script>
-    <script src="<?= $base_url ?>Admin/Asset/js/modern-plugins.js"></script>
+    <script src="<?= $base_url ?>admin/Asset/js/bootstrap5-init.js"></script>
+    <script src="<?= $base_url ?>admin/Asset/js/main-vanilla.js"></script>
+    <script src="<?= $base_url ?>admin/Asset/js/swiper-bundle-12.0.3.min.js"></script>
+    <script src="<?= $base_url ?>admin/Asset/js/aos.js"></script>
+    <script src="<?= $base_url ?>admin/Asset/js/modern-plugins.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="<?= $base_url ?>Admin/Asset/js/datetime.js"></script>
+    <script src="<?= $base_url ?>admin/Asset/js/datetime.js"></script>
 
 </body>
 
