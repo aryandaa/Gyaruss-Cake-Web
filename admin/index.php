@@ -1,14 +1,14 @@
 <?php
+session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ini_set('log_errors', 1);
 ini_set('error_log', __DIR__ . '/error.log');
 
-include __DIR__ . "/../../config.php";
-include __DIR__ . "/../../secure.php";
+include_once "../config.php";
+include "include/config.php";
+include "../secure.php";
 
-
-session_start();
 if(isset($_SESSION['nama'])){
 ?>
 
