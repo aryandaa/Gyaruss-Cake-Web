@@ -7,6 +7,7 @@ ini_set('log_errors', 1);
 ini_set('error_log', __DIR__ . '..//error.log');
 
 include __DIR__ . "/../../config.php";
+include "../include/connect.php";
 include __DIR__ . "/../../secure.php";
 ?>
 <!DOCTYPE html>
