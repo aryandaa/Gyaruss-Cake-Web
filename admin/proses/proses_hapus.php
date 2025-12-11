@@ -1,22 +1,7 @@
 <?php
-function smartInclude($local, $hosting) {
-    if (file_exists($local)) {
-        include $local;
-    } elseif (file_exists($hosting)) {
-        include $hosting;
-    } else {
-        die("Include gagal: file tidak ditemukan");
-    }
-}
+include __DIR__ . "/../../config.php";
+include __DIR__ . "/../../secure.php";
 
-smartInclude(
-    $_SERVER['DOCUMENT_ROOT'] . '/Gyruss-Cake-Web/config.php', // local
-    $_SERVER['DOCUMENT_ROOT'] . '/config.php'                  // hosting
-);
-smartInclude(
-    $_SERVER['DOCUMENT_ROOT'] . '/Gyruss-Cake-Web/secure.php', // local
-    $_SERVER['DOCUMENT_ROOT'] . '/secure.php'                  // hosting
-);
 
 if (!isset($_GET['id'])) {
     echo "<script>alert('ID tidak ditemukan!'); history.back();</script>";

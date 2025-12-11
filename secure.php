@@ -28,9 +28,11 @@ if (basename($_SERVER['PHP_SELF']) === 'secure.php') {
 }
 
 // Include config hanya sekali
-require_once __DIR__ . '/config.php';
+include "config.php";
 
 // Helper untuk sanitize output HTML
-function e($str) {
-    return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
+if (!function_exists("e")) {
+    function e($str) {
+        return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
+    }
 }
