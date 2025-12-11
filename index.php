@@ -1,7 +1,22 @@
 <?php 
 session_start();
-include $_SERVER['DOCUMENT_ROOT'] . '/Gyruss-Cake-Web/config.php';
-include $_SERVER['DOCUMENT_ROOT'] . '/Gyruss-Cake-Web/secure.php';
+function smartInclude($local, $hosting) {
+    if (file_exists($local)) {
+        include $local;
+    } elseif (file_exists($hosting)) {
+        include $hosting;
+    } else {
+        die("Include gagal: file tidak ditemukan");
+    }
+}
+smartInclude(
+    $_SERVER['DOCUMENT_ROOT'] . '/Gyruss-Cake-Web/config.php', // local
+    $_SERVER['DOCUMENT_ROOT'] . '/config.php'                  // hosting
+);
+smartInclude(
+    $_SERVER['DOCUMENT_ROOT'] . '/Gyruss-Cake-Web/secure.php', // local
+    $_SERVER['DOCUMENT_ROOT'] . '/secure.php'                  // hosting
+);
 include 'User/include/init_cart.php';
 ?>
 <!DOCTYPE html>
