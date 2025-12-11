@@ -25,7 +25,7 @@ $data = $res->fetch_assoc();
 $gambar = $data['gambar'];
 
 // Hapus komentar terkait produk
-$del_komen = $conn->prepare("DELETE FROM komentar WHERE id_produk = ?");
+$del_komen = $conn->prepare("DELETE FROM testimoni WHERE id_produk = ?");
 $del_komen->bind_param("i", $id);
 $del_komen->execute();
 $del_komen->close();
