@@ -16,7 +16,7 @@ include __DIR__ . "/../../secure.php";
     .montserrat-font {
     font-family: "Montserrat", sans-serif !important;
     font-optical-sizing: auto;
-    font-weight: 300 !important;
+    font-weight: 200 !important;
     font-style: normal !important;
     }
 
