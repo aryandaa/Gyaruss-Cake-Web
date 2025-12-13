@@ -1,5 +1,5 @@
 <?php 
-require_once __DIR__ . '/../../config.php';
+require_once __DIR__ . '/../include/connect.php';
 include __DIR__ . "/../../secure.php";
 
 $errors = $errors ?? [];
