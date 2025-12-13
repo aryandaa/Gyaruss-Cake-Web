@@ -35,7 +35,7 @@ if (!empty($errors)) {
 // 2. VALIDASI CAPTCHA
 // ======================
 
-$secretKey = "CAPTCHA_SECRET_KEY";
+$secretKey = CAPTCHA_SECRET_KEY;
 $captcha = $_POST['g-recaptcha-response'] ?? '';
 
 if(!$captcha){
