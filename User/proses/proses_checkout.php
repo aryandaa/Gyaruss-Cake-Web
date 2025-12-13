@@ -37,7 +37,7 @@ while ($row = mysqli_fetch_assoc($keranjang)) {
 // Generate kode pesanan
 $kode = "ORDER-" . date("ymd") . "-" . rand(1000,9999);
 
-// Insert ke tabel pesanan (100% sesuai database Yanda)
+// Insert ke tabel pesanan
 mysqli_query($conn, "
     INSERT INTO pesanan (kode_pesanan, nama, no_wa, alamat, metode_pembayaran, catatan, total_harga)
     VALUES ('$kode', '$nama', '$wa', '$alamat', '$metode', '$catatan', '$total_harga')

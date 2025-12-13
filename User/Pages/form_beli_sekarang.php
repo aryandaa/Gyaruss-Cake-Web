@@ -154,6 +154,12 @@ $errors = $errors ?? [];
                     <textarea name="catatan" class="form-control input-custom" rows="2" placeholder="Tambahkan catatan..."></textarea>
                 </div>
 
+                <!-- Estimasi selesai -->
+                <div class="col-md-6">
+                    <label class="fw-semibold mb-1">Estimasi Selesai</label>
+                    <input type="text" class="form-control input-custom" placeholder="2-5 Hari" readonly>
+                </div>
+
                 <div class="col-md-6 mb-4">
                     <label class="fw-semibold mb-1">Metode pembayaran</label>
                     <div class="d-flex gap-4 radio-custom mt-2">
@@ -166,7 +172,7 @@ $errors = $errors ?? [];
 
             <div class="row mt-4">
                 <div class="col-12">
-                    <div class="g-recaptcha" data-sitekey="6Lde1RcsAAAAAPTvY0Xu32txIbpxUZBZFiHJAXco"></div>
+                    <div class="g-recaptcha" data-sitekey="<?= CAPTCHA_SITE_KEY ?>"></div>
                     <?php if(isset($errors['captcha'])): ?>
                         <small class="text-danger"><?= $errors['captcha'] ?></small>
                     <?php endif; ?>

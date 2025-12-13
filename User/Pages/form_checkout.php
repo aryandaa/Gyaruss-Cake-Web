@@ -187,7 +187,7 @@ $errors = $errors ?? [];
                 <!-- Estimasi selesai -->
                 <div class="col-md-6">
                     <label class="fw-semibold mb-1">Estimasi Selesai</label>
-                    <input type="text" name="no_wa" class="form-control input-custom" placeholder="2-5 Hari" readonly>
+                    <input type="text" class="form-control input-custom" placeholder="2-5 Hari" readonly>
                 </div>
 
                 <!-- Total Harga -->
@@ -218,7 +218,7 @@ $errors = $errors ?? [];
 
             <!-- CAPTCHA -->
             <div class="mt-4">
-                <div class="g-recaptcha" data-sitekey="6Lde1RcsAAAAAPTvY0Xu32txIbpxUZBZFiHJAXco"></div>
+                <div class="g-recaptcha" data-sitekey="<?= CAPTCHA_SITE_KEY ?>"></div>
             </div>
 
             <!-- TOTAL & SUBMIT -->
