@@ -85,7 +85,7 @@ include 'User/include/init_cart.php';
     <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="owl-carousel header-carousel position-relative">
 
-            <?php foreach ($bestSeller as $bs): ?>
+            <?php foreach ($carousel as $bs): ?>
             <div class="owl-carousel-item position-relative">
                 <img class="img-fluid" src="User/Asset/images/Produk/<?= e($bs['gambar']); ?>" alt="">
                 <div class="owl-carousel-inner">

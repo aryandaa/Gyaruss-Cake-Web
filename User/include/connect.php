@@ -40,6 +40,9 @@ if (!$result) {
     die("Query error: " . mysqli_error($conn));
 }
 
+//carausel
+$sql = "SELECT * FROM produk WHERE nama_produk IN ('Lapis Legit Besar', 'Kue Sus');";;
+$carousel = mysqli_query($conn, $sql);
 
 
 //Menampilkan Best Seller
