@@ -192,7 +192,7 @@ body.modal-open {
 <script>
 function showDeleteModal(id) {
     const yesBtn = document.getElementById("btnYesDelete");
-    yesBtn.href = "proses/proses_hapus.php?id=" + id;
+    yesBtn.href = "../proses/proses_hapus.php?id=" + id;
     const modal = new bootstrap.Modal(document.getElementById("modalHapus"));
     modal.show();
 }
