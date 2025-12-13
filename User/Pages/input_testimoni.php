@@ -1,5 +1,6 @@
 <?php 
 require_once __DIR__ . '/../include/connect.php';
+require_once __DIR__ . '/../../config.php';
 include __DIR__ . "/../../secure.php";
 
 $errors = $errors ?? [];
@@ -62,7 +63,11 @@ $errors = $errors ?? [];
     <!-- NAMA -->
     <div class="mb-3">
         <label class="fw-semibold" style="color:#6A6A6A;">Nama</label>
-        <input type="text" class="form-control py-2" placeholder="Ketik Nama" name="nama" value="<?= $_POST['nama'] ?? '' ?>">
+        <input type="text"
+                class="form-control py-2"
+                placeholder="Ketik Nama"
+                name="nama"
+                value="<?= htmlspecialchars($_POST['nama'] ?? '', ENT_QUOTES, 'UTF-8') ?>">
             <?php if(isset($errors['nama'])): ?>
                 <small class="text-danger"><?= $errors['nama'] ?></small>
             <?php endif; ?>
@@ -107,8 +112,7 @@ $errors = $errors ?? [];
                 rows="3" 
                 maxlength="150"
                 oninput="updateCount()"
-                value="<?= $_POST['pesan'] ?? '' ?>">
-        </textarea>
+                ><?= isset($_POST['pesan']) ? htmlspecialchars(trim($_POST['pesan'])) : '' ?></textarea>
         <?php if(isset($errors['pesan'])): ?>
             <small class="text-danger"><?= $errors['pesan'] ?></small>
         <?php endif; ?>
