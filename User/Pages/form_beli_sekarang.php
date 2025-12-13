@@ -48,7 +48,7 @@ $errors = $errors ?? [];
 
         .section-title {
             font-weight: 700;
-            color: #2B143B;
+            color: #504060;
         }
 
         .input-custom {
@@ -60,15 +60,15 @@ $errors = $errors ?? [];
 
         .input-custom:focus {
             outline: none;
-            border: 2px solid #2B143B;
+            border: 2px solid #504060;
         }
 
         .radio-custom input {
-            accent-color: #2B143B;
+            accent-color: #504060;
         }
 
         .btn-submit {
-            background-color: #2B143B;
+            background-color: #504060;
             border-radius: 50px;
             padding: 12px 30px;
             color: white;

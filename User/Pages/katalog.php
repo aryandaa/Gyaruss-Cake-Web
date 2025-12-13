@@ -69,7 +69,7 @@ $katering = mysqli_query($conn, $query);
         .btn-beli {
             padding: 10px 26px;       /* biar langsing */
             border-radius: 50px;
-            background-color: #2B143B;
+            background-color: #504060;
             color: white;
             font-weight: 600;
             display: inline-block;
@@ -120,7 +120,7 @@ $katering = mysqli_query($conn, $query);
                             <div class="product-actions">
                                  <form action="../proses/tambah_keranjang.php" method="POST" class="d-inline">
                                     <input type="hidden" name="id_produk" value="<?= $k['id_produk'] ?>">
-                                <button class="border-0 rounded-circle p-3 btn-cart-icon d-flex justify-content-center align-items-center" style="background-color: #2B143B;">
+                                <button class="border-0 rounded-circle p-3 btn-cart-icon d-flex justify-content-center align-items-center" style="background-color: #504060;">
                                     <svg width="50" height="50"
                                         fill="currentColor"
                                         viewBox="0 0 16 16" 
@@ -179,7 +179,7 @@ $katering = mysqli_query($conn, $query);
                             <div class="product-actions"> 
                              <form action="../proses/tambah_keranjang.php" method="POST" class="d-inline">
                                     <input type="hidden" name="id_produk" value="<?= $kr['id_produk'] ?>">
-                                <button class="border-0 rounded-circle p-3 btn-cart-icon d-flex justify-content-center align-items-center" style="background-color: #2B143B;">
+                                <button class="border-0 rounded-circle p-3 btn-cart-icon d-flex justify-content-center align-items-center" style="background-color: #504060;">
                                     <svg width="50" height="50"
                                         fill="currentColor"
                                         viewBox="0 0 16 16" 

@@ -117,7 +117,7 @@ $totalReviews = $totalReviewsRow['total_reviews'];
                 <?= nl2br($data['deskripsi']); ?>
             </p>
 
-            <h4 class="fw-bold mt-4" style="color:#2B143B;">Harga</h4>
+            <h4 class="fw-bold mt-4" style="color:#504060;">Harga</h4>
 
             <!-- HARGA -->
             <div class="px-1 py-2 d-inline-block mb-4"
@@ -125,7 +125,7 @@ $totalReviews = $totalReviewsRow['total_reviews'];
                 - Rp <?= number_format($data['harga'], 0, ',', '.'); ?>
             </div>
 
-            <h4 class="fw-bold mt-2 mb-2" style="color:#2B143B;">Estimasi Pesanan</h4>
+            <h4 class="fw-bold mt-2 mb-2" style="color:#504060;">Estimasi Pesanan</h4>
 
             <div class="px-1 py-2 d-inline-block mb-4"
                  style="color:#504060; font-weight:700; font-size:18px;">
@@ -170,7 +170,7 @@ $totalReviews = $totalReviewsRow['total_reviews'];
             <div class="d-flex align-items-center gap-4 mt-2">
 
                 <h2 class="fw-bold d-flex align-items-center gap-2 m-0" 
-                    style="font-family: 'Rufina', serif; color:#2B143B;">
+                    style="font-family: 'Rufina', serif; color:#504060;">
                     <?php
                     echo number_format($rataRatingprd, 1);
                     ?>
@@ -215,7 +215,7 @@ $totalReviews = $totalReviewsRow['total_reviews'];
 
                 <!-- Nama + Bintang -->
                 <div class="d-flex justify-content-between align-items-center mb-2">
-                    <strong style="color:#2B143B;">
+                    <strong style="color:#504060;">
                         <?= htmlspecialchars($u['nama']); ?>
                     </strong>
 

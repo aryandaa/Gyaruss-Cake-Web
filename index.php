@@ -54,7 +54,7 @@ include 'User/include/init_cart.php';
         .btn-beli {
             padding: 10px 26px;       /* biar langsing */
             border-radius: 50px;
-            background-color: #2B143B;
+            background-color: #504060;
             color: white;
             font-weight: 600;
             display: inline-block;
@@ -85,16 +85,15 @@ include 'User/include/init_cart.php';
     <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="owl-carousel header-carousel position-relative">
 
-            <?php foreach ($carousel as $bs): ?>
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="User/Asset/images/Produk/<?= e($bs['gambar']); ?>" alt="">
+                <img class="img-fluid" src="User/Asset/images/carausel/lapis legit.png" alt="">
                 <div class="owl-carousel-inner">
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-lg-8">
                                 <h1 class="display-1 mb-4 animated slideInDown" style="color: #504060;"><b>Rekomendasi</b></h1>
                                 <p class="text-color fs-5 mb-4 pb-3">- Rasakan Kelezatannya</p>
-                                <a href="User/Pages/form_beli_sekarang.php?id_produk=<?= e($bs['id_produk']); ?>" class="btn background rounded-pill py-3 px-5"><span class="text-white">Beli Sekarang <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <a href="User/Pages/form_beli_sekarang.php?id_produk=1" class="btn background rounded-pill py-3 px-5"><span class="text-white">Beli Sekarang <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                                 </svg></span></a>
                             </div>
@@ -102,7 +101,23 @@ include 'User/include/init_cart.php';
                     </div>
                 </div>
             </div>
-            <?php endforeach; ?>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="User/Asset/images/carausel/kue sus.jpg" alt="">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-lg-8">
+                                <h1 class="display-1 mb-4 animated slideInDown" style="color: #504060;"><b>Rekomendasi</b></h1>
+                                <p class="text-color fs-5 mb-4 pb-3">- Rasakan Kelezatannya</p>
+                                <a href="User/Pages/form_beli_sekarang.php?id_produk=2" class="btn background rounded-pill py-3 px-5"><span class="text-white">Beli Sekarang <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                                </svg></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
     </div>
     <!-- Carousel End -->
 
@@ -215,7 +230,7 @@ include 'User/include/init_cart.php';
                                 <form action="User/proses/tambah_keranjang.php" method="POST" class="d-inline">
                                     <input type="hidden" name="id_produk" value="<?= $p['id_produk'] ?>">
                                     <input type="hidden" name="csrf_token" value="<?= e($_SESSION['csrf_token']); ?>">
-                                <button class="border-0 rounded-circle p-3 btn-cart-icon d-flex justify-content-center align-items-center" style="background-color: #2B143B;">
+                                <button class="border-0 rounded-circle p-3 btn-cart-icon d-flex justify-content-center align-items-center" style="background-color: #504060;">
                                     
                                     <svg width="50" height="50"
                                         fill="currentColor"
