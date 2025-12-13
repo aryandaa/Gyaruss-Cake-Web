@@ -27,4 +27,15 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
+if (!defined('CAPTCHA_SITE_KEY')) {
+    if ($_SERVER['HTTP_HOST'] === 'localhost') {
+        define('CAPTCHA_SITE_KEY', '6Lde1RcsAAAAAPTvY0Xu32txIbpxUZBZFiHJAXco');
+        define('CAPTCHA_SECRET_KEY', '6Lde1RcsAAAAAJB4t12o1ZYBegQYuKa98twEM2F8');
+    } else {
+        define('CAPTCHA_SITE_KEY', '6LfZRCosAAAAAJs95J5qMf6hFFPH_mIgxURZs1Z6');
+        define('CAPTCHA_SECRET_KEY', '6LfZRCosAAAAABWa6d-NBHYiGe3nGvlogmMariVW');
+    }
+}
+
+
 ?>

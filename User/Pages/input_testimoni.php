@@ -1,5 +1,5 @@
 <?php 
-include __DIR__ . "/../../config.php";
+require_once __DIR__ . '/../../config.php';
 include __DIR__ . "/../../secure.php";
 
 $errors = $errors ?? [];
@@ -118,7 +118,7 @@ $errors = $errors ?? [];
         <span id="charCount">0</span>/150 karakter
     </div>
 
-    <div class="g-recaptcha" data-sitekey="6Lde1RcsAAAAAPTvY0Xu32txIbpxUZBZFiHJAXco"></div>
+    <div class="g-recaptcha" data-sitekey="<?= CAPTCHA_SITE_KEY ?>"></div>
         <?php if(isset($errors['captcha'])): ?>
             <small class="text-danger"><?= $errors['captcha'] ?></small>
         <?php endif; ?>

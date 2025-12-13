@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . "/../../config.php";
+require_once __DIR__ . '../../config.php';
 include __DIR__ . "/../../secure.php";
 
 
@@ -34,7 +34,7 @@ if (!empty($errors)) {
 // 2. VALIDASI CAPTCHA
 // ======================
 
-$secretKey = "6Lde1RcsAAAAAJB4t12o1ZYBegQYuKa98twEM2F8";
+$secretKey = "CAPTCHA_SECRET_KEY";
 $captcha = $_POST['g-recaptcha-response'] ?? '';
 
 if(!$captcha){
